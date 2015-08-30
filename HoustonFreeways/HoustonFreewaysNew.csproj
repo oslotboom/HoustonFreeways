@@ -1,0 +1,912 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2FD6DFAE-789E-4C01-90A5-15DA0D7FC05A}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HoustonFreewaysNew</RootNamespace>
+    <AssemblyName>HoustonFreewaysNew</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20710.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.20710.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20710.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ViewSwitcherController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HoustonFreewaysModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Home\AuthorText.ascx.cs">
+      <DependentUpon>AuthorText.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\AuthorText.ascx.designer.cs">
+      <DependentUpon>AuthorText.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter2.ascx.cs">
+      <DependentUpon>PreviewChapter2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter2.ascx.designer.cs">
+      <DependentUpon>PreviewChapter2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter3.ascx.cs">
+      <DependentUpon>PreviewChapter3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter3.ascx.designer.cs">
+      <DependentUpon>PreviewChapter3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter4.ascx.cs">
+      <DependentUpon>PreviewChapter4.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter4.ascx.designer.cs">
+      <DependentUpon>PreviewChapter4.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter5.ascx.cs">
+      <DependentUpon>PreviewChapter5.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter5.ascx.designer.cs">
+      <DependentUpon>PreviewChapter5.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter6.ascx.cs">
+      <DependentUpon>PreviewChapter6.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter6.ascx.designer.cs">
+      <DependentUpon>PreviewChapter6.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter7.ascx.cs">
+      <DependentUpon>PreviewChapter7.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter7.ascx.designer.cs">
+      <DependentUpon>PreviewChapter7.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter8.ascx.cs">
+      <DependentUpon>PreviewChapter8.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\PreviewChapter8.ascx.designer.cs">
+      <DependentUpon>PreviewChapter8.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\PreviewNotes.ascx.cs">
+      <DependentUpon>PreviewNotes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\PreviewNotes.ascx.designer.cs">
+      <DependentUpon>PreviewNotes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\PreviewPreface.ascx.cs">
+      <DependentUpon>PreviewPreface.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\PreviewPreface.ascx.designer.cs">
+      <DependentUpon>PreviewPreface.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\caddo-lake-photos.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\houston-construction-september-2014.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\interstate-35-construction-august-2014.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\libya-1965-photos.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\sh-87-port-arthur-highway-relics.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Content\HoustonFreewaysMobileThemes.css" />
+    <Content Include="Content\HoustonFreeways.min.css" />
+    <Content Include="Content\HoustonFreewaysMobileThemes.min.css" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\icons-18-black.png" />
+    <Content Include="Content\images\icons-18-white.png" />
+    <Content Include="Content\images\icons-36-black.png" />
+    <Content Include="Content\images\icons-36-white.png" />
+    <Content Include="Content\jquery-ui-1.10.1.custom.css" />
+    <Content Include="Content\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="Content\jquery.mobile-1.2.0.css" />
+    <Content Include="Content\jquery.mobile-1.2.0.min.css" />
+    <Content Include="Content\jquery.mobile.structure-1.2.0.css" />
+    <Content Include="Content\jquery.mobile.structure-1.2.0.min.css" />
+    <Content Include="Content\jquery.mobile.theme-1.2.0.css" />
+    <Content Include="Content\jquery.mobile.theme-1.2.0.min.css" />
+    <Content Include="Content\HoustonFreewaysMobile.css" />
+    <Content Include="Content\HoustonFreeways.css" />
+    <Content Include="Content\LegacyPhotos.css" />
+    <Content Include="Content\themes\base\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Desktop\balloons.png" />
+    <Content Include="Images\Desktop\birthday_candle_one.png" />
+    <Content Include="Images\Desktop\birthday_candle_ten.png" />
+    <Content Include="Images\Desktop\birthday_candle_ten_with_years.png" />
+    <Content Include="Images\Desktop\birthday_candle_ten_with_years_175.png" />
+    <Content Include="Images\Desktop\birthday_candle_ten_with_years_large.png" />
+    <Content Include="Images\Desktop\birthday_candle_zero.png" />
+    <Content Include="Images\Desktop\challenge.png" />
+    <Content Include="Images\Desktop\cover_balloons.png" />
+    <Content Include="Images\Desktop\cover_balloons_feathered.png" />
+    <Content Include="Images\Desktop\cover_balloons_feathered_280.png" />
+    <Content Include="Images\Desktop\Houston_Freeways_title.png" />
+    <Content Include="Images\Desktop\Houston_Freeways_title_header.png" />
+    <Content Include="Images\Desktop\portrait_2003-06-01_B_ADJ_CROP_600.jpg" />
+    <Content Include="Images\Desktop\retrospective_gradient.png" />
+    <Content Include="Images\Desktop\retrospective_top_background.png" />
+    <Content Include="Images\Desktop\View_the_book.png" />
+    <Content Include="Images\Desktop\windows_media_logo.gif" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\new_small.gif" />
+    <Content Include="modern\2014-01-18_us_290_right-of-way_clearance.aspx" />
+    <Content Include="modern\images\161\161_map.pspimage" />
+    <Content Include="Images\Mobile\100x100_green.png" />
+    <Content Include="Images\Mobile\Oscar_Portrait_DSC00034_280.jpg" />
+    <Content Include="modern\121_construction_2004-04-25.aspx" />
+    <Content Include="modern\161_row_clearance_200403-14.aspx" />
+    <Content Include="modern\2004-07_update.aspx" />
+    <Content Include="modern\2004-09-01_fort_bend_parkway.aspx" />
+    <Content Include="modern\2004-09-11_121_interchange.aspx" />
+    <Content Include="modern\2004-09_update.aspx" />
+    <Content Include="modern\2004-10-20_i10_at_bw8.aspx" />
+    <Content Include="modern\2004-11_update.aspx" />
+    <Content Include="modern\2004-12_dfw_update.aspx" />
+    <Content Include="modern\2005-01-14_sh87.aspx" />
+    <Content Include="modern\2005-01_road_trip_coastal.aspx" />
+    <Content Include="modern\2005-01_road_trip_el_paso.aspx" />
+    <Content Include="modern\2005-01_road_trip_guadalupe.aspx" />
+    <Content Include="modern\2005-01_road_trip_i10.aspx" />
+    <Content Include="modern\2005-01_road_trip_index.aspx" />
+    <Content Include="modern\2005-01_road_trip_us90.aspx" />
+    <Content Include="modern\2005-02-14_joshua_tree.aspx" />
+    <Content Include="modern\2005-04-11_high_five_aerial.aspx" />
+    <Content Include="modern\2005-04-23_i10_row_clearance.aspx" />
+    <Content Include="modern\2005-04-23_old_us_90_burned_out_bridge.aspx" />
+    <Content Include="modern\2005-04-24_houston_update.aspx" />
+    <Content Include="modern\2005-05-07_nasa1.aspx" />
+    <Content Include="modern\2005-05-16_i49.aspx" />
+    <Content Include="modern\2005-06-05_possum_kingdom.aspx" />
+    <Content Include="modern\2005-08-13_us59.aspx" />
+    <Content Include="modern\2005-11-27_houston_update.aspx" />
+    <Content Include="modern\2005-11-27_sh87.aspx" />
+    <Content Include="modern\2006-01-08_big_bend.aspx" />
+    <Content Include="modern\2006-03_houston_update.aspx" />
+    <Content Include="modern\2006-04-09_causeway_update.aspx" />
+    <Content Include="modern\2006-04-14_287.aspx" />
+    <Content Include="modern\2006-04-15_wichita_falls.aspx" />
+    <Content Include="modern\2006-05-21_161_frontage_road_construction.aspx" />
+    <Content Include="modern\2006-05-28_cadillac_ranch.aspx" />
+    <Content Include="modern\2006-05-28_caprock.aspx" />
+    <Content Include="modern\2006-05-28_lubbock_82-62_construction.aspx" />
+    <Content Include="modern\2006-05-28_palo_duro.aspx" />
+    <Content Include="modern\2006-08-12_13_59_249.aspx" />
+    <Content Include="modern\2006-08-13_sh249_driving_tour.aspx" />
+    <Content Include="modern\2006-08-13_sh6_college_station.aspx" />
+    <Content Include="modern\2006-11-18_161.aspx" />
+    <Content Include="modern\2006-11-24_texas_city_dike.aspx" />
+    <Content Include="modern\2006-11-25_houston_construction.aspx" />
+    <Content Include="modern\2006-12-23_crosby_freeway.aspx" />
+    <Content Include="modern\2006-12-23_katy_freeway_enhancement.aspx" />
+    <Content Include="modern\2006_road_trip_arches.aspx" />
+    <Content Include="modern\2006_road_trip_branson.aspx" />
+    <Content Include="modern\2006_road_trip_buffalo_river.aspx" />
+    <Content Include="modern\2006_road_trip_i540.aspx" />
+    <Content Include="modern\2006_road_trip_pch.aspx" />
+    <Content Include="modern\2006_road_trip_san_francisco.aspx" />
+    <Content Include="modern\2006_road_trip_utah_95.aspx" />
+    <Content Include="modern\2007-005-13_i10_west_texas.aspx" />
+    <Content Include="modern\2007-01-07_80mph_west_texas.aspx" />
+    <Content Include="modern\2007-01-08_big_bend.aspx" />
+    <Content Include="modern\2007-01-08_fm170.aspx" />
+    <Content Include="modern\2007-04-01_katy_freeway.aspx" />
+    <Content Include="modern\2007-04-18_causeway.aspx" />
+    <Content Include="modern\2007-04-21_ajo_city.aspx" />
+    <Content Include="modern\2007-04-21_arizona_index.aspx" />
+    <Content Include="modern\2007-04-21_florence_kelvin.aspx" />
+    <Content Include="modern\2007-04-21_gates_mckinney.aspx" />
+    <Content Include="modern\2007-04-21_organ_pipe_nat_park.aspx" />
+    <Content Include="modern\2007-04-21_saguaro_nat_park.aspx" />
+    <Content Include="modern\2007-07-01_gold_camp.aspx" />
+    <Content Include="modern\2007-07-01_phantom_creek.aspx" />
+    <Content Include="modern\2007-0704_colorado_index.aspx" />
+    <Content Include="modern\2007-07_04_kebler_pass.aspx" />
+    <Content Include="modern\2007-08-26_i10_bw8.aspx" />
+    <Content Include="modern\2007-12-23_nasa1.aspx" />
+    <Content Include="modern\2008-04-27_airport_road.aspx" />
+    <Content Include="modern\2008-04-27_catalina_index.aspx" />
+    <Content Include="modern\2008-04-27_catalina_little_harbor_road.aspx" />
+    <Content Include="modern\2008-04-27_catalina_safari_bus.aspx" />
+    <Content Include="modern\2008-04-27_little_harbor.aspx" />
+    <Content Include="modern\2008-04-27_middle_ranch_road.aspx" />
+    <Content Include="modern\2008-05-18_polygamist_ranch_eldorado.aspx" />
+    <Content Include="modern\2008-07-06_katy_freeway.aspx" />
+    <Content Include="modern\2008-10-19_fm3005_destroyed.aspx" />
+    <Content Include="modern\59n_2003-11-19.aspx" />
+    <Content Include="modern\59s_demolition_2004-02.aspx" />
+    <Content Include="modern\austin_turnpike_update_2003-12-09.aspx" />
+    <Content Include="modern\causeway_2004-10-28.aspx" />
+    <Content Include="modern\dfw_190_2003-11-12.aspx" />
+    <Content Include="modern\dfw_high_five_2003-05.aspx" />
+    <Content Include="modern\dfw_high_five_2003-10-27.aspx" />
+    <Content Include="modern\dfw_high_five_2003-12.aspx" />
+    <Content Include="modern\dfw_high_five_2004-05.aspx" />
+    <Content Include="modern\fort_bend_2003-10-15.aspx" />
+    <Content Include="modern\fort_bend_2003-11-30.aspx" />
+    <Content Include="modern\fort_bend_2004-03-07.aspx" />
+    <Content Include="modern\i45_houston_to_dallas.aspx" />
+    <Content Include="modern\images\121\121_03A_at_DNT_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_04A_utility_relocation_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_05A_the_colony_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_06A_rr_crossing_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_07A_rr_crossing_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_08A_w_of_121bus_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_10A_approaching_121bus_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_11A_hebron_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_13A_piers_at_i35e_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_15A_looking_e_at_i35e_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_18A_at_denton_tap_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_19A_e_of_denton_tap_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_21A_looking_e_toward_mcarthur_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_22A_at_mcarthur_2004-04-25_750.jpg" />
+    <Content Include="modern\images\121\121_map.jpg" />
+    <Content Include="modern\images\161\161_2004-06-05_church_B_ADJ_750.jpg" />
+    <Content Include="modern\images\161\161_2004-06-05_church_E_side_750.jpg" />
+    <Content Include="modern\images\161\161_2004-06-05_church_G_close_ADJ_750.jpg" />
+    <Content Include="modern\images\161\161_2004-06-05_warehouse_A_750.jpg" />
+    <Content Include="modern\images\161\161_2004-06-05_warehouse_C_750.jpg" />
+    <Content Include="modern\images\161\161_map.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_church_A_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_church_C_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_embroidery_A_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_embroidery_B_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_house_near_church_E_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_house_near_church_with_church_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_mcdonalds_A_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_mcdonalds_C_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_north_residential_C_house_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_north_residential_E_slabs_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_north_residential_F_street_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_residential_A_slab_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_residential_B_house_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_residential_E_view_through_window_400.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_residential_G_street_view_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_residential_I_house_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_road_dip_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_slab_near_church_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_solitary_house_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_strip_center_A_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_taco_bell_A_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_taco_bell_sign_D_best_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_west_freeway_sign_A_700.jpg" />
+    <Content Include="modern\images\161\161_row_clearance_2004-03-14_wide_view_cleared_row_A_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_church_A_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_church_C_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_embroidery_A_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_embroidery_B_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_house_near_church_E_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_house_near_church_with_church_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_mcdonalds_A_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_mcdonalds_C_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_north_residential_C_house_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_north_residential_E_slabs_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_north_residential_F_street_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_residential_A_slab_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_residential_B_house_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_residential_E_view_through_window_400.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_residential_G_street_view_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_residential_I_house_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_road_dip_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_slab_near_church_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_solitary_house_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_strip_center_A_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_taco_bell_A_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_taco_bell_sign_D_best_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_west_freeway_sign_A_700.jpg" />
+    <Content Include="modern\images\161\191_row_clearance_2004-03-14_wide_view_cleared_row_A_700.jpg" />
+    <Content Include="modern\images\2004-07_update\121_at_coit_looking_e_B_2004-07-05_780.jpg" />
+    <Content Include="modern\images\2004-07_update\121_at_custer_C_best_2004-07-05_780.jpg" />
+    <Content Include="modern\images\2004-07_update\121_at_custer_looking_e_A_2004-07-05_780.jpg" />
+    <Content Include="modern\images\2004-07_update\121_at_preston_2004-07-05_780.jpg" />
+    <Content Include="modern\images\2004-07_update\121_custer_sign_A_2004-07-05_780.jpg" />
+    <Content Include="modern\images\2004-07_update\121_e_of_custer_looking_e_B_2004-07-05_780.jpg" />
+    <Content Include="modern\images\2004-07_update\121_near_alma_A_2004-07-05_780.jpg" />
+    <Content Include="modern\images\2004-07_update\161-190_at_635_2004-06-27_B_best_looking_e_on_635_ADJ_780.jpg" />
+    <Content Include="modern\images\2004-07_update\161-190_at_635_2004-06-27_B_looking_n_on_161_780.jpg" />
+    <Content Include="modern\images\2004-07_update\249_at_bw8_2004-01-09_B_780.jpg" />
+    <Content Include="modern\images\2004-07_update\249_at_bw8_2004-01-09_C_780.jpg" />
+    <Content Include="modern\images\2004-07_update\249_at_bw8_2004-06-10_ADJ_780.jpg" />
+    <Content Include="modern\images\2004-07_update\59s_trench_2004-06-09_looking_e_from_mandel_ADJ_780.jpg" />
+    <Content Include="modern\images\2004-07_update\59s_trench_looking_w_at_montrose_B_2004-06-12_ADJ_780.jpg" />
+    <Content Include="modern\images\2004-07_update\59s_trench_looking_w_at_montrose_C_2004-06-12_ADJ_780.jpg" />
+    <Content Include="modern\images\2004-07_update\8n_at_45_2004-06-10_ADJ_780.jpg" />
+    <Content Include="modern\images\2004-07_update\99_meeting_A_signs_2004-06-10_780.jpg" />
+    <Content Include="modern\images\2004-07_update\99_meeting_crowd_back_2004-06-10_780.jpg" />
+    <Content Include="modern\images\2004-07_update\DSC00019_780.jpg" />
+    <Content Include="modern\images\2004-07_update\DSC00025_400.jpg" />
+    <Content Include="modern\images\2004-07_update\DSC00026_780.jpg" />
+    <Content Include="modern\images\2004-07_update\DSC00028_780.jpg" />
+    <Content Include="modern\images\2004-07_update\ft_bend_parkway_at_bw8_2004-06-14_780.jpg" />
+    <Content Include="modern\images\2004-07_update\ft_bend_parkway_at_orem_looking_sw_2004-06-14_780.jpg" />
+    <Content Include="modern\images\2004-07_update\ft_bend_pkway_at_orem_C_2004-06-14_780.jpg" />
+    <Content Include="modern\images\2004-07_update\ft_bend_pkwy_at_us90a_2004-06-14_780.jpg" />
+    <Content Include="modern\images\2004-09-11_35e_121\121_35E_interchange_0A_2004-09-11_780.jpg" />
+    <Content Include="modern\images\2004-09-11_35e_121\121_35E_interchange_1A_2004-09-11_580.jpg" />
+    <Content Include="modern\images\2004-09-11_35e_121\121_35E_interchange_3A_2004-09-11_780.jpg" />
+    <Content Include="modern\images\2004-09-11_35e_121\121_35E_interchange_4A_2004-09-11_2400.jpg" />
+    <Content Include="modern\images\2004-09-11_35e_121\121_35E_interchange_4A_2004-09-11_780.jpg" />
+    <Content Include="modern\images\2004-09-11_35e_121\35e_121_location_map.jpg" />
+    <Content Include="modern\images\2004-09_update\10w_59_diner_19_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\10w_barker_cypress_2_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\10w_barker_cypress_A_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\10w_bunningham_22_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\10w_campbell_looking_e_21_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\249_bw8_2004-08-08.jpg" />
+    <Content Include="modern\images\2004-09_update\59sw_trench_E_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\59sw_trench_J_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\59s_trench_10_2004-08-08_1000.jpg" />
+    <Content Include="modern\images\2004-09_update\59s_trench_13_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\59s_trench_16_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\610_at_10_A_2004-08-07_800.jpg" />
+    <Content Include="modern\images\2004-09_update\610_at_10_A_looking_n_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\610_at_10_A_looking_n_2004-08-08_hires.jpg" />
+    <Content Include="modern\images\2004-09_update\610_at_10_D_piers_at_memorial_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\610_at_10_F_looking_S_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\610_at_10_G_looking_n_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\610_at_10_H_looking_n_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00005_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00006_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00008_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00010_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00011_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00012_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00014_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00015_sh6_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00016_tramwell_frescno_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00017_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00018_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00019_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00020_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00022_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00023_toll_plaza_800.jpg" />
+    <Content Include="modern\images\2004-09_update\DSC00025_beam_800.jpg" />
+    <Content Include="modern\images\2004-09_update\westpark_A_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\westpark_C_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\westpark_D_at_SH6_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-09_update\westpark_E_at_eldridge_2004-08-08_800.jpg" />
+    <Content Include="modern\images\2004-10-20_town_and_country\10-bw8_2004-10-20_750.jpg" />
+    <Content Include="modern\images\2004-10-20_town_and_country\10-bw8_2004-10-20_looking_nw_750.jpg" />
+    <Content Include="modern\images\2004-10-20_town_and_country\10-bw8_2004-10-20_looking_s_750.jpg" />
+    <Content Include="modern\images\2004-10-20_town_and_country\10-bw8_2004-10-20_looking_w_750.jpg" />
+    <Content Include="modern\images\2004-10-20_town_and_country\10-bw8_2004-10-20_looking_w_old_RR_bridge_750.jpg" />
+    <Content Include="modern\images\2004-10-20_town_and_country\10-bw8_2004-10-20_sparks_750.jpg" />
+    <Content Include="modern\images\2004-10-20_town_and_country\town_and_country_2004-10-20_lord_taylor.jpg" />
+    <Content Include="modern\images\2004-10-20_town_and_country\town_and_country_2004-10-20_pennys.jpg" />
+    <Content Include="modern\images\2004-10-20_town_and_country\town_and_country_2004-10-20_pennys_south.jpg" />
+    <Content Include="modern\images\2004-10-20_town_and_country\town_and_country_7a_sign_2004-10-20.tif" />
+    <Content Include="modern\images\2004-10-20_town_and_country\town_and_country_7a_sign_2004-10-20_750.jpg" />
+    <Content Include="modern\images\2004-10-20_town_and_country\town_and_country_looking_ne_2004-10-20_750.jpg" />
+    <Content Include="modern\images\2004-10-20_town_and_country\town_and_county_side_view_2004-10-20.jpg" />
+    <Content Include="modern\images\527_demolition_2004-02\527_ramp_demolition_night_15_2004-02-13_ADJ_700.jpg" />
+    <Content Include="modern\images\527_demolition_2004-02\527_ramp_demolition_night_5_2004-02-13_700.jpg" />
+    <Content Include="modern\images\527_demolition_2004-02\527_ramp_demolition_night_7_2004-02-13_700.jpg" />
+    <Content Include="modern\images\527_demolition_2004-02\59s_demolition_22_2004-02-17_700.jpg" />
+    <Content Include="modern\images\527_demolition_2004-02\59s_demolition_23_2004-02-17_700.jpg" />
+    <Content Include="modern\images\527_demolition_2004-02\59s_demolition_24_2004-02-17_700.jpg" />
+    <Content Include="modern\images\527_demolition_2004-02\59s_demolition_cleared_area_A_2004-02-26_700.jpg" />
+    <Content Include="modern\images\527_demolition_2004-02\59s_demolition_cleared_area_C_2004-02-26_700.jpg" />
+    <Content Include="modern\images\527_demolition_2004-02\59s_demolition_closeup_2004-02-26_700.jpg" />
+    <Content Include="modern\images\527_demolition_2004-02\59s_demolition_medrange_2004-02-26_700.jpg" />
+    <Content Include="modern\images\527_demolition_2004-02\59s_demolition_view_from_hazard_2004-02-26_700.jpg" />
+    <Content Include="modern\images\527_demolition_2004-02\59s_demolition_wide_view_B_2004-02-26_700.jpg" />
+    <Content Include="modern\images\59n\59n_2003-11-19_at_BW8_looking_E_790.jpg" />
+    <Content Include="modern\images\59n\59n_2003-11-19_at_BW8_looking_N-NE_790.jpg" />
+    <Content Include="modern\images\59n\59n_2003-11-19_at_BW8_looking_NE_790.jpg" />
+    <Content Include="modern\images\59n\59n_2003-11-19_at_bw8_looking_NW_790.jpg" />
+    <Content Include="modern\images\59n\59n_2003-11-19_at_bw8_looking_NW_piers_790.jpg" />
+    <Content Include="modern\images\59n\59n_2003-11-19_at_bw8_looking_NW_wide_790.jpg" />
+    <Content Include="modern\images\59n\59n_2003-11-19_at_FM1960_790.jpg" />
+    <Content Include="modern\images\59n\59n_2003-11-19_at_kingwood_790.jpg" />
+    <Content Include="modern\images\59n\59n_2003-11-19_at_townsen_braided_ramp_790.jpg" />
+    <Content Include="modern\images\59n\59n_2003-11-19_at_townsen_looking_n_790.jpg" />
+    <Content Include="modern\images\austin_2003-12\loop1_atf_howard_2003-12-09_B_780.jpg" />
+    <Content Include="modern\images\austin_2003-12\loop1_const_at_howard_2003-12-08_A_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\loop1_sh45_const_2003-12-08_B_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\loop1_s_of_howard_2003-12-09_A_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\loop1_s_of_howard_2003-12-09_C_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\loop1_s_of_howard_2003-12-09_E_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at mcneil_2003-12-09_E_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at _172_2003-12-09_A_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at _172_2003-12-09_C_2048.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at _172_2003-12-09_C_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at _i35_2003-12-09_C_2048.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at _i35_2003-12-09_C_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at _loop1_2003-12-09_A_2048.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at _loop1_2003-12-09_A_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at _loop1_2003-12-09_B_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at _mcneil_2003-12-09_B_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at_172_2003-12-08_C_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at_frontera_2003-12-08_C_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at_frontera_2003-12-08_E_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_at_i35_2003-12-08_C_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_e_of_172_2003-12-08_A_2048.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_e_of_172_2003-12-08_A_785.jpg" />
+    <Content Include="modern\images\austin_2003-12\sh45_parmer_2003-11-09.jpg" />
+    <Content Include="modern\images\dallas_190\190_superconnector_2003-11-12_12A_elevated_curve_ADJ_790.jpg" />
+    <Content Include="modern\images\dallas_190\190_superconnector_2003-11-12_14A_ditch_crossing_790.jpg" />
+    <Content Include="modern\images\dallas_190\190_superconnector_2003-11-12_1A_at_valley_view_ADJ_790.jpg" />
+    <Content Include="modern\images\dallas_190\190_superconnector_2003-11-12_21A_piers_790.jpg" />
+    <Content Include="modern\images\dallas_190\190_superconnector_2003-11-12_24A_elevated_790.jpg" />
+    <Content Include="modern\images\dallas_190\190_superconnector_2003-11-12_3A_at_valley_view_790.jpg" />
+    <Content Include="modern\images\dallas_190\190_superconnector_2003-11-12_4A_sandy_lake_790.jpg" />
+    <Content Include="modern\images\dallas_190\190_superconnector_2003-11-12_8A_elevated_curve_790.jpg" />
+    <Content Include="modern\images\dallas_190\190_superconnector_2003-11-12_9A_elevated_curve_790.jpg" />
+    <Content Include="modern\images\dallas_190\190_superconnector_2003-11-12_elevated.jpg" />
+    <Content Include="modern\images\dallas_high_five\DSC00016_repaired_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\h5-122503_001.jpg" />
+    <Content Include="modern\images\dallas_high_five\h5-122503_003.jpg" />
+    <Content Include="modern\images\dallas_high_five\h5-122503_009.jpg" />
+    <Content Include="modern\images\dallas_high_five\h5-122503_010.jpg" />
+    <Content Include="modern\images\dallas_high_five\h5-122503_011.jpg" />
+    <Content Include="modern\images\dallas_high_five\h5-122503_013.jpg" />
+    <Content Include="modern\images\dallas_high_five\h5-122503_017.jpg" />
+    <Content Include="modern\images\dallas_high_five\h5-122503_019.jpg" />
+    <Content Include="modern\images\dallas_high_five\h5-122503_020.jpg" />
+    <Content Include="modern\images\dallas_high_five\h5-122503_023.jpg" />
+    <Content Include="modern\images\dallas_high_five\h5-122503_025.jpg" />
+    <Content Include="modern\images\dallas_high_five\h5-122503_026.jpg" />
+    <Content Include="modern\images\dallas_high_five\h5-122503_027.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_08A_looking_e_eb_frontage_2004-04-25 copy.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_10A_looking_e_future_eb_635_2004-04-25_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_11A_looking_e_near_center_2004-04-25_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_15A_2004-05-23_looking_SW_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_15A_looking_n_future_nb_us75_2004-04-25_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_16A_2004-05-23_looking__NW_repaired_850.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_18A_looking_ne_635_piers_2004-04-25_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_2004-02-18_looking_w_B_ADJ_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_2004-02-18_looking_w_full_width_ADJ_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_22A_ramp_2004-04-25_380.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_23A_near_center_2004-04-25_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_2A_2004-05-23_looking_south_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_4A_2004-05-23_looking_west_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_6A_2004-05-23_looking_west_BMW_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_8A_2004-05-23_looking_west_850.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_A_2003-12-12_1024.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_A_2003-12-12_2812.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_B_2003-12-12_1024.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_B_2003-12-12_2447.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_from_car_14_ADJ_800.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_image13_2004-02-19_looking_N_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_image6_2004-02-19_looking_NW_750.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_e_2_2003-08-26_ADJ_2797.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_e_2_2003-08-26_ADJ_800.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_e_3_2003-08-26_ADJ_500.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_e_3_west_side_2003-08-26_ADJ_800.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_e_9_2003-08-26_ADJ_800.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_ne_22_2003-08-26_ADJ_800.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_ne_24_2003-08-26_800.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_nw_18_2003-08-26_ADJ_600.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_n_14_2003-08-26_ADJ_800.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_n_17_2003-08-26_ADJ_2797.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_n_17_2003-08-26_ADJ_800.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_n_4_n_side_2003-08-26_ADJ_600.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_n_9_2003-08-26_ADJ2607.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_n_9_2003-08-26_ADJ_800.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_n_SE_quad_16_2003-08-26_ADJ_800.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_s_5_2003-08-26_ADJ_800.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_w_21_2003-08-27_ADJ_2800.jpg" />
+    <Content Include="modern\images\dallas_high_five\high_five_looking_w_21_2003-08-27_ADJ_800.jpg" />
+    <Content Include="modern\images\DNT\DNT_lighting_fixture_A_2004-04-25_500.jpg" />
+    <Content Include="modern\images\DNT\DNT_lighting_fixture_B_2004-04-25_450.jpg" />
+    <Content Include="modern\images\DNT\DNT_lighting_fixture_C_2004-04-25_750.jpg" />
+    <Content Include="modern\images\DNT\DNT_lighting_fixture_D_2004-04-25_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_06a_orem_at_chimney_rock_2004-03-06_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_08a_n_of_bw8_2004-03-06_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_10_s_of_bw8_2004-03-06_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_13_at_orem_2004-03-06_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_18_rebar_at_mchard_2004-03-06_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_1_at_mchard_side_view_2004-03-06_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_2003-11-28_looking_north_at_orem_B_780.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_2003-11-28_sh6_A_780.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_2003-11-28_tramwell_fresno_A_780.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_2003-11-28_tramwell_fresno_D_780.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_2003-11-30_orem_to_mchard_C_780.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_2003-11-30_orem_to_mchard_E_780.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_2003-11-30_orem_to_mchard_G_780.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_2003-11-30_orem_to_mchard_J_780.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_2003-11-30_orem_to_mchard_oil_tanks_780.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_2003-11-30_orem_to_mchard_stripper_600.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_23_looking_n_at_mchard_2004-03-06_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_23_looking_s_at_mchard_2004-03-06_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fb_parkway_2_at_tramwell_fresno_2004-03-06_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fort_bend_parkway_2003-09-07_const_B_ADJ_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fort_bend_parkway_2003-09-07_const_B_ADJ_hires.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fort_bend_parkway_2003-09-07_const_D_ADJ_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fort_bend_parkway_2003-09-07_const_D_ADJ_hires.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fort_bend_parkway_2003-09-07_const_F_ADJ_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fort_bend_parkway_2003-10-05_const_B_750.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fort_bend_parkway_2003-10-05_const_B_hires.jpg" />
+    <Content Include="modern\images\fort_bend_parkway\fort_bend_parkway_map.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-03_looking_E_C_1536.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-03_looking_E_C_780.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-03_looking_E_E_2048.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-03_looking_E_E_780.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-03_looking_E_G_2048.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-03_looking_E_G_780.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-03_SW_fwy_B_2048.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-03_SW_fwy_B_780.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-03_SW_fwy_looking_SW_B_780.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-17_at_59_A_2048.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-17_at_59_A_780.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-17_at_610_A_2048.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-17_at_610_A_780.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-17_at_BW8_C_2048.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-17_at_BW8_C_780.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-17_at_BW8_F_2048.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-17_at_BW8_F_780.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-17_at_Fondren_B_780.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-17_at_Fondren_F_780.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-17_near_terminus_A_780.jpg" />
+    <Content Include="modern\images\westpark_tollway\westpark_2003-08-17_trench_at_BW8_A_780.jpg" />
+    <Content Include="modern\IMG_2508_45bridge_north_side_2006-11-24.jpg" />
+    <Content Include="modern\light_fixtures.aspx" />
+    <Content Include="modern\sh99_2004-11-27.aspx" />
+    <Content Include="modern\sharpstown_clock_of_texas_near_A_best.jpg" />
+    <Content Include="modern\sharpstown_clock_of_texas_wide_A_best.jpg" />
+    <Content Include="modern\westpark_2003-10-19.aspx" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.10.0.js" />
+    <Content Include="Scripts\jquery-ui-1.10.0.min.js" />
+    <Content Include="Scripts\jquery.mobile-1.2.0.js" />
+    <Content Include="Scripts\jquery.mobile-1.2.0.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Views\Home\AuthorText.ascx" />
+    <Content Include="Views\Home\PreviewChapter1.ascx" />
+    <Content Include="Views\Home\PreviewChapter2.ascx" />
+    <Content Include="Views\Home\PreviewChapter3.ascx" />
+    <Content Include="Views\Home\PreviewChapter4.ascx" />
+    <Content Include="Views\Home\PreviewChapter5.ascx" />
+    <Content Include="Views\Home\PreviewChapter6.ascx" />
+    <Content Include="Views\Home\PreviewChapter7.ascx" />
+    <Content Include="Views\Home\PreviewChapter8.ascx" />
+    <Content Include="Views\Home\PreviewNotes.ascx" />
+    <Content Include="Views\Home\PreviewPreface.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Content\Site.css.Inactive" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\_Layout.Mobile.cshtml" />
+    <Content Include="Views\Home\Quickview.cshtml" />
+    <Content Include="Views\Home\Quickview.Mobile.cshtml" />
+    <Content Include="Views\Home\Index.Mobile.cshtml" />
+    <Content Include="Views\Shared\_LayoutBase.Mobile.cshtml" />
+    <Content Include="Views\Shared\_ViewSwitcher.cshtml" />
+    <Content Include="Views\Home\Author.Mobile.cshtml" />
+    <Content Include="Views\Home\About.Mobile.cshtml" />
+    <Content Include="Views\Home\Chapters.Mobile.cshtml" />
+    <Content Include="Views\Home\Chapters.cshtml" />
+    <Content Include="Webtest.config" />
+    <Content Include="Views\Home\Preview.cshtml" />
+    <Content Include="Views\Home\Corrections.cshtml" />
+    <Content Include="Views\Shared\_LayoutBase.cshtml" />
+    <Content Include="Views\Home\PhotoIndex.cshtml" />
+    <Content Include="Views\Home\Video.cshtml" />
+    <Content Include="Views\Home\Five_Year_Retrospective.cshtml" />
+    <Content Include="Views\Home\ErrorNotification.cshtml" />
+    <Content Include="Views\Home\Challenge.cshtml" />
+    <Content Include="Views\Home\Sharpstown_History.cshtml" />
+    <Content Include="Views\Home\Photos.cshtml" />
+    <Content Include="Views\Home\analysis.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\Desktop\Challenge\Aerial\Maps\" />
+    <Folder Include="Images\Desktop\Challenge\Historical\Maps\" />
+    <Folder Include="Images\Desktop\Preview\ch1\" />
+    <Folder Include="Images\Desktop\Preview\ch2\" />
+    <Folder Include="Images\Desktop\Preview\ch3\" />
+    <Folder Include="Images\Desktop\Preview\ch4\" />
+    <Folder Include="Images\Desktop\Preview\ch5\" />
+    <Folder Include="Images\Desktop\Preview\ch6\" />
+    <Folder Include="Images\Desktop\Preview\ch7\" />
+    <Folder Include="Images\Desktop\Preview\ch8\" />
+    <Folder Include="Images\Desktop\Preview\notes\" />
+    <Folder Include="Images\Desktop\Preview\preface\" />
+    <Folder Include="Images\plan-analysis\" />
+    <Folder Include="modern\images\20140118-290-clearance\" />
+    <Folder Include="modern\images\fm3005\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:65430/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

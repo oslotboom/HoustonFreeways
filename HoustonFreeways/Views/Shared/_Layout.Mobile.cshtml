@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutBase.Mobile.cshtml";
+}
+
+@section HeadJavaScript {
+    @RenderSection("HeadJavaScriptNested", required:false);
+}
+	<div data-role="header">
+        <div class="title-container">
+		    <div class="title-large">Houston Freeways</div>
+            <div class="title-large">@ViewBag.Heading</div>
+        </div>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">
+
+        <div class="icon-container">
+            <div>
+                <div class="icon">
+                    <a href="@Url.Action("index")">
+                        <span style="background-image: url('@Url.Content("~/images/mobile/home.png")')"></span>
+                    </a>
+                </div>
+
+                @if (@ViewBag.Action != "chapters") {
+                <div class="icon">
+                    <a href="@Url.Action("/chapters")">
+                        <span style="background-image: url('@Url.Content("~/images/mobile/book.png")')"></span>
+                    </a>
+                </div>
+                }
+                @if (@ViewBag.Action != "author") {
+                <div class="icon" >
+                    <a href="@Url.Action("/author")">
+                        <span style="background-image: url('@Url.Content("~/images/mobile/head.png")')"></span>
+                    </a>
+                </div>
+                }
+                @if (@ViewBag.Action != "about") {
+                <div class="icon" >
+                    <a href="@Url.Action("/about")">
+                        <span style="background-image: url('@Url.Content("~/images/mobile/about.png")')"></span>
+                    </a>
+                </div>
+                }
+            </div>
+        </div>
+
+       <div>
+         @RenderBody()
+           </div>
+	</div><!-- /content -->
+	
+
+
+

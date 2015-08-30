@@ -1,0 +1,1426 @@
+﻿@{
+    ViewBag.Title = "Five-Year-Retrospective";
+    Layout = "~/Views/Shared/_LayoutBase.cshtml";
+}
+
+<a href="@Url.Action("Index", "Home")">
+    <div class="Header">
+        <img src="@Url.Content("~/images/desktop/Houston_Freeways_title_header.png")" />
+    </div>
+</a>
+<div class="retrospective_gradient">
+    <div class="bodyshell_retrospective">
+
+
+
+        <div style="height=282px;" class="retrospective_background">
+            <table>
+                <tr>
+                    <td style="width: 220px; height: 282px;" valign="top" align="center">
+
+                        <img src="@Url.Content("~/images/desktop/retrospective/5th_anniversary_shield.png")" />
+                        <br />
+                        <br />
+                        <a href="@Url.Action("Index", "Home")" style="color: #FFFF00; font-size:0.7em; font-family: Verdana, Sans-Serif; font-weight: bold;" class=linkimage>Home Page</a>
+
+
+                    </td>
+                    <td style="width: 605px; padding-left: 16px;" valign="middle" align="left">
+
+                        <div class="retrospective_title">
+                            Five-Year Retrospective
+                        </div>
+                        <div class="retrospective_subtitle">
+                            What has happened since <em>Houston Freeways</em> was published
+                        </div>
+                        <div style="padding-top: 30px; text-align: left;" class="retrospective_text">
+                            <div><em>September 20, 2008</em></div>
+                            When <b>Houston Freeways</b> was published on September 15, 2003, Houston was poised for a 
+                            freeway and tollway construction boom. It was an amazing five-year run for Houston's freeways as
+                            the boom played out, culminating with the completion of Houston's crown jewel, the Katy Freeway,
+                            dedicated on October 28, 2008.
+                            <br />
+                            <br />
+                            We experienced the glory days, and for that we are thankful. But busts typically follow booms, and Houston's freeway construction program collapsed in 2008,
+                            with little hope for a meaningful resurgence. As the saying says, "the past was much more fun". &nbsp;&nbsp; 
+                            <br />
+                            &nbsp;
+                        </div>
+
+
+                    </td>
+
+                </tr>
+
+            </table>
+        </div>
+        <!-- end div class retrospective_background -->
+
+        <div style="width: 755px; background-color: #EEEE00; padding: 8px 25px 8px 25px; color: red; font-family: sans-serif; font-size: .95em;">
+            NOTE: Some of the information in this article has become obsolete since its original posting in September 2008
+        </div>
+
+        <br />
+        <br />
+        <div style="width: 805px;">
+
+
+            <table class="retrospective" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="top" style="width: 230px;"><a href="#newimprovedfwy" class="linkdarkgreensmall linkimage">New and Improved Freeways</a></td>
+                    <td>
+                        <a href="#10w" class="linkretrospective">Katy&nbsp;Freeway&nbsp;(I-10&nbsp;W)</a> &nbsp;
+            <a href="#nasa1" class="linkretrospective">Nasa&nbsp;1&nbsp;Bypass</a> &nbsp;
+            <a href="#causeway" class="linkretrospective">I-45&nbsp;Galveston&nbsp;Causeway</a> &nbsp;
+            <a href="#crosby" class="linkretrospective">Crosby&nbsp;Freeway&nbsp;(US&nbsp;90)</a> &nbsp;
+            <a href="#grandparkway" class="linkretrospective">Grand&nbsp;Parkway&nbsp;(SH&nbsp;99)</a> &nbsp;
+            <a href="#sw" class="linkretrospective">Southwest&nbsp;Freeway&nbsp;(US&nbsp;59&nbsp;S)</a> &nbsp;
+            <a href="#westloop" class="linkretrospective">West&nbsp;Loop&nbsp;(I-610)</a> &nbsp;
+            <a href="#north" class="linkretrospective">North&nbsp;Freeway&nbsp;(I-45&nbsp;N)</a> &nbsp;
+            <a href="#eastex" class="linkretrospective">Eastex&nbsp;Freeway&nbsp;(US&nbsp;59&nbsp;N)</a> &nbsp;
+            <a href="#northwest" class="linkretrospective">Northwest&nbsp;Freeway&nbsp;(US&nbsp;290)</a> &nbsp;
+            <a href="#northbelt" class="linkretrospective">North&nbsp;Belt&nbsp;(BW&nbsp;8)</a> &nbsp;
+            <a href="#otherfreeway" class="linkretrospective">Others</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><a href="#newimprovedtollway" class="linkdarkgreensmall linkimage">New and Improved Tollways</a></td>
+                    <td>
+                        <a href="#westpark" class="linkretrospective">Westpark&nbsp;Tollway</a> &nbsp;
+              <a href="#fortbend" class="linkretrospective">Fort Bend&nbsp;Parkway</a> &nbsp;
+              <a href="#samhouston" class="linkretrospective">Sam&nbsp;Houston&nbsp;Tollway</a> &nbsp;
+              <a href="#grandparkwayeast" class="linkretrospective">Grand&nbsp;Parkway&nbsp;section&nbsp;I-2</a> &nbsp;
+              <a href="#hardy" class="linkretrospective">Hardy&nbsp;Toll&nbsp;Road</a> &nbsp;
+          
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><a href="#underway" class="linkdarkgreensmall linkimage">Underway</a></td>
+                    <td>
+                        <a href="#i45conroe" class="linkretrospective">I-45&nbsp;in&nbsp;Conroe</a> &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><a href="#comingsoon" class="linkdarkgreensmall linkimage">Coming Soon</a></td>
+                    <td>
+                        <a href="#hardyextension" class="linkretrospective">Hardy&nbsp;Toll&nbsp;Road&nbsp;extension</a> &nbsp;
+              <a href="#samhoustonne" class="linkretrospective">Sam&nbsp;Houston&nbsp;Tollway&nbsp;Northeast</a> &nbsp;
+              <a href="#grandparkwaye" class="linkretrospective">Grand&nbsp;Parkway&nbsp;Section&nbsp;E&nbsp;(toll)</a> &nbsp;
+              <a href="#samhoustonsw" class="linkretrospective">Sam&nbsp;Houston&nbsp;Tollway&nbsp;SW&nbsp;widening</a> &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><a href="#ontrack" class="linkdarkgreensmall linkimage">On track</a></td>
+                    <td>
+                        <a href="#gulfexpansion" class="linkretrospective">Gulf&nbsp;Freeway&nbsp;(I-45&nbsp;S)&nbsp;widening</a> &nbsp;
+              <a href="#290loop" class="linkretrospective">West&nbsp;Loop/Northwest&nbsp;Freeway&nbsp;interchange</a> &nbsp;
+              <a href="#grandparkwayefg" class="linkretrospective">Grand&nbsp;Parkway&nbsp;sections E, F, G&nbsp;(toll)</a> &nbsp;
+              <a href="#i45nwalker" class="linkretrospective">I-45&nbsp;north&nbsp;of&nbsp;Conroe</a> &nbsp;
+            
+                    </td>
+
+
+                </tr>
+                <tr>
+                    <td valign="top"><a href="#cancelled" class="linkdarkgreensmall linkimage">Cancelled</a></td>
+                    <td>
+                        <a href="#bolivar" class="linkretrospective">Galveston-Bolivar&nbsp;Bridge</a> &nbsp;
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td valign="top"><a href="#indefinitehold" class="linkdarkgreensmall linkimage">Indefinite Hold</a></td>
+                    <td>
+                        <a href="#fortbendnorth" class="linkretrospective">Fort&nbsp;Bend&nbsp;Parkway&nbsp;north&nbsp;section</a> &nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td valign="top"><a href="#uncertain" class="linkdarkgreensmall linkimage">Future Uncertain</a></td>
+                    <td>
+                        <a href="#hempstead" class="linkretrospective">Hempstead&nbsp;Tollway</a> &nbsp;
+              <a href="#northfreewayimprovements" class="linkretrospective">North&nbsp;Freeway&nbsp;improvements</a> &nbsp;
+              <a href="#downtownimprovements" class="linkretrospective">Downtown&nbsp;improvements</a> &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><a href="#political" class="linkdarkgreensmall linkimage">Political scene</a></td>
+                    <td>
+                        <a href="#funding" class="linkretrospective">Funding&nbsp;collapse</a> &nbsp;
+              <a href="#tollroad" class="linkretrospective">TxDOT-Toll&nbsp;Road&nbsp;privatization</a> &nbsp;
+              <a href="#harris" class="linkretrospective">Harris&nbsp;County</a> &nbsp;
+              <a href="#trietsch" class="linkretrospective">Gary&nbsp;Trietsch&nbsp;retirement</a> &nbsp;
+              <a href="#legends" class="linkretrospective">Old&nbsp;legends</a> &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><a href="#events" class="linkdarkgreensmall linkimage">Events</a></td>
+                    <td>
+                        <a href="#rita" class="linkretrospective">Hurricane&nbsp;Rita&nbsp;evacuation</a> &nbsp;
+               <a href="#ike" class="linkretrospective">Hurricane&nbsp;Ike</a> &nbsp;
+                    </td>
+                </tr>
+
+            </table>
+
+            <p>&nbsp;</p>
+
+            <div class="retrospective_main_text">
+
+                <div class="retrospective_section_title">
+                    <a id="newimprovedfwy" />
+                    New and Improved Freeways
+                </div>
+
+                <table width="100%">
+
+
+                    <tr>
+                        <td valign="top">
+                            <a id="10w" />
+
+                            <div class="retrospective_sidebar">Katy Freeway, I-10 west</div>
+
+
+                            Loop 610 to Katy
+
+                <div style="padding-top: 12px;">Dedicated October 2008</div>
+                        </td>
+
+
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/10_20080706_IMG_2367_retrospective_550.jpg" />
+                                <div style="font-family: Serif;">Eastbound main lanes at Silber just prior to opening, 6-Jul-2008</div>
+                            </div>
+
+                            The Katy Freeway expansion was a project of such large scale that it will likely never again be matched in the United States. (Dallas-Fort Worth has plans
+            for expansions with a comparable number of lanes, but overall corridor widths are narrower.)
+            <p />
+
+                            When <b>Houston Freeways</b> was published on September 15, 2003, the future of the Katy Freeway project was uncertain. 
+            A lawsuit attempting to stop the project was in litigation, and the project could not proceed until a favorable judgement was
+            received. An official groundbreaking ceremony was held in June 2003, since the far west section was not affected by litigation.
+             On April 9, 2004, a federal court dismissed the lawsuit, clearing the path to construction for the entire project.
+            <p></p>
+                            Right-of-way clearance and construction proceeded quickly. The project west of Highway 6 was officially dedicated on June 26, 2006, and the entire project
+            was completed in October 2008, with a dedication ceremony on October 28.
+            <p></p>
+                            Total cost of construction contracts was $1.45 billion. As of March 2005, the entire project cost including right-of-way was reported at $2.67 billion.
+             <p></p>
+                            Houston now has its crown jewel freeway. And as the book states, "All great freeway cities need a great freeway." There is no doubt, Houston is now among the freeway elite.
+             <p>&nbsp;</p>
+
+
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td valign="top">
+                            <a id="nasa1" />
+                            <div class="retrospective_sidebar">NASA 1 bypass freeway</div>
+                            Gulf Freeway to FM 270 
+                
+                <div style="padding-top: 12px;">Opened 2008</div>
+                        </td>
+
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/nasa1_200701223_IMG_0061_retrospective_550.jpg" />
+                                <div style="font-family: Serif;">Main lanes nearing completion at the east end of the bypass near existing NASA 1, 23-Dec-2007</div>
+                            </div>
+
+                            It was a long time coming. NASA announced the establishment of the Johnson Space Center in September 1961, and plans for improvements to 
+            NASA Road 1 have been in the works since the 1980s. So it was a major milestone when the contract for construction of the freeway bypass was awarded in 2004.
+            And then the contractor went bankrupt, stopping the project and delaying it for at least a year.
+            <p></p>
+                            The NASA 1 bypass freeway is the next-to-last all-new, new-location freeway to be built in Houston.
+           The Crosby Freeway (US 90) will be the last all-new freeway in Houston. All future new location facilities will be tolled.
+
+            <p></p>
+                            The first lane openings on the bypass took place in late July 2008 and the project was entirely complete by the end of 2008.
+            The project features two new direct-connection ramps to the Gulf Freeway.
+             <p>&nbsp;</p>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td valign="top">
+                            <a id="causeway" />
+                            <div class="retrospective_sidebar">I-45 Galveston Causeway</div>
+
+                            <div style="padding-top: 12px;">Dedicated November 13, 2008</div>
+                        </td>
+
+                        <td>
+
+                            <div style="padding-bottom: 3mm;">
+                                <img src="images/desktop/retrospective/causeway_20060409_IMG_1049_retrospective_550.jpg" />
+                                <div style="font-family: Serif;">Traffic on the new northbound structure, 9-April-2006</div>
+                            </div>
+                            A $136 million contract (later adjusted to $162 million) for removal of the existing causeway and construction of a new, 8-lane causeway was awarded in June 2003.
+            Work has proceeded slowly but steadily, a dedication ceremony for the completed bridge took place on November 13, 2008.
+            <p />
+                            The new causeway was not affected by Hurricane Ike, but adjacent sections of I-45 were covered with <a href="#ike">debris</a> and boats.
+            <p></p>
+
+
+                            <div style="padding-bottom: 3mm;">
+                                <img src="images/desktop/retrospective/IMG_4419_causeway_20081020_550.jpg" />
+                                <div style="font-family: Serif;">On Oct 20, 2008, the southbound main lanes were complete and awaiting striping for the November opening.</div>
+                                <p>&nbsp;</p>
+                            </div>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td valign="top">
+                            <a id="crosby" />
+                            <div class="retrospective_sidebar">US 90 Crosby Freeway</div>
+                            Loop 610 to Beltway 8
+                        </td>
+
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/crosby_retrospective_2006_12_23_IMG_2958_550.jpg" />
+                                <div style="font-family: Serif;">Construction of freeway overpass at Wallisville Road, 23-Dec-2006</div>
+                            </div>
+                            The Crosby Freeway between Loop 610 and Beltway 8 was the only remaining unbuilt freeway from Houston's original 1953 freeway plan.
+            Construction began in 2006 and is nearing completion in late 2008.
+            <p />
+                            The Crosby Freeway will also be the last all-new, "greenfield" freeway to be built in Houston. All future new-location facilities will 
+            be tolled. The only other all-new freeway lanes in the future could be built on the existing non-freeway sections of SH 146 near Seabrook/Kemah.
+                <p>
+                    <b>Update February 2013:</b> After a long delay in completion, the Crosby Freeway between Loop 610 and Beltway 8 was dedicated on 
+                    January 24, 2011
+                </p>
+                            <p>&nbsp;</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td valign="top">
+                            <a id="grandparkway" />
+                            <div class="retrospective_sidebar">SH 99 Grand Parkway</div>
+                            I-10 to Cinco Ranch Blvd
+                        </td>
+
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/sh99_construction_B_2004-11-27_550.jpg" />
+                                <div style="font-family: Serif;">Construction of Grand Parkway, 27-Nov-2004</div>
+                            </div>
+                            About two miles of new freeway main lanes on the Grand Parkway were opened in 2005. This section will be the last free main lanes
+            to be built on the Grand Parkway - all the rest will be tolled. In fact, TxDOT was planning to try to toll this short section of main 
+            lanes but the toll plans were dropped.
+            <p>
+                <b>Update February 2013: </b>Connection ramps between this section of the Grand Parkway and the Katy Freeway opened in December 2011,
+                including a very long and high ramp from IH 10 westbound to SH 99 southbound.
+            </p>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td valign="top">
+                            <a id="sw" />
+                            <div class="retrospective_sidebar">US 59 Southwest Freeway</div>
+                            At Montrose
+            <br />
+                            SH 6 to SH 99 in Sugar Land
+                        </td>
+
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/59_arches_20060812_IMG_1618_retrospective_550.jpg" />
+                                <div style="font-family: Serif;">Looking west (southbound) along the new trench from east of Montrose, 18-Aug-2006</div>
+
+                            </div>
+                            There were two major projects on US 59 since the publication of the book.
+            <p />
+                            The first project, at Montrose near downtown, is a first-of-its-kind in the United States. The freeway elevated
+            structure was demolished in February and March 2004, and the freeway was sunk into a trench with two new long-span
+            arched bridges. This is the first instance in the United States of an elevated freeway being sunk into a trench at the same location.
+            <p></p>
+                            The project was engulfed in controversy. Plans called for the US 59 through-lanes to be reduced to three in each direction during construction,
+            and nearby neighborhoods filed a lawsuit to stop the project since they feared that commuter traffic would use neighborhood streets.
+            The lawsuit was dismissed in February 2004 and the project moved forward immediately with the demolition of the Montrose elevated structure.
+            The project was completed in the summer of 2006. The impact on the nearby neighborhoods turned out to be minimal, and actual events showed that the
+            lawsuit had been frivolous.
+            
+            <p>&nbsp;</p>
+
+
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/retrospective_59s_at_university_looking_se_2005-08-13_22a.jpg" />
+                                <div style="font-family: Serif;">Looking southwest (southbound) at University in Sugar Land, 13-Aug-2006. This section was completed in 2008.</div>
+
+                            </div>
+                            The second major project on US 59 was the expansion in Sugar Land. The original four-lane freeway without frontage roads
+            now has a minimum of 8 main lanes and frontage roads and a new intersection at the Grand Parkway, opened by April 2008 (some sections opened earlier). This project is substantially complete but due to heavy water flow in the 
+            Brazos River in 2007, the 12-lane mainlane bridge is behind schedule and will be complete in 2009.
+            <p>&nbsp;</p>
+
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td valign="top" style="width: 230px;">
+                            <a id="westloop" />
+                            <div class="retrospective_sidebar">West Loop I-610</div>
+                            Southwest Freeway to Katy Freeway
+                        </td>
+
+                        <td>The West Loop was reconstructed as a "no capacity added" project. This project was result of the cancellation of plans to 
+            expand the West Loop in 1992, which was the worst setback to Houston's freeway system in the history of Houston's freeways.
+           
+            
+            <p></p>
+                            Still, the new West Loop is much better than the old West Loop, with modern ramp design, several braided ramps, and
+            more auxiliary merging lanes. Plans are moving forward for a huge expansion of the section of the West Loop between
+            I-10 and US 290, so all is not lost for the West Loop.
+             <p>&nbsp;</p>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td valign="top">
+                            <a id="north" />
+                            <div class="retrospective_sidebar">I-45</div>
+                            North of Woodlands
+                        </td>
+                        <td>The expansion of I-45 north, which has been in process since the mid-1990s, pushed northward with the section from
+            FM 1488 north of the Woodlands to Loop 336 on the south side of Conroe. The expansion was partially open in 2007 and fully complete
+            in 2008. The freeway is built to the same standards as
+            the adjacent sections: 8 main lanes with extra pavement in the median for a future HOV lane, and high-capacity frontage roads.
+            <p>&nbsp;</p>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td valign="top">
+                            <a id="eastex" />
+                            <div class="retrospective_sidebar">Eastex Freeway US 59</div>
+                            North of Kingwood
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/US59_eastex_retrospective_IMG_0008_550.jpg" />
+                                <div style="font-family: Serif;">Expansion in progress north of Kingwood Blvd, 22-Nov-2007</div>
+                            </div>
+
+                            The expansion of US 59 north, which has been in progress since the early 1990s, pushed north of Kingwood. Sections were completed in 2007 and 2008, with some remaining
+            work to be completed in 2009. The expanded freeway has 8 main lanes and modern, high-capacity frontage roads.
+            <br />
+                            <br />
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/59n_retrospective_nb_s_of_kingwood.jpg" />
+                                <div style="font-family: Serif;">Looking north, south of Kingwood Blvd, at newly widened freeway, 22-Nov-2007</div>
+                            </div>
+                            <p></p>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td valign="top">
+                            <a id="northwest" />
+                            <div class="retrospective_sidebar">US 290</div>
+                            West of Cypress
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 3mm;">
+
+                                <img src="images/desktop/retrospective/290_20060324_construction.jpg" />
+                                <div style="font-family: Serif;">
+                                    Construction on US 290 northwest of Houston, March 24, 2006
+                                </div>
+                            </div>
+                            The remaining non-freeway section of US 290, in northwest Harris County west of Cypress, was upgraded to a full freeway.
+            The work was completed in 2006 and 2007.
+            US 290 is now a full freeway from Houston to Hempstead.
+            <p>&nbsp;</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td valign="top">
+                            <a id="northbelt" />
+                            <div class="retrospective_sidebar">Beltway 8</div>
+                            At US 59 Eastex Freeway
+                        </td>
+                        <td>In 2005 four direct-connection ramps and a section of main lanes about two miles long was completed at US 59.
+            <p>&nbsp;</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td valign="top">
+                            <a id="otherfreeway" />
+                            <div class="retrospective_sidebar">Other improvements</div>
+
+                        </td>
+                        <td>The freeway section of the South Freeway SH 288 was extended southward with an overpass at Croix road. I-10 east of downtown was repaved with
+            new concrete from Waco to Wayside, although no new capacity was added. The East Loop 610 was also repaved with new concrete from 
+            the ship Channel bridge to I-10.  Two connection ramps were added to the interchange at Beltway 8/Sam Houston Tollway and SH 249, the Tomball Parkway.
+            A connector ramp was added to the insection of Beltway 8 north and the Hardy Toll Road.
+            
+            <p>&nbsp;</p>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <div class="retrospective_section_title">
+                    <a id="newimprovedtollway" />
+                    New and Improved Tollways
+                </div>
+
+                <table width="100%">
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="westpark" />
+                            <div class="retrospective_sidebar">Westpark Tollway</div>
+                            Loop 610 to Grand Parkway
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/westpark_retrospective_20030803.jpg" />
+                                <div style="font-family: Serif;">Construction at US 59, August 3, 2003</div>
+                            </div>
+
+                            Construction of the Westpark Tollway was well underway when <b>Houston Freeways</b> was published in September 2003. The first section, from
+            Loop 610 to Old Westheimer Road (about two miles west of Beltway 8) opened on May 1, 2004. The second section, from Old Westheimer to
+            Highway 6, opened October 9, 2004, and the third section from Highway 6 to FM 1464 opened on June 8, 2005.
+            The Fort Bend County section, from FM 1464 to the Grand Parkway,
+            was officially dedicated on August 17, 2005. Completion of the interchange at Beltway 8 was delayed when the original contractor
+            could not finish the work and the remaining work was assigned to a new contractor. The intechange was completed in late 2005.
+              Interchange work at the Grand Parkway was completed in the first half of 2006.
+            <p></p>
+                            While traffic on the tollway was very light in the months after the initial opening, it increased dramatically after the opening of the
+            section to the Grand Parkway in August 2005, and the tollway succumbed to traffic congestion within weeks of the August 2005 completion.
+            The Westpark tollway was a huge success - even too successful for its own good.
+                        <p></p>
+                            Traffic congestion became so serious that Harris County announced its intent to implement congestion pricing in June 2007. The
+            plan would have doubled the tolls at each plaza from $1.25 to $2.50 during peak periods. The plan resulted in a backlash from the public,
+            and the toll road authority was forced to cancel the plan for congestion pricing in July 2007.
+                                    <p></p>
+                            As of September 2008, Harris County appears to be studying traffic relief measures but I have not heard of any decisions. Traffic on the
+            Westpark Tollway is expected to ease with the completion of the Katy Freeway expansion, so perhaps the Toll Road Authority is adopting
+            a wait-and-see policy.
+                                                <p></p>
+                            The Fort Bend County Toll Road Authority has plans to extend the tollway westward from the Grand Parkway to FM 1464. As of 
+            September 2008, preliminary work is in progress. <b>Update February 2013: </b>Construction on the westward extension has not yet begun
+                but appears to be imminent.
+                                                 <p>&nbsp;</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="fortbend" />
+                            <div class="retrospective_sidebar">Fort Bend Parkway tollway</div>
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/Fort_bend_parkway_retrospective_20060314.jpg" />
+                                <div style="font-family: Serif;">Connection ramp to the parkway from US 90A, March 14, 2006</div>
+                            </div>
+                            The groundbreaking ceremony for the Fort Bend Parkway took place on May 14, 2003, and a photo of the event is included in the book on page 264.
+            As a simple and basic tollway, construction proceeded quickly and the 6.2-mile Fort Bend County section of the tollway,
+            from Beltway 8 to Highway 6, opened on August 30, 2004. The Harris County section, from Beltway 8 to US 90A-South Main, opened on
+            March 15, 2005. The tollway appears to be meeting its traffic and revenue projections.
+            <p></p>
+                            The planned extension from US 90A to connect to Loop 610 has been placed on indefinite hold due to community opposition and
+            has an uncertain future. The project is still listed in the regional plan, so I don't think the project is dead. It may be revived in the
+            future, or it may be killed.
+            <p></p>
+
+                            The Fort Bend County Toll Road Authority has plans to extend the Fort Bend Parkway westward from Highway 6. 
+            <b>Update February 2013: </b>The extension of the toll road is still in the planning phase.
+
+            <p>&nbsp;</p>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="samhouston" />
+                            <div class="retrospective_sidebar">Sam Houston tollway</div>
+                            US 59 South to I-45 North
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/bw8_2008709_retrospective.jpg" />
+                                <div style="font-family: Serif;">Widened Sam Houston Tollway northbound at Westheimer, July 11, 2008</div>
+                            </div>
+                            The Sam Houston Tollway was widened to 8 main lanes from US 59 south to I-45 north. In addition, all main lanes were rebuilt
+            in a section with severely deteriorated pavement in southwest Houston from Bissonnet to Harwin.
+            <p></p>
+
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/bw8_at_249_20040807_retrospective.jpg" />
+
+                                <div style="font-family: Serif;">
+                                    Sam Houston Tollway eastbound at SH 249, 7-Aug-2004, showing the connection ramp from
+            SH 249 under construction.
+                                </div>
+                            </div>
+
+                            Two new direct-connection ramps were added at SH 249, the Tomball Parkway. That work was in progress when the book was written
+            and completed in 2005.
+            <p>&nbsp;</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="grandparkwayeast" />
+                            <div class="retrospective_sidebar">Grand Parkway SH 99</div>
+                            Section I-2 east of Houston<br />
+                            I-10 east to FM 1405
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/grand_parkway_east_C_2005-11-27_550.jpg" />
+                                <div style="font-family: Serif;">Construction, November 27, 2005</div>
+                            </div>
+                            This section of the Grand Parkway was dedicated on February 19, 2008, and opened to traffic on March 25, 2008. 
+            Construction took a very long time - about 4 years.
+            It was funded by gasoline tax revenue and was planned
+            to be a freeway when construction began, but TxDOT's toll road iron fist took control during the construction, and tragically this
+            section of the Grand Parkway was designated a toll road. However, I received a report in September 2008 that tolls are not being collected yet.
+            <b>Update February 2013: </b>Tolls are being charged to use the road.
+            <p></p>
+                            I haven't seen
+            any traffic numbers, but informal reports suggest that traffic is extremely light on the new section and probably could not even generate enough
+            revenue to pay for the toll collection equipment.
+            <p>&nbsp;</p>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="hardy" />
+                            <div class="retrospective_sidebar">Hardy Toll Road</div>
+
+                        </td>
+                        <td>Improvements to the Hardy Toll Road were minimal in the last 5 years. Deteriorating pavement was replaced with new concrete pavement.
+            A new connection ramp from the eastbound Beltway 8 to northbound Hardy was completed in 2004.
+            <p></p>
+
+
+                            <p></p>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <a id="underway" />
+
+                <div class="retrospective_section_title">
+                    Underway
+                </div>
+
+                <table width="100%">
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="i45conroe" />
+                            <div class="retrospective_sidebar">I-45 Conroe</div>
+                            Loop 336 north to Loop 336 South
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/45n_conroe_20080711_IMG_2462_retrospective.jpg" />
+                                <div style="font-family: Serif;">Driving northbound in the construction zone, July 11, 2008 </div>
+                            </div>
+                            In 2008 work was underway to expand I-45 in Conroe to 8 main lanes. This urgently-needed project, awarded in September 2007 and costing $175 million, will help relieve the
+            serious traffic congestion on I-45.
+            <p></p>
+                            This project will be the only large-scale freeway construction project in progress in 2009 in Houston. 
+            While freeway work was ongoing just about everywhere in the Houston area in the 2003-2008 period, the <a href="#funding">collapse</a> of Houston's freeway construction
+            program has left us with only this one major project over $100 million.
+            
+            <p></p>
+                            <b>Update February 2013: </b>The project was completed in 2012 after long delays.
+                        </td>
+                    </tr>
+
+                </table>
+                <a id="comingsoon" />
+
+                <div class="retrospective_section_title">
+                    Coming Soon
+                </div>
+                <table width="100%">
+
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>With the collapse of conventional funding, the only bright spot is the likelihood of some toll projects moving forward.
+            There is a good chance these projects will begin construction in 2009 or (most likely) 2010. But, the first three of these projects have
+            been delayed again and again, so further delays are definitely possible.
+            <p>&nbsp;</p>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="hardyextension" />
+                            <div class="retrospective_sidebar">Hardy Toll Road Extension</div>
+                            Loop 610 to Downtown
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/hardy_retrospective_20060314.jpg" />
+                                <div style="font-family: Serif;">The Hardy Toll road extension will be built on this railroad corridor and the vacant land on the right. Photo: 14-March-2006</div>
+                            </div>
+                            The Hardy Toll Road downtown extension has been studied and promoted for over 20 years,
+            and in the <b>Houston Freeways</b> book I even listed the expected completion as 2007. Well, that prediction was definitely wrong.
+            It now appears that the Hardy Toll Road extension is finally going to happen. 
+            In 2007 and 2008 we have seen most of the
+            preliminary work take place: needed approvals, right-of-way acquisition, engineering, and agreements with TxDOT and the railroad.
+            The official HCTRA web site states the following
+            <p></p>
+                            <blockquote style="font-family: Serif;">
+                                Final design of the Downtown Connector project is scheduled for completion in 2009 with construction beginning soon thereafter. 
+            This project, which will link the current Hardy Toll Road into downtown Houston via US 59 and the Elysian Viaduct, should help alleviate congestion on both IH 45 and US 59, and has a total estimated cost of $300 million.
+                            </blockquote>
+                            <p></p>
+                            The project is nearly 4 miles long, making it a costly $75 million per mile for the basic 4-lane facility. Yikes! Surely right-of-way, railroad
+            relocation, and connections to the Elysian viaduct contribute heavily to the cost.
+            <p>
+                <b>Update February 2013: </b>Construction has not yet begun but HCTRA has proceeded with preliminary work including relocation of the railroad. According to the
+                <a href="https://www.hctra.org/about_construction/hardy-downtown-connector">HCTRA web site</a> the project is estimated to cost $350 million and 
+                railroad relocation is scheduled for completion in 2014.
+            </p>
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="samhoustonne" />
+                            <div class="retrospective_sidebar">Sam Houston Northeast Main Lanes</div>
+                            US 90 to US 59 North
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/bw8_end_freeway_at_90_22-may-2001_retrospective.jpg" />
+                                <div style="font-family: Serif;">The current end of the Beltway 8 main lanes just south of US 90. The toll project will extend the main lanes to US 59. Photo: 22-May-2001</div>
+                            </div>
+                            As of September 2008, the official <a href="https://www.hctra.org/about_construction/">HCTRA</a> web site states the following
+            <p></p>
+                            <blockquote style="font-family: Serif;">
+                                The Sam Houston Tollway - Beltway 8 Northeast project is a 13-mile project, extending from east of US 59 North to south of US 90A East. 
+The engineering is to be completed in Spring 2008. 
+Construction is expected to begin Summer 2009 with a Spring 2011 completion date pending an environmental assessment approval. 
+The estimated construction cost is $550 Million.
+                            </blockquote>
+                            <p></p>
+                            I don't know if the project will include connection ramps at US 90 or US 59. My best guess is that there will be ramps at US 59 but not US 90.
+            <p>
+                <b>Update February 2013: </b>The northeast section of the Sam Houston Tollway opened on February 26, 2011. Around the same time connector
+                ramps opened at the US 59/Beltway 8 interchange.
+            </p>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="grandparkwaye" />
+                            <div class="retrospective_sidebar">Grand Parkway section E</div>
+                            I-10 West to US 290
+                        </td>
+                        <td>In 2008, HCTRA was pushing hard to complete pre-construction work on this section of the Grand Parkway in west Houston from
+            I-10 West to US 290. This project is still not officially under the control of HCTRA, and an agreement
+            must be reached with TxDOT on ownership and funding.
+            <p></p>
+                            If an agreement is reached, I think we will see construction very soon, possibly as soon as 2009.
+            <p>
+                <b>Update February 2013: </b>Construction began around 2011 and section E is scheduled to open in 2013.
+            </p>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="samhoustonsw" />
+                            <div class="retrospective_sidebar">Sam Houston southwest widening</div>
+                            US 59 South to SH 288
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/8s_at_fort_bend_parkway_B_2004-11-27_retrospective.jpg" />
+                                <div style="font-family: Serif;">This section of the Sam Houston Tollway will be widened to have four main lanes in each direction. Photo: at the Fort Bend Parkway 27-Nov-2004</div>
+                            </div>
+                            As of September 2008, the official <a href="https://www.hctra.org/about_construction/">HCTRA</a> web site states the following
+            <p></p>
+                            <blockquote style="font-family: Serif;">
+                                The Sam Houston Tollway widening project, between US 59 South and State Highway 288, will add four (4) new toll lanes within a 10-mile corridor
+ of the Sam Houston Tollway in southern Harris County. Right-of-way acquisition for stormwater detention is currently underway. 
+ Completion of final design and the beginning of Phase I construction are scheduled for early 2009. 
+ This project, which will add increased capacity to the Beltway 8/Sam Houston Tollway system, has a total estimated cost of $150 million.
+                            </blockquote>
+                            <p></p>
+                            It is good to read that HCTRA is upgrading the facility to 8 main lanes, rather than taking the incremental step to 6 main lanes.
+            <p>
+                <b>Update February 2013: </b>Construction is in progress in February 2013 on the $118 million project and is expected to be complete in summer 2013. However, I don't
+                know for certain that the section will have 8 main lanes for its full length.
+            </p>
+
+                        </td>
+                    </tr>
+
+                </table>
+                <a id="ontrack" />
+
+                <div class="retrospective_section_title">
+                    On Track
+                </div>
+                <table width="100%">
+
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td>Although these projects are not imminent within 1-2 years, they are proceeding forward and should start construction within 5 years.
+            The widening of the West Loop North between I-10 west and US 290 will be a huge project and is definitely the highlight of planned
+            future work on Houston's freeways.
+            <p></p>
+                            If the funding situation improves, we could see these freeway projects accelerated and potentially more work commencing in the next five years,
+            such as the widening of US 290.
+            <p>&nbsp;</p>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="290loop" />
+                            <div class="retrospective_sidebar">West Loop North</div>
+                            I-10 West to US 290
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/610_widening_retrospective.gif" />
+                                <div style="font-family: Serif;">Excerpt from the schematic of the expanded West Loop North.</div>
+                            </div>
+                            Amid all the gloom of the funding collapse, this is the project that will keep our spirits up. This is a huge project, the kind that
+            puts a big smile on the face of a freeway enthusiast. In terms
+            of total lanes in the cross section, it will be one of the largest freeway construction projects in the United States. As far as I know, only Dallas-Fort Worth
+            has plans for projects with comparable lane counts. This project will also involve complete reconstruction of the interchange
+            at US 290. However, the ultra-wide section of freeway is short, about one mile.
+            
+            <p></p>
+                            Rather than try to describe the plans, it is best to visit the official <a href="http://my290.com/index.htm">project web site</a> and be sure to check out the
+            <a href="http://my290.com/Schematics.htm">schematics</a>, particularly <a href="http://my290.com/NR/rdonlyres/F5C12472-12C6-4BAB-9558-5918923F024F/0/us290schmOrtho_opt3_Rev_OVRL_200.pdf">this one</a>. The improved west loop will
+            have 16 main lanes, 4 lanes connecting to the planned Hempstead Toll Road, and 6 frontage road lanes.
+            <p></p>
+                            According to the official web site, "The current preliminary schedule is to begin construction by 2011 at the IH 610/US 290/Hempstead 
+            managed lanes interchange and portions of the Hempstead managed lanes between SH 6 and IH 610." The future of the Hempstead Tollway is uncertain (see <a href="#hempstead">below</a>), but 
+            this project should not be affected by the outcome of the Hempstead Tollway.
+            <p></p>
+                            This project will be a nice secondary jewel to go along with Katy Freeway crown jewel of Houston's freeway system.
+            <p>
+                <b>Update February 2013: </b>Construction is in progress in February 2013. Nearly all of the US 290 project will be under construction by the end of 2013.
+            </p>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="gulfexpansion" />
+                            <div class="retrospective_sidebar">I-45 Gulf Freeway</div>
+                            BW 8 to NASA 1
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/i45_at_nasa1_retrospective.jpg" />
+                                <div style="font-family: Serif;">Widening at NASA 1, looking northwest along the southbound main lane deck under construction, 23-Dec-2007.</div>
+                            </div>
+                            This much-needed project will widen the Gulf Freeway to 10 main lanes and 2 HOV lanes. The current work in progress
+            at NASA 1 is widening the freeway to the planned ultimate width.
+            
+            <p></p>
+                            This is a high-priority project, but funding cuts have delayed it. Most likely we will see sufficient funding to start construction
+            by 2010.
+            
+            <p>
+                <b>Update February 2013: </b>Construction is in progress in February 2013.
+            </p>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="grandparkwayefg" />
+                            <div class="retrospective_sidebar">Grand Parkway section E</div>
+                            I-10 West to US 290
+                        </td>
+                        <td>In 2008, HCTRA was pushing hard to complete pre-construction work on this section of the Grand Parkway in west Houston from
+            I-10 West to US 290, the Northwest Freeway. This project is still not officially under the control of HCTRA, and an agreement
+            must be reached with TxDOT on ownership and funding.
+            <p></p>
+                            If an agreement is reached, I think we will see construction very soon, possibly as soon as 2009.
+            <p>
+                <b>Update February 2013: </b>Construction began around 2011 and section E is scheduled to open in 2013.
+            </p>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <div class="retrospective_sidebar">Grand Parkway sections F and G</div>
+                            US 290 to US 59 North
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/grand_parkway.gif" />
+                                <div style="font-family: Serif;">
+                                    Section E will move forward first, perhaps as soon as 2009. The controversial
+            section F-2 has received a record of decision (authorizing construction), a huge accomplishment.
+                                </div>
+                            </div>
+
+
+                            This planned toll road has been highly controversial, especially in the F-2 section between SH 249 and I-45 North. But the project
+            appears to have survived, and that's a very good thing because the area is urbanizing rapidly and will soon be in dire need of the
+            Grand Parkway.
+            <p></p>
+                            On July 2, 2008, a major milestone was reached. The Segment F-2 Final Environmental Impact Statement (FEIS) was signed by the Federal Highway Administration.
+            This is huge, since F-2 has been embroiled in controversy for nearly 10 years. Previously, the section F-1 DEIS was signed
+            by the Federal Highway Administration on April 18, 2008. Segment G is still in the Draft Environmental Impact Statement phase, and we 
+            can look for final approval in the near future.
+
+            <p></p>
+                            The Grand Parkway is controlled by TxDOT, not HCTRA, and TxDOT in recent years has tried to privatize toll road projects. 
+            An agreement will need to be reached among TxDOT, HCTRA, and local governments concerning the ownership of the project.
+            If an agreement can be reached, we will likely see construction start soon.
+
+            <p>
+                <b>Update February 2013: </b>TxDOT took control of the development of this project and awarded a design-build contract.
+                On Sept. 27, 2012, the Texas Transportation Commission awarded Zachry-Odebrecht a $1.1 billion design-build agreement for sections F and G with a length of 37.8 miles. The tolled lanes will open in 2015.
+            </p>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="i45nwalker" />
+                            <div class="retrospective_sidebar">I-45 north of Conroe</div>
+                            Loop 336 to Walker County Line
+                        </td>
+                        <td>This project will add a lane in each direction. As of this writing, this multi-part project appears to be slated for contract award in the 2010-2013 period.
+           <p>
+               <b>Update February 2013: </b>Construction is in progress in 2013 and will be complete in 2013 or 2014
+           </p>
+
+                        </td>
+                    </tr>
+                </table>
+
+                <a id="cancelled"></a>
+                <div class="retrospective_section_title">
+                    Cancelled
+                </div>
+
+
+                <table>
+
+                    <tr>
+                        <a id="bolivar" />
+
+                        <td style="width: 230px;" valign="top">
+                            <div class="retrospective_sidebar">Galveston-Bolivar Bridge</div>
+
+                        </td>
+                        <td>On page 375 of <b>Houston Freeways</b> I stated: "Will the Galveston-Bolivar bridge be built? Only time will tell."
+            <p></p>
+                            Time has revealed the answer, and the bridge will not be built. The cancellation was reported on October 2, 2007. The announcement on the official web
+            page is shown below.
+            <p></p>
+                            As the official announcement indicates, everything was working against the project. The highway construction inflation surge has
+            made the project much more expensive. The Port of Houston was concerned about the vertical clearance. The existing ferry operation would
+            need to be continued even with the toll bridge, because TxDOT is required to retain free alternatives to toll roads. Also,
+            support on the Bolivar Pensinsula diminished when residents realized that the bridge could become a truck route, 
+            sending a steady stream of trucks along the peninsula on the two-lane SH 87. 
+            <p></p>
+                            The Bolivar Pensinsula was devastated by Hurricane Ike, with entire neighborhoods at Crystal Beach and Gilchrist being wiped off 
+            the map. In fact, continued erosion may even put SH 87 near High Island at risk of being swallowed by the Gulf. East of High Island,
+            SH 87 has been lost to erosion since the 1990s. The Bolivar Peninsula is no place for development, and from that perspective, the
+            cancellation is a good thing. 
+             <p></p>
+                            The image below is from the official project web site.
+             <p></p>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/bolivar_cancellation.gif" />
+                            </div>
+
+                            <p>&nbsp;</p>
+
+                        </td>
+                    </tr>
+
+                </table>
+
+                <a id="indefinitehold" />
+
+
+                <div class="retrospective_section_title">
+                    On Indefinite Hold
+                </div>
+
+
+                <table>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="fortbendnorth" />
+                            <div class="retrospective_sidebar">Fort Bend Parkway</div>
+                            From US 90A to Loop 610
+            
+                        </td>
+                        <td>This project appeared to be moving forward when the first Harris County section of the Fort Bend Parkway opened in 2005.
+            But the planned extension to Loop 610 passes alongside residential areas and, although no residences would be displaced, opposition to the project developed.
+            Harris County appears to have immediately and fully caved in to the opposition, and the latest word is that only minimal improvements
+            will be made in the corridor between US 90A and Loop 610.
+            <p></p>
+                            The project still remains on official planning documents at HGAC, so it is premature to list the project as dead. I think it is most
+            accurate to list it as being on indefinite hold. It may be resurrected in the future, or it may be killed.
+            
+            
+              <p>&nbsp;</p>
+
+                        </td>
+                    </tr>
+
+                </table>
+
+                <a id="uncertain"></a>
+                <div class="retrospective_section_title">
+                    Future Uncertain
+                </div>
+
+
+                <table>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="hempstead" />
+                            <div class="retrospective_sidebar">Hempstead Tollway</div>
+                            Loop 610 to Highway 6
+            
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/hempstead_map.png" />
+                            </div>
+                            This project appeared to a priority project for HCTRA until 2008, but it looks like the project
+            has been placed on hold due to a huge increase in the estimated construction cost, mainly due to the overall inflation
+            in highway construction costs since the original estimates were made. The bottom line is that tolls are not sufficient
+            to pay for the project, and HCTRA seems to have lost interest in the project, instead turning its attention to section E of the Grand Parkway.
+             Even without the increase in construction cost, we know from experience with the Hardy Toll Road that tollways paralleling
+            freeways get significant traffic only during peak periods, and this is often not enough to support the facility. For at least its first 15 years,
+            the Hardy Toll Road required subsidies from the Sam Houston Tollway revenue.
+            
+            
+           
+              <p></p>
+                            The special issue with the Hempstead tollway is that it is an integral part of the plan to modernize the US 290 corridor. See the
+              <a href="http://my290.com/index.htm">official web site</a>. The approved plan for corridor expansion is to remove the reversible HOV lane on US 290 and
+              place the transit and carpool traffic on the Hempstead Tollway. Shifting the HOV traffic to the Hempstead Tollway reduced the needed right-of-way on the US 290 corridor.
+              But with the approved plan to shift HOV traffic to the tollway, the
+              tollway is a critical part of the overall plan.
+              <p></p>
+                            So if the Hempstead Tollway is not financially feasible, what does that mean for plans on US 290, the Northwest Freeway? Will US 290 need to
+              be redesigned? As of September 2008, a final environmental impact statement is about to be published, and the record of decision is expected in Spring 2009.
+              If the Hempstead Tollway is cancelled, then the environmental process will need to go back into the study and public involvement phase, which could take years.
+              <br />
+                            So, it will be interesting to see what happens.
+              <p>
+                  <b>Update February 2013: </b>In 2012 plans were revealed to expedite the US 290 project by including three reversible tolled lanes in the design.
+                  Construction on nearly the entire length of the widening will be underway by the end of 2013.
+                  Officially, the Hempstead Toll Road is still part of the long-term plan for the corridor. But it is clear it won't be built anytime soon, if ever.
+              </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="northfreewayimprovements" />
+                            <div class="retrospective_sidebar">I-45 North Freeway</div>
+                            Downtown to Beltway 8
+            
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/north_hardy_study_cover.jpg" />
+                            </div>
+                            Modernization of this section of I-45 has been under study since before <b>Houston Freeways</b> was published.
+            In September 2005, the study recommendation was released, calling for the addition of four tolled lanes to I-45, and retaining the existing
+            eight free main lanes. Opposition to the project was very strong inside Loop 610, and the expansion outside Loop 610 would require
+            a major right-of-way clearance.
+            <p></p>
+                            Local engineer Gonzalo Camacho has been promoting a plan for a long <a href="http://www.i45parkway.com/i45.htm">tunnel</a> underneath I-45. 
+            Inside the Loop, locals are very supportive of a tunnel, which would be enormously expensive (billions of dollars).
+            With recent dramatic increases in construction costs, a tunnel is certain to be infeasible. In fact, TxDOT-Dallas spent 10 years
+            planning for a tunnel underneath Interstate 635 in North Dallas, but the tunnel was cancelled in November 2006 due to rising costs
+            and the inability of tolls to finance the project.
+                        <p></p>
+
+                            Since publication of the recommendation for the corridor, things have been very quiet. With the collapse in TxDOT funding, TxDOT has probably decided
+            not to pursue this project any further, since there are no funds to build it. Since I-45 already has the Hardy Toll Road to relieve it
+            and the upcoming Hardy downtown extension, TxDOT is probably going to devote available funds to the US 290 project. There is no longer a
+            link to the project study web site on TxDOT's web site. The draft recommendation is still available on the
+            <a href="http://www.h-gac.com/taq/plans_programs/mobility/documents/north_hardy.pdf">HGAC</a> web site (24 MB link).
+            <p></p>
+                            So, the future of North Freeway improvements is definitely uncertain. The only thing that is certain is that nothing is going to happen
+            anytime soon.
+           <p>
+               <b>Update February 2013: </b>In 2013 planning for the expansion from downtown to Beltway 8 resumed. Construction is not imminent, but the project
+               is moving forward. <a href="http://www.ih45northandmore.com/">Official web site</a>
+           </p>
+
+
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="downtownimprovements" />
+                            <div class="retrospective_sidebar">Downtown Bottlements</div>
+                            I-45 Pierce Elevated<br />
+                            US 59, SH 288 to Spur 527
+            
+                        </td>
+                        <td>The Interstate 45 Pierce Elevated is the most serious bottleneck in the downtown Houston freeway complex, and
+            the 6-lane section of US 59 between SH 288 and Spur 527 ranks a close second. 
+            <p></p>
+                            As far as I know, there has been no progress toward plans to relieve these bottlenecks. Any effort to improve I-45 will
+            certainly be accompanied by demands by certain interests to trench or tunnel the freeway, an enormously costly option. An influential downtown
+            Houston business group recommended a westward realignment of I-45 north of Buffalo Bayou (while still retaining an elevated structure),
+            and that, too, would be costly. So (to borrow some slang English), I think TxDOT has just decided to not even go there. The demise of the
+            I-45 north study (see above) has also contributed to the lack of progress, since widening I-45 downtown may not make sense without widening to the north. But in leaving
+            everything as-is, we are permanently stuck with the critical bottleneck.
+            <p></p>
+                            The narrow section of US 59 is not a lightning rod for controversy, and it seems like it could be widened without a major public
+            controversy. Still, I am not aware of any progress on plans for bottleneck relief.
+            
+          <p>
+              <b>Update February 2013: </b>Options for relief of downtown traffic are being studied as part of the 
+              <a href="http://www.ih45northandmore.com/">Interstate 45 study.</a>
+          </p>
+
+                        </td>
+                    </tr>
+
+                </table>
+                <p></p>
+                <a id="political" />
+                <div class="retrospective_section_title">
+                    Political Scene
+                </div>
+                <table>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="funding" />
+                            <div class="retrospective_sidebar">Funding Collapse</div>
+                            <br />
+
+
+                        </td>
+                        <td>In 1990s through 2001, the average annual TxDOT Houston district funding was <b>$615.58 million</b>, with funding for any particular year usually within $100 million of the average.
+             The funding boom started in 2003, when annual funding first reached <b>$1 billion</b>, followed by around <b>$900 million</b> in 2004 and another <b>$1 billion</b> in
+             2005. TxDOT's Houston district chief engineer, Gary Trietsch, became known as the billion dollar man. This funding boom financed the Katy
+             Freeway project, as well as all the other freeway projects included in this retrospective.
+            <p></p>
+                            But the funding collapse has been swift and stunning. In fiscal year 2008, which ended in August 2008, the Houston district had
+            funding authority of only $340 million, and only <b>$184 million</b> went to new contracts for highway construction. (This was reported by Trietsch
+            at the August, 22, 2008 meeting of the HGAC Transportation Policy Council). When you further consider the dramatic increase in highway construction
+            costs in the last few years, reported around 60% in the last 5 years, the effective funding for the Houston district has been
+            reduced by an order of magnitude - reduced to one-tenth of what it once was.
+            <p></p>
+                            As further evidence of the extent of the collapse, the September 12, 2008, construction status report on the TxDOT web site
+            showed that construction contracts in the Houston district were 81% complete, compared to 67% complete statewide.
+            The percent complete is around 50% when new contracts being awarded equal projects that are being completed. 
+            When the percent complete is at 81%, it indicates a <em>very</em> mature construction program, with very few new projects to offset
+            the projects that are being completed. Most likely we will see the value go higher than 81% because there is nothing in the pipeline
+            and several large contracts are completing in the next few months.
+            <p></p>
+                            As of this writing, it is uncertain if and when the funding situation will improve. There is talk and hope of action at the Texas state legislature
+            or in the United States congress in 2009. At the state level, discussion of strengthening funding is focusing on up to $8 billion in bonds, with
+            $5 billion backed by general state revenue (not gasoline tax) approved by voters in November 2007. Diversions of gasoline tax funds from highway construction
+            to the Department of Public Safety may also be reduced or eliminated. Even in a best-case scenario, the scale of work will not be anything near the 2003-2008 boom,
+            but we may see more work proceed than is currently anticipated as of this writing.
+            <p></p>
+                            Like the saying says, "the past was much more fun". We saw the glory days in 2003-2008, and who knows, we may never see glory days again.
+          <p>
+              <b>Update February 2013: </b>After greatly reduced funding in the 2008-2012 period, it is expected that TxDOT will award around $1.1 billion in contracts in 2013, mostly
+              for the US 290 project. In September 2012 a $1.1 billion design-build contract was awarded for the construction of sections F and G of the Grand Parkway.</a>
+          </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="tollroad" />
+                            <div class="retrospective_sidebar">Toll Roads and Privatization</div>
+                            <br />
+
+
+                        </td>
+                        <td>During this five-year period, Governor Perry directed his appointees on the Texas Transportation Commission to drastically
+            alter the way Texas pays for highway construction. In short, Perry wants to turn everything possible into a toll road. He
+            authorized his chief henchman, commission chairman Ric Williamson (who died in December 2007), to unleash the toll road juggernaut and steamroll local interests
+            that voiced any objections. Empowered by far reaching legislation (HB-3588) passed in 2003, Williamson was ready and willing to rule with
+            an iron fist to achieve Perry's objectives of privatizing as much highway construction as possible, and using gimmicks such
+            as concession fees which private firms would pay for the right to collect tolls on a toll road.
+            <p></p>
+                            TxDOT's policies have generated tremendous controversy and opposition statewide, especially in Austin, San Antonio, and the Dallas area.
+            In 2007, the Texas Legislature passed legislation (which became law) which placed some temporary limits on TxDOT's ability to
+            privatize highways. 
+            <p></p>
+                            Controversy in Houston was less than what occurred in other parts of Texas. The most controversial action by TxDOT in the Houston area
+            was TxDOT's effort to turn the freeway section of SH 249, the Tomball Parkway, into a tollway in 2004. This would have been the first
+            instance of a freeway being turned into a tollway in Texas and the United States. There was tremendous opposition, and TxDOT dropped
+            the tolling plan in October 2004.
+            <p></p>
+                            Construction on section I-2 of the Grand Parkway (SH 99) was started in 2004 as a freeway using conventional gasoline tax funds. However, during construction the
+            project was converted into a toll road. TxDOT also attempted to convert a short, new section of the Grand Parkway in west Houston into a toll road,
+            but it dropped those plans when opposition surfaced.
+            
+            <p></p>
+                            The 2007 legislation granted HCTRA the right to control many of the planned toll road projects in Harris County. The projects included
+            the northeast section of the Sam Houston toll road (planned for construction), the Hempstead toll road (future uncertain), and the
+            extension of the Fort Bend Parkway (on indefinite hold). This meant that
+            TxDOT could not force these projects to be privatized.
+            <p></p>
+                            However, the Grand Parkway remains under TxDOT's control. As of this writing, it is unclear who will develop the Grand Parkway: HCTRA, 
+            TxDOT, or a private firm.
+          <p>
+              <b>Update February 2013: </b>No projects in Houston have been privatized yet.</a>
+          </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="harris" />
+                            <div class="retrospective_sidebar">Harris County</div>
+                            <br />
+
+
+                        </td>
+                        <td>When the book was written in 2003, Harris County government under the leadership of Judge Robert Eckels, who was the leading advocate of mobility
+            investments in the region. Robert Eckels abruptly resigned as Harris County Judge on February 15, 2007, just two months into his new
+            four-year term. As of September 2008, Eckels is with the Fulbright &amp; Jaworski law firm, and in August 2008 he was promoting the construction
+             of high speed rail in Texas.
+            
+            <p></p>
+                            It was certainly a loss to lose a transportation advocate in an influential position. But the good news is that Eckels was replaced
+            by Ed Emmett, a former Houston-area state representive who had a consulting business in transportation issues. Emmett is viewed
+            as a transportation expert, and he is continuing the pro-investment, pro-mobility policies of his predecessor. In practice, this means that
+            the Harris County Toll Road Authority (HCTRA) will continue its toll road investment program to the greatest extent possible.
+            However, construction cost increases, public opposition (particularly on the Fort Bend Parkway extension), diversion of about $150 million per year
+            of toll road revenue to non-tollway projects, and TxDOT's
+            efforts to control toll projects have combined to greatly lower expectations of what HCTRA can achieve.
+            <p></p>
+                            Emmett faces a potentially difficult election in November 2008. His continued presence will be crucial to maintaining Harris County's
+            pro-mobility policies.
+            <br />
+                            <b>Update (Nov 9, 2008):</b> Emmett won the election with 53.2% of the vote. He will complete the remaining two years of the four-year term that he
+            was appointed to after the departure of Robert Eckels.
+            <p>
+                <b>Update February 2013: </b>Ed Emmett was re-elected in 2012.
+            </p>
+
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="trietsch" />
+                            <div class="retrospective_sidebar">Gary Trietsch retirement</div>
+                            <br />
+
+
+                        </td>
+                        <td>Gary Trietsch served as the administrative head of the TxDOT Houston office from 1995 until his retirement on August 31, 2008.
+            Trietsch is credited with moving the projects included in the 2003-2008 boom to construction. He was knicknamed the billion-dollar man,
+            in recognition of the annual Houston district contruction budget which was near or above $1 billion dollars from 2003 to 2005.
+             On his retirement, he received numerous commendations for his service.
+            <p></p>
+                            As of September 18, 2008, I am not aware of the announcement of a replacement.
+
+            <p></p>
+                            What does this mean for Houston's freeways? Trietsch certainly proved to be very capable of moving large and controversial projects
+            to construction. He will be missed. The question is: will his replacement be equally capable? Will his replacement be a toll-road zealot, 
+            picked by Governor Perry to implement a toll agenda? We should know soon.
+<br />
+                             <b>Update (Dec 12, 2014):</b> Gary Trietsch became director of the Harris County Toll Road Authority in August 2014. In 2014, Michael Alford serves as the head of the Houston District.
+                           
+             <p>&nbsp;</p>
+
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="legends" />
+                            <div class="retrospective_sidebar">Old Legends</div>
+                            Jon Lindsay
+            <br />
+                            Bob Lanier
+            <br />
+                            Doug Pitcock
+            
+                        </td>
+                        <td>Jon Lindsay and Bob Lanier were designated by <b>Houston Freeways</b> as leaders of the second wave of Houston Freeway construction which
+            took place in the 1980s. Doug Pitcock was the hidden power behind Houston freeways, working behind the scenes to build
+            political support and funding for Houston. Only 80-year-old Pitcock remains active on the transportation scene, still running
+            his construction firm Williams Brothers Construction.
+            
+            <p></p>
+                            Jon Lindsay retired from his position as State Senator at the end of 2006 and is no longer actively involved in politics. 
+            As a moderate, progressive Republican, he was marginalized by the conservative leadership in the Senate and his tenure as 
+            State Senator was generally not productive. He leaves a large and lasting imprint on Houston's transportation system with his pro-mobility
+            policies and his founding of the Harris County Toll Road Authority in 1983.
+
+            <p></p>
+                            Bob Lanier, who turned 83 in 2008, remains active in his real estate business. He also still has some involvement in politics and academics, and
+            in recent years has opposed restrictions on Houston's development industry. However, his days of being influential in transportation
+            issues are long gone.
+                                        <br />
+                            <b>Update (Dec 12, 2014):</b> Lanier died on December 20, 2014, at the age of 89.
+            <p></p>
+                            Doug Pitcock remains active on the scene. However, it is not clear to me if his level of involvement and influence remains at the same level it was
+            at the time <b>Houston Freeways</b> was written. My perception is that he may be less engaged than in years past. His construction
+            firm has dominated the highway construction scene in Houston, building most of the Katy Freeway and the majority of other large projects
+            in the Houston area. With the collapse of construction funding in Houston, Williams Brothers could be seeing some tough times ahead.
+            Pitcock has expanded Williams Brothers to do work outside of Houston, including recent work in Dallas. Williams Brothers is the contractor
+            for the "signature" bridge designed by renowned architect Santiago Calatrava on Spur 366 over the Trinity River just northwest of downtown
+            Dallas. The bridge project faced serious problems in 2006 when the lowest bid, $113 million by Williams Brothers, was 98% over
+            the estimate. Williams Brothers worked with Calatrava and local officals to reduce the cost. In the second round of bidding Williams 
+            Brothers, the only bidder, was able to reduce the cost to $70 million, allowing the project to move forward. Dallas will get its signature
+            bridge because of Williams Brothers, and Pitcock will have another distinctive project to his credit.
+            <p>
+                <b>Update February 2013: </b>Williams Brothers has remained busy with highway and toll road construction work during the 2008-2012 period,
+                and I am not aware of any downsizing during the period. Pitcock continues to own and run the company.
+            </p>
+
+                        </td>
+                    </tr>
+
+                </table>
+                <a id="events" />
+
+                <div class="retrospective_section_title">
+                    Events
+                </div>
+                <table>
+
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="rita" />
+                            <div class="retrospective_sidebar">Hurrican Rita Evacuation</div>
+
+                            Sept 22, 2005
+            
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/traffic_jam_rita.jpg" />
+                                <div style="font-family: Serif;">The horrendous traffic backup on I-45 north near the Woodlands during the Rita evacuation.</div>
+
+                            </div>
+                            The evacuation for Hurricane Rita, which took place on September 21 and 22, 2005, was by far the most colossal traffic jam to ever
+            occur in Houston. The epic backup may have been biggest traffic jam in the history of the United States, and it was surely the most deadly in modern U.S. history.
+             At least 2.5 million people
+            evacuated out of Houston, causing unbelievable traffic jams on the Katy, Northwest, and North freeways. The inbound lanes on the North and Katy
+            Freeways were reversed to handle outbound traffic, but that still wasn't enough.
+             Horror stories abounded 
+            from just about anyone involved in the evacuation - incredibly long drives to nearby cities, lack of food and water, fuel shortages,
+            sleep deprivation, heat exposure, and medical emergencies were some the adversity evacuees had to deal with.
+            
+            <p></p>
+                            I couldn't find the final number for the death toll, but reports in the Houston Chronicle stated the evacuation death toll to be in the range
+            of 107 to 137.
+            <p>&nbsp;</p>
+
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 230px;" valign="top">
+                            <a id="ike" />
+                            <div class="retrospective_sidebar">Hurricane Ike</div>
+
+                            September 12-13, 2008
+            
+                        </td>
+                        <td>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/45_ike_debris.jpg" />
+                                <div style="font-family: Serif;">I-45 southbound near the Texas City Y after Hurricane Ike.</div>
+
+                            </div>
+                            Category-2 storm Ike was the strongest storm to hit the Houston area since Alicia in 1983. 
+                            After the Hurricane Rita evacuation debacle, most Houstonians not in a storm surge zone wisely stayed at home.
+                            Some coastal areas, particular the Bolivar Peninsula, were
+                            devastated, with near-total destruction in some beachside communities. In Houston damage was mostly low-to-moderate, with pervasive tree failures the main problem.
+                            Loss of power was the biggest inconvenience to most Houstonians.
+            
+                            <p></p>
+                                            In terms of freeways, most of the trenched freeways which flood during storms flooded during Ike. However, the amount of water in the freeway trenches
+                            was less than what was seen in previous storms, such as Tropical Storm Allison. There was no structural damage to any Houston freeways.
+                            <p></p>
+                                            Interstate 45 near Galveston was covered with debris and displaced boats. (See photos above and below.)
+                            <p></p>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/45_ike_boats_aerial.jpg" />
+                                <div style="font-family: Serif;">Wayward boats settled on I-45 after the storm surge.</div>
+
+                            </div>
+                            <p></p>
+                            <div style="padding-bottom: 4mm;">
+                                <img src="images/desktop/retrospective/45_ike_aerial_debris.jpg" />
+                                <div style="font-family: Serif;">Debris on I-45.</div>
+
+                            </div>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+
+                        </td>
+                    </tr>
+                </table>
+                <div style="clear: both;">&nbsp;</div>
+
+            </div>
+            <!-- end class bodyshell_retrospective -->
+
+        </div>
+        <!-- end div class retrospective gradient -->

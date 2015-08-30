@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<photoPage>
+  <folderPath>libya-1965-photos</folderPath>
+  <pageTitle>Libya photos 1964 and 1965</pageTitle>
+  <pageCreated>5-September-2014</pageCreated>
+  <lastUpdated></lastUpdated>
+  <photosTaken>1965</photosTaken>
+  <description>Color photos of Libya taken in 1965, including Tripoli, Garyan and Tarhuna </description>
+  <text>
+    <![CDATA[
+    <p>
+    My father worked his career in the oil industry and in 1964-1965 he was posted in Libya. At that time the country was ruled by King Idris and was friendly to western countries, with close ties to the United States and Great Britain.
+    Muammar Gaddafi took control of the country in 1969.
+    </p>
+    <p>
+      I recently found these photos taken by my father during his time in Libya.
+     </p>
+
+    ]]>
+  </text>
+  <images>
+
+    <image>
+      <file>libya_map.jpg</file>
+      <highResolution></highResolution>
+      <caption></caption>
+      <imageDate></imageDate>
+
+    </image>
+    <image>
+      <file>tripoli_election_april_1965_AD_1180.jpg</file>
+      <highResolution>tripoli_election_april_1965_ADJ_3200.jpg</highResolution>
+      <caption>This April 1965 photo shows election banners installed across a street in Tripoli.</caption>
+      <imageDate></imageDate>
+    </image>
+    <image>
+      <file>tripoli_port_dec_1965_1180.jpg</file>
+      <highResolution></highResolution>
+      <caption>The waterfront in Tripoli.</caption>
+      <imageDate>December 1965</imageDate>
+    </image>
+    <image>
+      <file>tripoli_m_cotts_april_1965 copy_ADJ_1180.jpg</file>
+      <highResolution></highResolution>
+      <caption>
+        This office building in Tripoli was where both my parents worked. My mother worked for Mitchell Cotts shipping.
+      </caption>
+      <imageDate>April 1965</imageDate>
+    </image>
+    <image>
+      <file>tripoli_mosque_1_kodachrome_1180.jpg</file>
+      <highResolution></highResolution>
+      <caption>This slide showing a mosque was not identified or dated. It is probably in Tripoli.</caption>
+      <imageDate></imageDate>
+    </image>
+    <image>
+      <file>excavation_nov_1965_ADJ_1180.jpg</file>
+      <highResolution></highResolution>
+      <caption>An unidentified archaeological site along the Mediterranean.</caption>
+      <imageDate>November 1965</imageDate>
+    </image>
+    <image>
+      <file>tarhuna_april_1965_c_ADJ_1180.jpg</file>
+      <highResolution></highResolution>
+      <caption>A mosque in Tarhuna.</caption>
+      <imageDate>April 1965</imageDate>
+    </image>
+    <image>
+      <file>tarhuna_april_1965_b_kodachrome_ADJ_1180.jpg</file>
+      <highResolution></highResolution>
+      <caption>Another view of the mosque in Tarhuna.</caption>
+      <imageDate>April 1965</imageDate>
+    </image>
+    <image>
+      <file>garian_april_1965_e_ADJ_1180.jpg</file>
+      <highResolution></highResolution>
+      <caption>Garian. This type of landscape is similar to what you can find in many places throughout the southwest United States.</caption>
+      <imageDate>April 1965</imageDate>
+    </image>
+    <image>
+      <file>garian_april_1965_d_ADJ_1180.jpg</file>
+      <highResolution></highResolution>
+      <caption>Pottery vendor in Garian.</caption>
+      <imageDate>April 1965</imageDate>
+    </image>
+    <image>
+      <file>garian_april_1965_c_ADJ_1180.jpg</file>
+      <highResolution></highResolution>
+      <caption>Garian, with a gathering of locals in the background.</caption>
+      <imageDate>April 1965</imageDate>
+    </image>
+  </images>
+</photoPage>

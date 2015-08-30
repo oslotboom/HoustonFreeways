@@ -1,0 +1,68 @@
+<div class="FullPageWidth">
+    
+    <div class="MainArea">
+        
+        <div class="TopZone" >
+
+              <div class="BookCover FL" style="margin-right:6mm;" >
+                  <div class="Text-Center" style="width: 100%" >
+                      <div >
+                        <img alt="Book Cover" src="@Url.Content("~/Images/Desktop/birthday_candle_ten.png")" />
+
+
+                      </div>
+                  </div>
+                <img alt="Book Cover" src="@Url.Content("~/Images/Desktop/balloons.png")" />
+            </div>
+            <div class="FL" style="width:500px;" >
+                <img alt="Book Cover" src="@Url.Content("~/Images/Desktop/Houston_Freeways_title.png")" />
+                <div class="author">by <a id="authorName" href="#"><span class="authorHeading">Oscar Slotboom</span></a></div>
+                <div class="TextArea">
+                    On September 30, 1948, a crowd of Houstonians gathered on a Gulf Freeway overpass to witness the dedication of Houston's first freeway. 
+                    Houston's freeway journey began. Houston Freeways traces the history and influence of the freeway system with extensive photography, fascinating stories, remarkable people and time capsules to the past. 
+
+                </div>
+
+                <div class="TextArea">
+                    <div class="ChaptersTitle Text-Center"><img src="@Url.Content("~/Images/Desktop/View_the_book.png")" /></div>
+                    <table class="chapterTable" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <th></th>
+                        <th>Pages</th>
+                        <th>Low Res<br />Size, MB</th>
+                        <th>High Res<br />Size, MB</th>
+                    </tr>
+                    
+                    @foreach (HoustonFreewaysNew.Models.DownloadItem chapter in Model.Chapters)
+                    {
+                    <tr>
+                        <td>@chapter.Title<br />@chapter.Description</td>
+                        <td align="center">@chapter.PageCount</td>
+                        <td align="center"><a target="_blank" class="" href="@chapter.PdfFileSmall" title="Download size, MB" >@chapter.PdfFileSmallSizeMB</a></td>
+                        <td align="center"><a target="_blank" class="" href="@chapter.PdfFileLarge" title="Doanload size, MB" >@chapter.PdfFileLargeSizeMB</a></td>
+
+                    
+                    </tr>
+
+                    }
+                        <tr>
+                            <th colspan="4" align="center"><span style="font-family: Verdana, sans-serif; letter-spacing: 1px;">Freeway Excerpts</span> </th>
+                            
+
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="FL" style="width:250px;" >
+                <a href="test">Used copies on Amazon</a>
+                <a href="test">Aerial Challenge</a>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div>

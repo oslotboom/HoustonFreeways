@@ -1,0 +1,120 @@
+﻿
+body {
+
+    font-size: 1.0em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-fix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.icon-div {
+    padding: 0 8px 0 8px;
+}
+.icon-div-container {
+    width: 100%;
+    text-align: center;
+}
+
+.title-container {
+width: 100%;
+text-align: center;
+}
+.title-large {
+    font-size: 1.6em;
+    letter-spacing: 1.5px;
+}
+.title-medium {
+    font-size: 1.2em;
+}
+.title-small {
+    font-size: 1.1em;
+}
+.image-div {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.home-text {
+    margin-top: 0px !important;
+    padding-bottom: 10px !important;
+}
+
+/*Override JQuery Mobile styles*/
+.ui-collapsible-content .ui-listview-inset  {
+    margin-top: 0 !important;
+}
+
+.ui-body-a .ui-link {
+    color: #99E3FC !important;
+}
+
+.ui-body-a .ui-link:visited {
+    color: yellow !important;
+}
+
+DIV.icon-container {
+    clear: both;
+    padding-bottom: 10px;
+    overflow: hidden;
+
+}
+DIV.icon {
+    width: 33.3%;
+    height: 80px;
+    float: left;
+    text-align: center;
+}
+DIV.icon span {
+    display: inline-block;
+    height: 70px;
+    width: 84px;
+    margin: 4px auto;
+    background-color: rgb(0,82,37);
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 4px 1px #333;
+    box-shadow: 0 0 4px 1px #333;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*
+.ui-bar.ui-bar-a {
+    height: 100% !important;
+}
+    */
+
+.infoGrid {
+        overflow: hidden;
+}
+
+.infoGrid DIV {
+    float: left;
+
+}
+
+.infoGrid DIV:nth-child(2n+1) {
+    clear: left;
+    width: 36%;
+}
+.infoGrid DIV:nth-child(2n+2) {
+    width: 60%;
+    padding-left: 6px;
+
+}

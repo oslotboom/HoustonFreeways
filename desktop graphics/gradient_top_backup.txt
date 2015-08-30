@@ -1,0 +1,41 @@
+        /* IE10 Consumer Preview */ 
+    background-image: -ms-linear-gradient(top left, #005DC7 0%, #0546A8 40%, #0546A8 60%, #005DC7 100%);
+
+    /* Mozilla Firefox */ 
+    /*background-image: -moz-linear-gradient(top left, #005DC7 0%, #0546A8 40%, #0546A8 60%, #005DC7 100%); background-image: -moz-linear-gradient(top left, #009444 0%, #004A24 100%); */
+    background-image: -moz-linear-gradient(top left, #009040 0%, #004420 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top left, #BBB 0%, #ddddf0 25%, #eeeeF2 45%, #eeeeF2 75%, #BBB 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #BBB), color-stop(0.25, #ddddf0), color-stop(.45, #eeeeF2), color-stop(.75, #eeeeF2), color-stop(.75, #BBB));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top left, #BBB 0%, #ddddf0 25%, #eeeeF2 45%, #eeeeF2 75%, #BBB 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: linear-gradient(to bottom, #004A24  0%, #009444 100%);
+
+
+
+header original
+
+        /* IE10 Consumer Preview */ 
+    background-image: -ms-linear-gradient(top left, #005DC7 0%, #0546A8 40%, #0546A8 60%, #005DC7 100%);
+
+    /* Mozilla Firefox */ 
+    /*background-image: -moz-linear-gradient(top left, #005DC7 0%, #0546A8 40%, #0546A8 60%, #005DC7 100%); background-image: -moz-linear-gradient(top left, #009444 0%, #004A24 100%); */
+    background-image: -moz-linear-gradient(top left, #009040 0%, #004420 100%);
+
+    /* Opera */ 
+    background-image: -o-linear-gradient(top left, #BBB 0%, #ddddf0 25%, #eeeeF2 45%, #eeeeF2 75%, #BBB 100%);
+
+    /* Webkit (Safari/Chrome 10) */ 
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #BBB), color-stop(0.25, #ddddf0), color-stop(.45, #eeeeF2), color-stop(.75, #eeeeF2), color-stop(.75, #BBB));
+
+    /* Webkit (Chrome 11+) */ 
+    background-image: -webkit-linear-gradient(top left, #BBB 0%, #ddddf0 25%, #eeeeF2 45%, #eeeeF2 75%, #BBB 100%);
+
+    /* W3C Markup, IE10 Release Preview */ 
+    background-image: linear-gradient(to bottom, #00401A  0%, #005430 100%);

@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutBase.cshtml";
+}
+
+<a href="@Url.Action("Index", "Home")">
+    <div class="Header">
+        <img src="@Url.Content("~/images/desktop/Houston_Freeways_title_header.png")" />
+    </div>
+</a>
+<DIV class="previewDiv">
+    <div class="previewCenter">
+
+@{
+    //stringif (ViewBag.Preview.ToString()=="1")
+
+    string pageTitle = "Houston Freeways Preview ";
+        
+    string preview= ViewBag.Preview.ToString();   
+    switch (preview)
+    {
+        case "1":
+            Html.RenderPartial("PreviewChapter1");
+            ViewBag.Title = pageTitle + "Chapter 1";
+            break;
+        case "2":
+            Html.RenderPartial("PreviewChapter2");
+            ViewBag.Title = pageTitle + "Chapter 2";
+            break;
+        case "3":
+            Html.RenderPartial("PreviewChapter3");
+            ViewBag.Title = pageTitle + "Chapter 3";
+            break;
+        case "4":
+            Html.RenderPartial("PreviewChapter4");
+            ViewBag.Title = pageTitle + "Chapter 4";
+            break;
+        case "5":
+            Html.RenderPartial("PreviewChapter5");
+            ViewBag.Title = pageTitle + "Chapter 5";
+            break;
+        case "6":
+            Html.RenderPartial("PreviewChapter6");
+            ViewBag.Title = pageTitle + "Chapter 6";
+            break;
+        case "7":
+            Html.RenderPartial("PreviewChapter7");
+            ViewBag.Title = pageTitle + "Chapter 7";
+            break;
+        case "8":
+            Html.RenderPartial("PreviewChapter8");
+            ViewBag.Title = pageTitle + "Chapter 8";
+            break;
+        case "preface":
+            Html.RenderPartial("PreviewPreface");
+            ViewBag.Title = pageTitle + "Preface";
+            break;
+        case "notes":
+            Html.RenderPartial("PreviewNotes");
+            ViewBag.Title = pageTitle + "Notes";
+            break;
+        default:
+            Console.WriteLine("Default case");
+            break;
+    }   
+    
+}
+    </div>
+</DIV>

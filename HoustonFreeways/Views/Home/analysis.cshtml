@@ -1,0 +1,764 @@
+﻿@{
+    ViewBag.Title = "Analysis of TxDOT plan";
+}
+
+<style>
+    body { 
+     font-family: 'Segoe UI', sans-serif; font-size: 15px; }
+
+    .problem-heading, .comment-heading { font-weight: bold; font-size: 1.1em; margin: 28px 0 4px 0; }
+        .problem-heading:before { counter-increment: index; content: counter(index) ". "; }
+
+    .index-list {padding-top: 10px; padding-bottom: 2px;}
+    .index-list:before { counter-increment: index; content: counter(index) ". ";}
+
+    .updateItem {padding: 6px 0 6px 0; max-width: 900px; margin-left: 16px;}
+
+    .problem-solution span:nth-child(1) { font-weight: bold; color:dodgerblue; }
+    .problem-solution span:nth-child(2) {  }
+    .problem-solution img { display: inline-block; }
+
+    h2 { font-weight: bold; font-size: 1.5em; padding: 12px 0 4px 0; margin: 0 0; }
+    h3 { font-weight: bold; font-size: 1.3em; padding: 0 0 8px 0; margin: 0 0; }
+    .textblock { max-width: 650px; padding: 8px 0; }
+        .textblock div { padding: 4px 0 2px 0; }
+    ul { margin: 0px 0 8px 0; }
+
+    img { display: block; }
+
+    .bold { font-weight: bold; }
+    .red { color: red; }
+
+    .reset-counter { counter-reset: index; }
+    .italic { font-style: italic; }
+    a {
+  text-decoration: none;
+  font-weight: bold; }
+  a:hover {
+    text-decoration: underline;
+    color: red; }
+
+
+    .statusYes, .statusNo, .statusTBD { padding-left: 28px; margin: 8px 0; line-height: 155%; min-height: 25px;}
+  /*.statusYes { background: url(../../images/plan-analysis/checkmark.png) no-repeat 0 6px; }*/
+@*  .statusYes { background: url(@Url.Content("~/images/plan-analysis/tbd-14h.png")) no-repeat 0 6px; 	background-position: 10px 0px; }*@
+    .status { margin-left: 20px;}
+  .status img { display: inline-block; padding-left: 4px; padding-right: 4px;}
+   .status::before {
+    content: "Status: ";
+    font-weight: bold; color:dodgerblue;
+
+} 
+    
+    .itemStatus {font-weight: bold; }
+    .itemStatusText { margin-left: 20px; max-width: 800px; padding-bottom: 12px !important;}
+</style>
+<a name="top"></a>
+
+<h2>Analysis, Critique and Suggested Modification</h2>
+<h3>for the Proposed Improvements to Downtown Freeways and I-45 North</h3>
+
+<div class="textblock"> <span class="italic" style="padding-right: 30px;">Page created May 10, 2015</span> </div>
+<div class="textblock"> <span class="italic bold" style="padding-right: 30px;">Updated July 22, 2015, with TxDOT's response to the items of concern</span> </div>
+
+<div class="textblock">Comments and feedback to <a href="mailto:houston@oscarmail.net">Houston@oscarmail.net</a></div>
+
+<div class="textblock"><a href="http://www.ih45northandmore.com/">Official TxDOT Project Web Site</a>, Interstate 45 and Downtown</div>
+
+@*<div class="textblock">
+    TxDOT’s recommendation for downtown freeways and Interstate 45 North is the most influential recommendation for Houston’s freeways since the 1950s. 
+TxDOT and its partners deserve credit for a bold plan to fully modernize downtown Houston freeways and enhance mobility.
+However, review of the preliminary schematics reveals numerous points of concern which could compromise the ability of the new freeway system to meet current and future needs.
+</div>*@
+
+<div class="bold">Update, July 22, 2015</div>
+<div class="updateItem">On July 20 I met with a TxDOT representative and representatives from HNTB, the consulting firm developing the design. HNTB provided a response to each issue in the list. A brief summary of the TxDOT/HNTB response is included with the item link below, and more details on the TxDOT/HNTB response are in the detailed item description.</div>
+<div class="updateItem">HNTB developed the design with a VISSIM computer model using 2035 projected traffic counts supplied by HGAC. HNTB stated numerous times that the proposed design meets all performance objectives in the traffic model, including the points of concern in my list. However, HNTB did agree that many of my points of concern warranted further review, and the next version of the plan will include modifications, likely including improvements at some my points of concern.</div>
+<div class="updateItem">For many of my concerns, HNTB says they are evaluating the issue. That probably means that are verifying that the model performance is valid.
+     My interpretation and expection is that if the proposed design is demonstrating acceptable performance in the model, it is unlikely that cost-increasing changes will be made. And virtually all my suggested improvements increase cost. </div>
+
+<div class="updateItem">I appreciate TxDOT's and HNTB's willingness to take a close look at each individual issue. Not all issues will be addressed to my satisfaction. But I'm glad that each item was reviewed and the design should ultiimately be the best it can be within the financial limits, political constraints and traffic model performance.</div>
+
+
+@*<div class="textblock">
+    Disclaimer:  
+    The points of concern in this analysis are identified based on existing traffic patterns and bottlenecks, using a common-sense approach in terms of overall lanes and lane balance.
+    TxDOT and its consultant (HNTB) almost use detailed projected traffic counts and computer modeling to develop the plan.
+    The schematics used were downloaded from the project web site in April 2015.
+</div>*@
+
+@*<div class="textblock">
+<div class="problem-solution">Comments on the removal of the Pierce Elevated</div>
+    From the mobility perspective, it is undesirable to remove the Pierce Elevated. It is preferable to have multiple routes rather than a single route, and placing all traffic on the east downtown spine introduces a single point of failure for the entire system.
+    Even with the realignment of I-45, the Pierce transportation corridor (sunken into a trench) could be valuable for managed lanes or to provide capacity for connecting traffic.
+    <p>
+    But the removal appears to be certain to remain in the plan and the removal should have benefits for new development, so I won't object and instead I'll focus on the concerns of the new plan, some of which are serious.
+</p>
+</div>*@
+
+@*<div style="padding: 12px 0;"> Download printable document &nbsp; <a href="@Url.Content("~/images/plan-analysis/Public-Comments-I45-Plan.docx")">MS Word</a> &nbsp; &nbsp;<a href="@Url.Content("~/images/plan-analysis/Public-Comments-I45-Plan.pdf")">PDF</a> </div>*@
+
+
+<div class="reset-counter bold"><span>Design Concerns</span> </div>
+<div class="reset-counter problem-solution"><span>Status below each item is based on the July 2015 meeting</span> &nbsp; <img src="@Url.Content("~/images/plan-analysis/tbd-14h.png")" /> = To be determined when the next version of the plan is released, probably in early 2016</div>
+<div class="bold red">Status is based on preliminary indications, and nothing is final until the TxDOT releases an updated version of the schematic during the next round of public meetings.</div>
+<div class="index-list"><a href="#45-downtown-1">I-45 Through Downtown: Insufficient through-capacity</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/tbd-14h.png")" /> <img src="@Url.Content("~/images/plan-analysis/checkmark.png")" />  The next version of the plan will include improvements on I-45, but the east downtown trench will not be widened, so the extent of improvements is unclear.</div>
+
+<div class="index-list"><a href="#45-north-main">I-45 North of Downtown: Insufficient Lanes at North Main</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/tbd-14h.png")" /> HNTB agrees that an additional lane in each direction would provide operational benefits and is reviewing if the lane(s) can be added. But right-of-way is super-tight and options are severely limited. Status is uncertain.</div>
+
+<div class="index-list"><a href="#45-managed-access">I-45 Northbound Managed Lanes: Insufficient Access from Downtown</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/checkmark.png")" /> Potential solutions to this problem are being studied, and this is expected to be corrected.</div>
+
+<div class="index-list"><a href="#45-managed-southbound">Interstate 45 Southbound Managed Lanes: No exit to the downtown connector</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/checkmark.png")" /> Potential solutions to this problem are being studied, and this is expected to be corrected.</div>
+
+<div class="index-list"><a href="#allen-parkway">Downtown Connector: Missing northbound access from Allen Parkway and no access to Memorial</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/checkmark.png")" /> <img src="@Url.Content("~/images/plan-analysis/x-16h.png")" /> An on-ramp from Allen Parkway will be added. Connections at Memorial will not be added.</div>
+
+
+<div class="index-list"><a href="#59-montrose">US 59 Northbound at the Spur 527 split: insufficient lanes</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/x-16h.png")" /> Changes are unlikely at this location</div>
+
+<div class="index-list"><a href="#59-midtown">US 59 Midtown: removal of existing entrance/exit, new access points inconvenient</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/x-16h.png")" /> <img src="@Url.Content("~/images/plan-analysis/tbd-14h.png")" /> A short extension of the southbound frontage road is anticipated, but the overall east-west travel problem  and freeway access difficulty is not fully fixed.</div>
+
+<div class="index-list"><a href="#59-288-merging">US 59/SH 288 Northbound exit to Interstate 45, excessive lane switching in short section</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/tbd-14h.png")" /> HNTB agrees with this potential issue, and options for adjusting the design are being studied.</div>
+
+
+<div class="index-list"><a href="#59-midtown-exit">US 59 Southbound through downtown, lack of exit to Midtown</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/x-16h.png")" /> HNTB agrees that a Midtown exit would have operational benefits, but an exit is not technically feasible and will not be added.</div>
+
+<div class="index-list"><a href="#288-access">SH 288: drastically reduced access to southbound main lanes from downtown, and poor access going northbound</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/tbd-14h.png")" /> Any changes to the current proposed plan will be minimal. The Chenevert connections may be modified to provide access to the main lanes. HNTB says the single-lane entrance ramp from south Midtown is sufficient based on the traffic model.</div>
+
+
+<div class="index-list"><a href="#10-express-lanes">I-10: Express lanes bottleneck, especially westbound at the west end</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/x-16h.png")" /> <img src="@Url.Content("~/images/plan-analysis/tbd-14h.png")" /> HNTB says the traffic model indicates the proposed design performs acceptably. Although a decision has not been made, it is likely the express lanes will be tolled.</div>
+
+<div class="index-list"><a href="#10-downtown-access">I-10 westbound: Poor and asymmetric access to downtown</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/tbd-14h.png")" /> <img src="@Url.Content("~/images/plan-analysis/x-16h.png")" /> This is being evaluated, but it appears that adjustments are unlikely due to the low demand for downtown access from westbound I-10.</div>
+
+
+<div class="index-list"><a href="#45-north-capacity">I-45 entire length between Loop 610 and Beltway 8: insufficient regular lane capacity</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/tbd-14h.png")" /> TxDOT and HNTB agree that a fifth continuous regular lane is desirable, and are investigating the feasibility.</div>
+
+<div class="index-list"><a href="#45-north-bw8">I-45 northbound at Beltway 8: Major problems with the interchange transition area</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/tbd-14h.png")" /> HNTB says the proposed design performs acceptably in the traffic model, but is evaluating if improvements can be made. Status is uncertain until the next revision is released.</div>
+
+
+<div class="index-list"><a href="#45-bw8-ramp">Beltway 8 ramp to southbound I-45 main lanes is only one lane</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/x-16h.png")" /> HNTB says this area performs acceptably in the traffic model, and changes are unlikely.</div>
+
+<div class="index-list"><a href="#45-managed-610">Poor connections between the I-45 managed lanes and Loop 610</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/tbd-14h.png")" /> This area is complicated by the T-ramp to the Metro transit center. Design options are being evaluated, and the plan could be revised to have better connections.</div>
+
+<br />
+<div class="reset-counter problem-solution">Desirable Modifications</div>
+<div><a href="#polk">Retain the Polk Street crossing</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/x-16h.png")" /> The Polk Street bridge cannot be retained due to geometric requirements for bringing I-45 out of the trench.</div>
+
+<div><a href="#trench">Straighten curve of the downtown trench</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/x-16h.png")" /> The design will not be changed to straighten the curve.</div>
+
+<br />
+<div class="problem-solution">Other Comments and Observations</div>
+<div><a href="#pierce">Comments on the removal of the Pierce Elevated</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/x-16h.png")" /> TxDOT's preference is to sell the right-of-way of the Pierce Elevated and use the funds to acquire needed right-of-way in other parts of downtown.</div>
+
+<div><a href="#bridges">Use of arched bridges as a design theme</a></div>
+<div class="status"><img src="@Url.Content("~/images/plan-analysis/checkmark.png")" /> TxDOT has a goal of implementing signature bridges in cooperation with neighborhood/district organizations. This will add to the project cost and funding needs to be identified.</div>
+
+
+<a name="45-downtown-1"></a> 
+<div class="problem-heading reset-counter">Interstate 45 Through Downtown: Insufficient through-capacity</div>
+
+<div class="textblock">
+    <div>
+        Downtown freeways were originally built to handle traffic originating or terminating downtown. But today, traffic passing through downtown is the dominant pattern.
+In recognition of the through-traffic pattern, the freeways through downtown need additional through capacity, a minimum of three uninterrupted lanes in each direction.
+    </div>
+
+    <div class="problem-solution">Problems</div>
+    <ul>
+        <li>Northbound I-45 is reduced to two lanes at US 59 and again on the north side of downtown</li>
+        <li>Southbound I-45 is reduced to two lanes at the GRB center</li>
+    </ul>
+
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Maintain at least three lanes in both directions all the way through downtown. </li>
+        <li>Northbound: After the merge point with the ramp from US 59/SH 288, maintain four lanes to the exit to I-10, then three lanes to an exit to a new ramp to the managed lanes, where one lane goes to the managed lanes</li>
+        <li>Southbound: Maintain three lanes at the GRB center and keep the new lane on the I-45 transition zone south of downtown.</li>
+        <li>The downtown trench east of the GRB will need to be widened, and this is easily accomplished since space is available along St. Emanuel.</li>
+    </ul>
+
+    <div class="itemStatus">July 2015 Preliminary Status: Improvements expected but details To Be Determined</div>
+    <div class="itemStatusText">HNTB says they expect to improve the capacity of I-45 for traffic passing through downtown. But it is not clear how many lanes will be added, and if the lanes will be for the full length or just sections. 
+        In my view, the trench on the east side of downtown needs to be widened to accommodate new I-45 lanes (one in each direction) with a sufficiently long transition for the two northbound lanes merging in from US 59/SH 288. But the trench will not be widened. The trench issue is complicated by the adjacent George R. Brown
+        (GRB) Convention Center. Currently, the GRB uses the area underneath the US 59 elevated structure as a staging area where 18-wheelers and other delivery vehicles can park and unload. But with the elevated structure removed,
+        the staging area will be lost. So it appears that the entire trench will be shifted east to the edge of St. Emanuel Street to provide a staging area for GRB deliveries and equipment.
+        So the status of this issue is "To Be Determined" until  the next design iteration is released. I want to see three continous lanes all the way through downtown with auxiliary lanes to accomodate traffic which merges in, which means four or five lanes in most places.
+    </div>
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/i45-two-lanes-south.jpg")" />
+</div>
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/i45-two-lanes-north.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+
+<a name="45-north-main"></a>
+<div class="problem-heading">Interstate 45 North of Downtown: Insufficient Lanes at North Main (Woodland Heights/Hollywood Cemetery)</div>
+
+<div class="textblock">
+    <div>
+        From North Main to Loop 610 there is no right-of-way acquisition to appease the neighborhood group, even though the west side of the freeway has only low-grade commercial establishments and no homes.
+This introduces a serious bottleneck where six northbound main lanes are reduced to four lanes at North Main. At evening rush hour, this will potentially cause a backup that will cascade into the downtown interchange complex.
+    </div>
+    <div>
+        Let's remember that in 1992 Houston City Council members Sheila Jackson Lee and Jim Greenwood opposed the expansion of the West Loop, so the project was built with no new capacity added.
+    Today, the West Loop is chronically congested at all hours of the day and at least 100,000 people every day sustain longer delays. What good has the lack of new capacity on the West Loop accomplished? <span class="bold">ABSOLUTELY NOTHING.</span>
+        (Thank you Mrs. Jackson and Mr. Greenwood for sentencing West Loop motorists to additional delays every day.)
+    </div>
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>Six northbound lanes reduced to only four lanes at North Main</li>
+        <li>All lanes narrowed to 11 feet</li>
+        <li>The bottleneck is exacerbated by the lack of access to the northbound managed lanes (see next issue)</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Add at least one northbound main lane through the North Main intersection and all the way to Loop 610.</li>
+        <li>Acquire a modest strip of right-of-way on the west side to accommodate the needed lane(s).</li>
+        <li>Ideally there should also be a fifth southbound lane</li>
+        <li>Have standard-width 12-foot-wide lanes</li>
+    </ul>
+
+        <div class="itemStatus">July 2015 Preliminary Status: Under Study</div>
+    <div class="itemStatusText">HNTB says the performance of the proposed design is acceptable in the traffic model, but the extra northbound and southbound lane would have operational benefits. They are looking at pylon separation (instead of concrete barriers) and adjusting
+        columns to determine if it is possible to add one or two more lanes under North Main. But since TxDOT set the ill-advised goal of not obtaining any right-of-way in this area, I would not be surpised if improvements are impossible.
+    </div>
+
+
+    <img src="@Url.Content("~/images/plan-analysis/i45-north-main.jpg")" />
+    <a href="#top">Back to top</a>
+
+</div>
+
+<a name="45-managed-access"></a>
+<div class="problem-heading">Interstate 45 Northbound Managed Lanes: Insufficent Access from Downtown</div>
+<div class="textblock">
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>There is only <span class="bold">ONE</span> access point to the northbound managed lanes in the downtown area, from Travis Street downtown</li>
+        <li>Traffic on the northbound I-45 main lanes and coming from the downtown connector cannot get on the managed lanes to avoid the bottleneck at North Main</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Add access to the northbound managed lanes from the I-45 main lanes and from the downtown connector</li>
+    </ul>
+    <div class="itemStatus">July 2015 Preliminary Status: Under Study and Design Adjustments to Fix this Problem are Expected</div>
+
+
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/i45-managed-lane-access-1.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="45-managed-southbound"></a>
+<div class="problem-heading">Interstate 45 Southbound Managed Lanes: No exit to the downtown connector</div>
+<div class="textblock">
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>There is no exit from the southbound I-45 managed lanes to the downtown connector</li>
+        <li>Managed-lane traffic going to south downtown, Midtown and Allen Parkway must use Milam Street, contributing to congestion on Milam</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Add a ramp from the southbound managed lanes to the downtown connector</li>
+    </ul>
+    <div class="itemStatus">July 2015 Preliminary Status: Under Study and Design Adjustments to Fix this Problem are Expected</div>
+
+</div>
+
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/i45-managed-lane-access-southbound.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="allen-parkway"></a>
+<div class="problem-heading">Downtown Connector: Missing northbound access from Allen Parkway and no access to Memorial</div>
+<div class="textblock">
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>There is a southbound exit to Allen Parkway, but no northbound on-ramp</li>
+        <li>Allen Parkway traffic must make a detour to Bagby or Brazos to get on the connector, contributing to traffic congestion on those streets</li>
+        <li>There are no connections to Memorial.</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Add a new ramp to the northbound connector to serve Allen Parkway</li>
+        <li>Add two connection ramps at Memorial as shown on the map below</li>
+    </ul>
+
+    <div>Currently there are no connections at Memorial, but we need to think of the future. With increasing density and population along Buffalo Bayou and Washington Avenue, the Memorial connections will be needed to serve the growing population.</div>
+
+    <div class="itemStatus">July 2015 Preliminary Status: Allen Parkway on-ramp will be added, no connections to Memorial</div>
+    <div class="itemStatusText">For Allen Parkway, a loop connector similar to the currently existing loop on-ramp will be added to allow eastbound Allen Parkway traffic to get on the northbound downtown connector. 
+        No connections will be provided between Memorial and the downtown connector. The City of Houston is against connections at Memorial, and TxDOT also wants to avoid connections due to space issues and complications introduced by ramps. As of July 2015, TxDOT is awaiting
+        feedback from the City of Houston and the Downtown Management District about their preference for the Houston Avenue intersection. Design updates for this area are likely to be heavily influenced by the recommendation from the City of Houston and Downtown District.
+    </div>
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/connector-allen-parkway-annotated.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="59-montrose"></a>
+<div class="problem-heading">US 59 Northbound at the Spur 527 split: insufficient lanes</div>
+<div class="textblock">
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>Only six lanes at the split point, and (apparently) no lanes added further back near Graustark</li>
+        <li>Slowed or stalled traffic on either direction will disrupt both connections</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>There needs to be seven northbound lanes through the trench approaching the downtown split, two for Spur 527 and five for the US 59 main lanes.</li>
+        <li>The narrow section of the trench (Graustark to Montrose) needs to be widened. This is accomplished by using the high voltage right-of-way on the south side and removing the transmission towers. The power lines would be placed
+            in an underground conduit.
+        </li>
+    </ul>
+
+
+        <div class="itemStatus">July 2015 Preliminary Status: No changes expected</div>
+    <div class="itemStatusText">HNTB says this area has acceptable performance in the traffic model. But I still have deep concerns. Northbound US 59 has six lanes from Shepherd to Mandel, where the two right lanes are merged into one lane to have five northbound  lanes.
+In the proposed design, the five-lane section is retained for a short distance around Graustark, and then widened back to six lanes west of Montrose. That narrowing to five lanes for the short distance is of course a bottleneck. It makes sense to remove that bottleneck during this project, especially since the right-of-way is readily available from the high voltage strip south of the freeway. TxDOT says widening US 59  to have a consistent six lanes northbound is beyond the scope of the project
+        and introduces more cost into an already-expensive plan. They also say that the five lane section could be widened in a separate future project.
+    </div>
+
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/us59-montrose-annotated.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="59-midtown"></a>
+<div class="problem-heading">US 59 Midtown: removal of existing entrance/exit, new access points inconvenient</div>
+<div class="textblock">
+    <div>
+        A large area, including the museum district, lower midtown and the area along US 59 well west of Montrose, needs freeway access. Access is already somewhat difficult, but the proposed plan will make the situation much worse, especially as the area densifies.
+    </div>
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>The southbound exit to Fannin is removed and the northbound entrance at San Jacinto is removed</li>
+        <li>The new entrance and exit are east of Almeda near SH 288, and access is very poor due to poor east-west mobility in this area</li>
+        <li>(Added July 2015) Vehicles using the on-ramp to northbound US 59 at Almeda Road will not have the option to connect to Interstate 45. Currently, vehicles entering at San Jacinto can connect to I-45. It will be very inconvenient for vehicles in the south Midtown area to reach I-45, requiring a long drive through Midtown on surface streets.</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>If the entrance/exit east of Almeda road is retained, frontage roads need to be built along both sides of the freeway, including southbound. East-west connectivity is poor in the area, and the frontage roads will provide the needed connectivity.</li>
+        <li>Potentially add a southbound off-ramp to Wheeler, especially if the southbound frontage road is not feasible.
+        </li>
+    </ul>
+
+    <div class="itemStatus">July 2015 Preliminary Status: Under study but minimal changes expected</div>
+    <div class="itemStatusText">
+        It appears that the only potential change in this area is to add a southbound frontage road (westbound compass direction) from Almeda to Eagle Street. This is a welcome improvement, but I really would like to see the southbound frontage road continued to Fannin, and at least to Wheeler to allow
+        convenient access to Richmond. But more right-of-way would be required for the extended frontage, and TxDOT wants to avoid ROW acquisition. On the northbound side I would really like to see the frontage road start at San Jacinto rather than
+        Wheeler, but that would require the removal of the entire Mexican Consulate building. (It is unclear to me if that building needs to be acquired with the current plan, but it appears not.) So I'm still hoping for as much frontage road as possible in the next plan.
+    </div>
+
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/us59-south-access-annotated.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="59-288-merging"></a>
+<div class="problem-heading">US 59/SH 288 Northbound exit to Interstate 45, excessive lane switching in short section</div>
+<div class="textblock">
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>The merge and lane-switching zone from Elgin to Tuam is short and there will be heavy lane-switching</li>
+        <li>The existing design is similar and suffers from poor performance</li>
+        <li>If traffic stops on either connection (to I-45 north or to I-45 south), the other connection is adversely affected </li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Eliminate the merging/lane-switch zone by using braided ramps south of Elgin, separating traffic destined for northbound I-45 and southbound I-45.</li>
+    </ul>
+
+        <div>Separating traffic to prevent merging and lane switching is the principle which is used for the new Loop 610/US 290 interchange. That principle also needs to be applied here.</div>
+
+        <div class="itemStatus">July 2015 Preliminary Status: Under study, changes possible if feasible</div>
+    <div class="itemStatusText">
+        HNTB agrees that it is desirable to eliminate this short lane-switching zone. There is a good chance this problem area will be fixed if a fix is technically feasible.
+    </div>
+
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/us59-sh288-merge.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="59-midtown-exit"></a>
+<div class="problem-heading">US 59 Southbound through downtown, lack of exit to Midtown</div>
+<div class="textblock">
+    <div>
+        There is an exit to Bell (Toyota Center) well north of Midtown, and the next exit is to Almeda on the south end of Midtown. To accommodate potential future growth in Midtown, an exit is desirable and appears to be technically feasible at McGowen.
+    </div>
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>Traffic destined for Midtown must exit well to the north or on the far south end of Midtown.</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Add a southbound exit to McGowen</li>
+    </ul>
+
+        <div>A corresponding entrance ramp to northbound US 59 near Mcgowen is also desirable but appears to be less technically feasible. Northbound traffic will need to take the frontage road north to the Leland Street entrance. </div>
+        <div class="itemStatus">July 2015 Preliminary Status: not feasible to add an exit</div>
+    <div class="itemStatusText">
+        HNTB agrees an exit ramp near McGowen Street would have operational benefits, but an exit is not technically feasible so it will not be added.
+    </div>
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/us59-mcgown-annotated.jpg")" />
+    <a href="#top">Back to top</a>
+
+</div>
+
+<a name="288-access"></a>
+<div class="problem-heading">SH 288: drastically reduced access to southbound main lanes from downtown, and poor access going northbound</div>
+<div class="textblock">
+    <div>
+        This is rather shocking if you are in central downtown and need to get on the SH 288 main lanes southbound.
+    </div>
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>The US 59 southbound on-ramp at Webster (just south of I-45) no longer provides access to SH 288</li>
+        <li>The currently existing access from Chenevert Street will be for toll-paying managed lanes traffic only</li>
+        <li>There is <span class="bold">only ONE</span> entrance to the SH 288 southbound main lanes for all of downtown, and it is at the south end of Midtown and is only one lane.</li>
+        <li>Northbound exit into downtown is on the far south end of Midtown. Traffic can connect into US 59 for more exits, but that contributes more traffic to US 59.</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Add a southbound entrance ramp from Pierce Street to the connector going to SH 288 southbound</li>
+        <li>Add an exit ramp from the SH 288 connector to I-45 north to either St. Joseph, Gray or Pease</li>
+    </ul>
+
+    <div class="itemStatus">July 2015 Preliminary Status: Only minimal changes possible</div>
+    <div class="itemStatusText">
+        HNTB says the traffic model shows that the single lane entrance from the south end of Midtown in sufficient for all traffic orginating in the downtown area. They are also looking at making the existing connections to Chenevert Street
+       for both the regular and managed lanes (not just the managed lanes). The ideas I proposed for connections near Pierce are not technically feasible, and are not needed according to the traffic model.
+    </div>
+
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/288-downtown-access-south-annotated.jpg")" />
+</div>
+<br />
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/288-downtown-access-1.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="10-express-lanes"></a>
+<div class="problem-heading">I-10: Express lanes bottleneck, especially westbound at the west end</div>
+<div class="textblock">
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>I-10 main lanes are reduced to only two lanes each way on the north side of downtown. This could be tolerated with sufficient managed lane capacity, but....</li>
+        <li>The westbound managed lanes has two lanes entering on the east side of downtown but is reduced to one lane on the west side of downtown</li>
+        <li>The eastbound managed lanes have a one-lane entrance on the west side of downtown</li>
+        <li>Congestion depends on whether or not the lanes are tolled, and how high the toll is. But the regular lanes are certain to be congested.</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Keep the managed lanes toll-free since there are only two regular lanes each way. The free express lane capacity is needed to prevent severe congestion on the regular lanes.</li>
+        <li>Do not reduce the westbound express lanes to one lane at the west end. This is accomplished by extending the elevated structure on the north side of the freeway and then merging the express lanes between Studemont and Heights.</li>
+        <li>Provide a two-lane entrance to the eastbound managed lanes on the west end of downtown. This is accomplished but using the existing HOV structure.</li>
+    </ul>
+
+    <div class="itemStatus">July 2015 Preliminary Status: Under study but major changes unlikely, tolling likely</div>
+    <div class="itemStatusText">
+        HNTB says the traffic model shows that the proposed design is adequate. A decision on tolling has not been made, but it appears likely the express lanes will be tolled. Of course, managed lanes tolls can be very high.
+        I still have concerns about reducing the I-10 regular lanes to two lanes in each direction. I can't argue with the traffic model - I can only assume it is valid. But I still think there should be three non-toll lanes through downtown in each direction.
+    </div>
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/i10-west-managed-lanes.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="10-downtown-access"></a>
+<div class="problem-heading">I-10 westbound: Poor and asymmetric access to downtown</div>
+<div class="textblock">
+
+    <div class="problem-solution">Problems</div>
+    <ul>
+        <li>The northbound downtown connector has a connection to eastbound I-10. But there is no corresponding connector for westbound I-10 to the southbound downtown connector. </li>
+        <li>The only access to downtown is on the northeast side of downtown, or to east downtown via US 59</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Add a new westbound lane through downtown which connects to the downtown connector (southbound).</li>
+    </ul>
+    <div class="itemStatus">July 2015 Preliminary Status: Current design expected to remain as-is</div>
+    <div class="itemStatusText">
+        HNTB says there is low volume for the traffic movement from westbound I-10 into downtown. I agree with that, but that may not be the case 20, 40 or 60 years from now. I still think it is odd to have the connection ramp
+        from the northbound downtown connector to eastbound I-10, but not from westbound I-10 to the connector. Obviously it was easy to add the ramp to eastbound I-10, but difficult from westbound I-10, so they decided to omit the
+        ramp from westbound I-10 due to low volume.
+    </div>
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/i10-downtown-exits-1.jpg")" />
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/i10-downtown-exits-2.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="45-north-capacity"></a>
+<div class="problem-heading">I-45 entire length between Loop 610 and Beltway 8: insufficient regular lane capacity</div>
+<div class="textblock">
+
+    <div>We know from experience with the Katy Freeway that 8 regular lanes (four each way) and 4 managed lanes (2 each way) are not enough. 
+        The recommendation for the corridor, 8 regular lanes and 4 managed lanes, should be viewed as the <span class="bold">minimum</span> design criteria. There needs to be 10 regular main lanes along the full length of the corridor, or large sections of the corridor.
+    </div>
+
+    <div class="problem-solution">Problems</div>
+    <ul>
+        <li>Eight regular lanes is <span class="bold">not</span> sufficient</li>
+        <li>There are insufficient lanes near the Loop 610 and BW8 interchanges.</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Maintain at least five regular lanes in each direction for the full length from Loop 610 to BW8</li>
+        <li>At the very minimum, maintain five regular lanes for longer distances north of Loop 610 and south of BW8</li>
+    </ul>
+
+    <div class="itemStatus">July 2015 Preliminary Status: TxDOT agrees that the fifth lane is desirable and feasibity is being studied</div>
+    <div class="itemStatusText">
+        I'm hopeful we'll get that fifth lane in most or all of the section between Loop 610 and Beltway 8. Looking at the schematic, right-of-way is available in most of the length, but there could be issues at some intersections, and those
+        intersections issues (and associated costs) could be the problem.
+    </div>
+
+</div>
+
+<a href="#top">Back to top</a>
+
+
+<a name="45-north-bw8"></a>
+<div class="problem-heading">I-45 northbound at Beltway 8: Major problems with the interchange transition area</div>
+<div class="textblock">
+
+    <div>The northbound I-45 main lanes at Beltway 8 look very much like the dysfunctional existing Katy Freeway eastbound at Beltway 8: not enough lanes approaching the interchange, not enough lanes exiting to the connection ramp, and an entrance ramp from the frontage road merging into the transition zone.
+        This is a recipe to duplicate the mess we have on the inbound Katy Freeway.
+    </div>
+
+    <div class="problem-solution">Problems</div>
+    <ul>
+        <li>The northbound main lanes have insufficient lanes approaching the interchange. </li>
+        <li>Only two lanes exiting to the Beltway 8 ramp</li>
+        <li>A short zone for merging and lane-switching</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Add at least one more main lane approaching the interchange</li>
+        <li>Have a three-lane exit to the Beltway 8 ramp.</li>
+        <li>Move the entrance ramp serving traffic coming from West Road, because it creates a lane-switching hazard</li>
+    </ul>
+
+    <div class="itemStatus">July 2015 Preliminary Status: Under study and improvements are possible</div>
+    <div class="itemStatusText">
+        HNTB says the traffic model shows that the current proposed design is adequate, but they agree that this section could warrant a better design. I'm hopeful that that we'll see a better design in the next iteration.
+        TxDOT also mentioned that this interchange will be part of another study for I-45 north of Beltway 8, and improvements to the Beltway 8 interchange could be deferred to that study.
+    </div>
+
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/i45n-bw8-northbound-annotated.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="45-bw8-ramp"></a>
+<div class="problem-heading">Beltway 8 ramp to southbound I-45 main lanes is only one lane</div>
+<div class="textblock">
+
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>The two lanes from the connecting ramps have only a one lane exit to the regular main lanes </li>
+        <li>This replicates the existing situation, but for the future design there should be two lanes exiting to the main lanes</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Maintain two lanes on the ramp to the I-45 main lanes and add main lanes in the merging zone</li>
+    </ul>
+
+        <div class="itemStatus">July 2015 Preliminary Status: TxDOT says the proposed design is adequate</div>
+    <div class="itemStatusText">
+        TxDOT agrees two lanes on the ramp is better than one, but two lanes would introduce merging issues and the traffic model shows that the proposed design with one lane is adequate.
+        I don't have personal experience with this ramp during peak periods, so I'm not in a position to disagree.
+    </div>
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/i45n-bw8-southbound-annotated.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="45-managed-610"></a>
+<div class="problem-heading">Poor connections between the I-45 managed lanes and Loop 610</div>
+<div class="textblock">
+
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>Southbound managed lane traffic connecting to Loop 610 must exit three miles north of Loop 610 at Parker and use the main lanes for two miles (likely congested) to the ramp to Loop 610</li>
+        <li>Traffic from Loop 610 must drive two miles on the (likely congested) main lanes before being able to enter the managed lanes at Parker.</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Add ramps to connect the managed lanes directly to the Loop 610 interchange ramps</li>
+    </ul>
+
+    <div class="itemStatus">July 2015 Preliminary Status: Under review, improvements are possible</div>
+    <div class="itemStatusText">
+        The current proposed design includes a T-ramp to the Metro transit center in the area of the ramps to/from Loop 610, and apparently the T-ramp introduces difficulty in making a direct connection between Loop 610 and the managed lanes. 
+        They are looking at the overall configuration in this area and it is possible it will be revised to provide better connections between Loop 610 and the managed lanes.
+    </div>
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/i45n-managed-lanes-access-annotated.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+
+
+
+<a name="polk"></a>
+<div class="comment-heading">Desirable Modification: Keep the Polk Street Crossing over the Freeway</div>
+<div class="textblock">
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>The Polk Street crossing is removed, leaving a long distance in the north-south direction with no westbound street access.</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Retain the Polk Street bridge, if this is technically feasible while still accommodating needed ramps</li>
+        <li>If not technically feasible to retain the Polk Street crossing, add a U-turn at the nearest feasible crossing to allow easier movement of westbound traffic</li>
+    </ul>
+    <div class="itemStatus">July 2015 Preliminary Status: Polk Street bridge is not feasible</div>
+    <div class="itemStatusText">
+        Due to the geometrics of bringing I-45 out of the trench in this area, it is not possible to include the Polk Street bridge. TxDOT says "considerations to maintain bike and pedestrian access along Polk Street will be made".
+        I'm not sure what that means, but it could mean that a pedestrian bridge with ADA-style ramps (acting like staircases) at each end is possible, and would probably be intended to serve pedestrians associated with Toyota Center.
+    </div>
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/us59-polk-annotated.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+
+<a name="trench"></a>
+<div class="comment-heading">Desirable Modification: Remove Curving Alignment near Pierce</div>
+<div class="textblock">
+
+    <div>
+        There is a strange narrowing of the trench at Pierce and St. Joseph, which introduces a curve in the northbound main lanes. The purpose of this constriction is unclear - perhaps it is to reduce required excavation.
+    </div>
+        <div>
+        But since right-of-way will already be purchased, I would prefer to see the main lanes maintain a straighter alignment with space in the trench used for landscaping.
+    </div>
+
+     <div class="itemStatus">July 2015 Preliminary Status: No changes to the current proposed design are expected</div>
+
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/us59-constricted-annotated.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="pierce"></a>
+<div class="comment-heading">Comment: Removal of the Pierce Elevated</div>
+<div class="textblock">
+
+    <div>
+    From the mobility perspective, it is undesirable to remove the Pierce Elevated. It is preferable to have multiple routes rather than a single route, and placing all traffic on the east downtown spine introduces a single point of failure for the entire system.
+    <p>
+        Even with the realignment of I-45, the Pierce transportation corridor (sunken into a trench) could be valuable and useful.
+        With I-45 realigned, the Pierce corridor could be used for managed lanes or to provide certain connections which would be useful, for example Allen Parkway and Memorial to the Gulf Freeway and South Freeway.
+    </p>
+    But the removal appears to be certain to remain in the plan and the removal should have benefits for new development, so I won't object and instead I'll focus on the concerns of the new plan, some of which are serious.
+    </div>
+
+            <div class="itemStatus">July 2015 Preliminary Status: TxDOT wants to sell the Pierce Elevated land, and Pierce Elevated will not be used for transporation purposes</div>
+    <div class="itemStatusText">
+        This verifies what I said above in the original posting, which is that the Pierce Elevated corridor is definitely a goner. TxDOT wants to sell the land and use to funds to buy expensive right-of-way which is needed for the
+        wide trench on the east side of downtown. TxDOT is required to offer the land to the City of Houston first, then (assuming the City of Houston does not want it) it must offer the land to adjacent landowners, and only  then  could TxDOT
+        sell the land to any buyers. (I'm assuming that the price for adjacent landowners would be set by an independent appraiser; prices to any buyer would be market price of course.) It is unclear to me what the price would be to the City of Houston, but TxDOT wants as much as possible. Of course TxDOT operates in a political environment, and political leaders could set
+        a price to favor the City of Houston if in fact the city is interested. But I have not seen any indications that the City of Houston wants to spend money to buy the Pierce Elevated land. It appears that a deck park near the GRB center
+        is a higher priority, and any available City of Houston funds would go to that project.
+    </div>
+</div>
+<a href="#top">Back to top</a>
+
+
+<a name="bridges"></a>
+<div class="comment-heading">Comment: Use of arched bridges as a design theme</div>
+<div class="textblock">
+
+    <div>
+        TxDOT should consider using long-span arched bridges, similar to the arches spanning US 59 from Hazard to Montrose, at all feasible locations as a design theme. This includes most of the bridges over the new US 59 trench from Spur 527 to SH 288, and the potential for three very long spans at Elgin, Tuam and McGown. 
+        Pierce and St. Joseph are also potential candidates. The bridges over the trench east of the GRB center are not candidates since that area is potentially a future deck park.
+    </div>
+
+                <div class="itemStatus">July 2015 Preliminary Status: TxDOT wants to have signature bridges and will work with stakeholders, funding is the only issue</div>
+    <div class="itemStatusText">
+        TxDOT wants signature bridges on the project and is looking to work with neighborhood groups and districts. I was envisioning a standard design of arched bridges, but the signature bridges could be anything, depending on how the discussions develop.
+        As always, money is limited and additional funding from non-TxDOT sources will likely be needed for a comprehensive signature bridge program.
+    </div>
+</div>
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/arch-bridge-IMG_1601.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<div>&nbsp;</div>
+

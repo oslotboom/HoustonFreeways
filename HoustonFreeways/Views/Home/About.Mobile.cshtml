@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Heading = "About the Book";
+    Layout = "~/Views/Shared/_Layout.Mobile.cshtml";
+}
+
+@*
+@section HeadJavaScriptNested {
+    <script  type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $(".ui-block-a").each(function () {
+                maxHeightInner = Math.max($(this).children("div:first").height(), $(this).next().children("div:first").height());
+                maxHeightOuter = Math.max($(this).height(), $(this).next().height());
+                $(this).height(maxHeightOuter);
+                $(this).next().height(maxHeightOuter);
+                $(this).children("div:first").height(maxHeightInner);
+                $(this).next().children("div:first").height(maxHeightInner);
+            });
+        });
+    </script>
+}
+*@
+
+<div class="ui-bar-a infoGrid">
+    <div>Quantity Printed</div>
+    <div>5000</div>
+    </div>
+<div class="ui-bar-a infoGrid">
+    <div>Released</div>
+    <div>Sept 15, 2003</div>
+</div>
+<div class="ui-bar-a infoGrid">
+    <div>Out of print</div>
+    <div>Dec 12, 2004</div>
+</div>
+<div class="ui-bar-a infoGrid">
+    <div>Format</div>
+    <div>Hard cover, full color throughout</div>
+</div>
+<div class="ui-bar-a infoGrid">
+    <div>ISBN</div>
+    <div>0-9741605-3-9</div>
+</div>
+<div class="ui-bar-a infoGrid">
+    <div>Pages</div>
+    <div>416<br />380 main text</div>
+</div>
+<div class="ui-bar-a infoGrid">
+    <div>Price</div>
+    <div>List: $35<br />Actual sales price <br />HoustonFreeways: $24<br />Amazon.com: $23</div>
+</div>
+<div class="ui-bar-a infoGrid">
+    <div>Digital book release</div>
+    <div>June 5, 2005</div>
+</div>
+<div class="ui-bar-a infoGrid">
+    <div>Used copies on Amazon</div>
+    <div><a href="http://www.amazon.com/gp/offer-listing/0974160539/ref=dp_olp_2?ie=UTF8&qid=1220922082&sr=1-1">View Availability</a></div>
+</div>
+
+<p>&nbsp;</p>

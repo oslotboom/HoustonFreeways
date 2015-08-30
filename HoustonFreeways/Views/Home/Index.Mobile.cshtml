@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutBase.Mobile.cshtml";
+}
+
+
+<div data-role="header">
+    <div class="title-container">
+		<div class="title-large">Houston Freeways</div>
+        <div class="title-medium">A Historical and Visual Journey</div>
+        <div class="title-small">by Erik Slotboom &nbsp; &#0169;2003</div>
+    </div>
+</div><!-- /header -->
+
+<div data-role="content" data-theme="a">
+    @Html.Partial("_ViewSwitcher")
+
+    <div class="image-div">
+        <img src="@Url.Content("~/Images/Mobile/CoverMasked_300w.png")" />
+    </div>
+    <p class="home-text">
+        <b><em>Houston Freeways</em></b> is a 2003 book which documents the history and influence of freeways in Houston.
+    </p>
+    <ul data-role="listview" data-theme="a" >
+	    <li>
+            <a href="@Url.Action("about")">
+			    <h3>About Houston Freeways</h3>
+			    <p>Information and statistics</p>
+	        </a>
+	    </li>
+        <li>
+            <a href="@Url.Action("chapters")">
+			    <h3>Chapters and eBook download</h3>
+                <p>Free pdf download of the book by chapter.</p>
+	        </a>
+	    </li>
+    	    <li>
+            <a href="@Url.Action("author")">
+			    <h3>Author</h3>
+	        </a>
+	    </li>
+        </li>
+    	    <li>
+            <a href="http://www.amazon.com/gp/offer-listing/0974160539/ref=dp_olp_0?ie=UTF8&condition=all">
+			    <h3>Used books on Amazon</h3>
+	        </a>
+	    </li>
+        <!--
+	    <li>
+            <a href="index.html">
+			    <h3>Challenges</h3>
+			    <p>Identify historical and aerial views.</p>
+	        </a>
+	    </li>
+	    <li>
+            <a href="index.html">
+			    <h3>Photos</h3>
+			    <p>Search for recent photos.</p>
+	        </a>
+	    </li>
+        -->
+
+    </ul>
+</div>

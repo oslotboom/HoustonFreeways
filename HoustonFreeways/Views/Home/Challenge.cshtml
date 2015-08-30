@@ -1,0 +1,145 @@
+﻿@model HoustonFreeways.Models.ChallengeItem
+
+@{
+    ViewBag.Title = "Houston Freeways Photo Challenge";
+    Layout = "~/Views/Shared/_LayoutBase.cshtml";
+}
+
+@section HeadJavaScript {
+                @Scripts.Render("~/bundles/jquery")
+
+    <script  type="text/javascript" language="javascript">
+
+
+        function show_map() {
+            $("#image_map").html("<img src='@Url.Content("~" + Model.ImagePath + "maps/" + Model.Map)'>");
+            //document.all.item("image_map").src = document.all.item("hidden_map").value;
+        }
+
+        function show_hint() {
+            $("#span_hint").text("@Html.Raw(Model.Hint)");
+
+        }
+
+        function show_answer() {
+            $("#span_answer").text("@Html.Raw(Model.Answer)");
+        }
+
+
+    </script>
+}
+
+
+<a href="@Url.Action("Index", "Home")">
+    <div class="Header">
+        <img src="@Url.Content("~/images/desktop/Houston_Freeways_title_header.png")" />
+    </div>
+</a>
+
+<div class="challengeCenter">
+<table width="800" cellspacing=0 >
+	<tr>
+		<td colspan="2">
+			<table class="challengeHeading">
+				<TBODY>
+					<tr>
+						<td width=10%>
+                            @if (Model.Sequence > 0)
+                            {
+                                <a href="@Url.Action("challenge", new { item = (Model.Sequence).ToString() })" >
+                                    <img src="@Url.Content("~/images/desktop/arrow_left.png")" />
+                                </a>
+                            }
+						</td>
+						<td align="middle" width=80%>
+							<div class="challengeHeadingText">@Model.Title</div>
+                            <br />
+                            <div>
+                                @for (int i = 0; i < Model.SequenceMax; i++)
+                                {
+                                    string iDisplay = (i + 1).ToString();
+                                    if (i == Model.Sequence)
+                                    {
+                                        <span class="challengeItemUnselected">&nbsp;@iDisplay &nbsp;</span>
+                                    }
+                                    else
+                                    {
+                                       <span><a href="@Url.Action("challenge", new { item = iDisplay })" class="challengeItemSelected" >@iDisplay</a>&nbsp;</span>
+                                    }
+                                }
+
+                            </div>
+							<BR>
+						</td>
+						<td width=10%>
+                            @if (Model.Sequence < Model.SequenceMax - 1)
+                            {
+                                <a href="@Url.Action("challenge", new { item = (Model.Sequence + 2).ToString() })" >
+                                    <img src="@Url.Content("~/images/desktop/arrow_right.png")" />
+                                </a>
+                            }
+						</td>
+					</tr>
+				</TBODY>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+
+
+            @if (!String.IsNullOrEmpty(Model.ImageHighRes))
+            {
+                <div>
+                    <a class="challengeImageLink" target="_blank" href="@Url.Content("~" + Model.ImagePath + Model.ImageHighRes)"><img src="@Url.Content("~" + Model.ImagePath + Model.Image)"></a>
+                </div>
+                <div><em>Click image for high resolution</em></div>
+            }
+            else
+            {
+                <img src="@Url.Content("~" + Model.ImagePath + Model.Image)">  
+            }
+		</td>
+	</tr>
+	<tr>
+		<td width="480px" valign=top>
+			<table width=478px>
+				<tr>
+					<td colspan="2">
+						Photo: @Model.PhotoCredit
+						
+					</td>
+				</tr>
+				<tr>
+					<td width=25%>
+						<SPAN id="span_show_hint" class="challengeClick" onclick="show_hint();" >
+							Show Hint</SPAN>
+					</td>
+					<td>
+						<span id="span_hint"></span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<SPAN id="span_show_answer" class="challengeClick" onclick="show_answer();">
+							Show Answer</SPAN>
+					</td>
+				</tr>
+				<TR>
+					<td colspan="2">
+						<span id="span_answer"></span>
+					</td>
+				</TR>
+			</table>
+		</td>
+		<td valign=top width="320px" style="padding-left:4mm;"><SPAN class="challengeClick" id="span_show_map" onclick="show_map();"  >Show Map</SPAN>
+			<BR>
+            <div id="image_map" style="padding-top: 6px;">
+
+            </div>
+		</td>
+	</tr>
+</table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+</div>

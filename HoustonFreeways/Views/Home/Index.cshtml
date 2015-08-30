@@ -1,0 +1,306 @@
+﻿@model HoustonFreeways.Models.HomePage
+
+@{
+    Layout = "~/Views/Shared/_LayoutBase.cshtml";
+}
+
+@section HeadJavaScript {
+                @Scripts.Render("~/bundles/jqueryui")
+<link rel="stylesheet" href="@Url.Content("~/content/jquery-ui-1.10.1.custom.css")" />
+    <script  type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            $("#author").click(function () {
+                $('#authorDialog').dialog('open');
+                //return false;
+            });
+
+            $('#authorDialog').dialog({
+                autoOpen: false,
+                width: 850,
+                modal: true,
+                bgiframe: true,
+                buttons: {
+                    "Ok": function () {
+                        $(this).dialog("close");
+                    }
+                }
+            });
+        });
+    </script>
+}
+
+<div class="FullPageWidth">
+    
+    <div class="MainArea">
+        
+        <div class="TopZone CB" >
+            <div class="FL leftMain"> <!--left main div -->
+                <div class="fullWidthCenter">
+                    <img alt="10-year candles" src="@Url.Content("~/Images/Desktop/birthday_candle_ten_with_years_175.png")"  />
+                </div>
+                <div class="fullWidthCenter">
+                    <img alt="Book Cover" src="@Url.Content("~/Images/Desktop/cover_balloons_feathered_280.png")" />
+                </div>
+                <div class="TextArea" >
+                        <div style="font-size: 1.4em; text-align:center; width:100%; font-weight: bold; padding-bottom: 6px;">Book Data</div>
+
+                        <table cellpadding=0 cellspacing=0 class="bookData">
+                        <tr>
+                        <td>Author</td>
+                        <td>Erik Slotboom</td>
+                        </tr>
+                        <tr>
+                        <td>Released</td>
+                        <td>September 15, 2003</td>
+                        </tr>
+                        <tr>
+                        <td>Out-of-print</td>
+                        <td>December 12, 2004</td>
+                        </tr>
+                        <tr>
+                        <td valign="top">eBook</td>
+                        <td>released June 5, 2005</td>
+                        </tr>
+                        <tr>
+                        <td>Pages</td>
+                        <td>416 (380 main text)</td>
+                        <tr>
+                        <td>Quantity</td>
+                        <td>5000 printed</td>
+                        </tr>
+
+                        <tr>
+                        <td>Size</td>
+                        <td>8.5 x 11"</td>
+                        </tr>
+                        <tr>
+                        <td valign=top>Format&nbsp;&nbsp;</td>
+                        <td>Hard cover, full color throughout</td>
+                        </tr>
+                        <tr>
+                        <td valign=top>Illustrations &nbsp;</td>
+                        <td>526 total
+                        <br />
+                        215 historical
+                        <br />
+                        143 modern
+                        <br />
+                        62 maps and graphics
+                        <br />
+                        106 photo location maps
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>ISBN</td>
+                        <td>0-9741605-3-9</td>
+                        </tr>
+                        <tr>
+                        <td valign=top>Price</td>
+                        <td>List: $34.95
+                            <br />
+                            Actual sales price:<br />$23 to $24
+                        <br />
+                        <a href="http://www.amazon.com/gp/offer-listing/0974160539/ref=dp_olp_2?ie=UTF8&qid=1220922082&sr=1-1">Used copies</a>
+                        are normally available
+                        </td>
+                        </tr>
+                        
+                        </table>
+                </div>
+                <div class="TextArea" >
+                    <b>Contact:</b> &nbsp; <a href="mailto:Houston@oscarmail.net">Houston@oscarmail.net</a>
+                </div>
+
+            </div><!--left main div -->
+
+            <div class="FL centerMain"> <!--left main div -->
+
+                <div class="FR CB" style="padding-bottom: 20px;">
+                    <img alt="Book Cover" src="@Url.Content("~/Images/Desktop/Houston_Freeways_title.png")" />
+                    <div id="author" class="author">by <a id="authorName" href="#"><span class="authorHeading">Erik Slotboom</span></a></div>
+                </div>
+
+                <div class="TextArea fullWidth CB" >
+                    On September 30, 1948, a crowd of Houstonians gathered on a Gulf Freeway overpass to witness the dedication of Houston's first freeway. 
+                    Houston's freeway journey began. <b><em>Houston Freeways</em></b> traces the history and influence of the freeway system with extensive photography, fascinating stories, remarkable people and time capsules from the past. 
+                </div>
+                <div class="TextArea fullWidth" >
+                    <div class="fullWidth Text-Center">
+                        <table class="linkDisplay"  cellpadding="0" cellspacing="0">
+                            
+                             <tr>
+                                <td><img src="@Url.Content("~/images/new_small.gif")" /> @Html.ActionLink("Plan Analysis", "analysis")</td>
+                                 <td><div style="color: red;">Updated July 22, 2015</div>Analysis of TxDOT's plan for downtown freeways and I-45 North (May 10, 2015)</td>
+                            </tr>                               
+@*                               <tr>
+                                <td><img src="@Url.Content("~/images/new_small.gif")" /> @Html.ActionLink("IH-35", "photos", new { id= "interstate-35-construction-august-2014"})</td>
+                                 <td>IH 35 Central Texas construction report (Aug 23, 2014)</td>
+                            </tr>                               
+                         <tr>
+                                <td><img src="@Url.Content("~/images/new_small.gif")" /> @Html.ActionLink("SH 87", "photos", new { id= "sh-87-port-arthur-highway-relics"})</td>
+                                 <td>Washed-out coastal highway, see the remains near Port Arthur (May 22, 2014)</td>
+                            </tr>  *@                           
+                            <tr>
+                                <td><a href="http://www.amazon.com/gp/offer-listing/0974160539/ref=dp_olp_0?ie=UTF8&condition=all">Used Books on Amazon</a></td>
+                                <td>Usually in the $50-100 price range</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.ActionLink("Photos", "photoIndex")</td>
+                                <td>Houston freeway photos, mostly construction in progress; also roadtrip photos from around Texas and the USA</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.ActionLink("Video", "video")</td>
+                                <td>Video of Houston freeways; also some Dallas-Fort Worth and roadtrip videos</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.ActionLink("Five Year Retrospective", "Five_Year_Retrospective")</td>
+                                <td>This report, posted on the fifth anniversary of the release of <b><em>Houston Freeways</em></b>, summarizes Houston's freeway accomplishments in the construction boom from 2003 to 2008</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.ActionLink("Corrections and Updates", "Corrections")</td>
+                                <td>A (short) listing of errors in the printed book</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="padding-right: 0;">
+                                    <div class="hRule Text-Center"><span>Links</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://www.dfwfreeways.com">DFWFreeways.com</a></td>
+                                <td>Site for my second book, <b><em>Dallas-Fort Worth Freeways, Texas-Sized Ambition</em></b>, released in 2014</td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://www.sunplots.com">SunPlots.com</a></td>
+                                <td>My web site to plot the position of the sun, mainly for photography</td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://www.texasfreeway.com">TexasFreeway.com</a></td>
+                                <td>The web site I launched in July 2000, managed by Ron Jackson since 2004 but dormant for many years.</td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://www.texashighwayman.com/index.shtml">TexasHighwayMan.com</a></td>
+                                <td>Brian Purcell's excellent site covering San Antonio</td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://www.westhoustonarchives.org/">WesthoustonArchives.org</a></td>
+                                <td>Photos and detailed info on Northwest Houston streets and highways</td>
+                            </tr>
+                            <tr>
+                                <td><a href="http://southbelthouston.blogspot.com/2014/03/both-roads-should-only-be-use-during.html">South Belt History</a></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="padding-right: 0;">
+                                    <div class="hRule Text-Center"><span>Related Content</span></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>@Html.ActionLink("Sharpstown History", "Sharpstown_History")</td>
+                                <td>Frank Sharp's efforts to bring the original seven astronauts to Sharpstown in 1962, and the 1962 Parade of Homes.</td>
+                            </tr>
+
+
+
+
+                        </table>
+
+                    </div>
+
+                </div>
+                <div class="TextArea fullWidth" >
+                    <div class="fullWidth Text-Center">
+                        <img alt=Take the photo challenge" src="@Url.Content("~/Images/Desktop/challenge.png")" />
+                    </div>
+                    <div>Identify the location of these historical and aerial photos.</div>
+                    <div><em>Each challenge has 15 photos</em></div>
+
+                    <div class="fullWidth Text-Center">
+                        <table class="linkDisplay tableChallenge"  cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td>Historical</td>
+                                <td>Aerial</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.ActionLink("Beginner", "challenge",  new { id = "historical-beginner", item=1 })</td>
+                                <td>@Html.ActionLink("November 2002", "challenge",  new { id = "aerial-1", item=1 })</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.ActionLink("Intermediate", "challenge",  new { id = "historical-intermediate", item=1 })</td>
+                                <td>@Html.ActionLink("September 2002", "challenge",  new { id = "aerial-2" , item=1})</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.ActionLink("Expert",  "challenge",  new { id = "historical-advanced", item=1 })</td>
+                                <td>@Html.ActionLink("November 2002 and May 2003", "challenge",  new { id = "aerial-3", item=1 })</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+                <p>&nbsp;</p>
+            </div><!--center main div -->
+            <div class="FL rightMain"> <!--right main div -->
+                <table class="chapterTable" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td colspan="5" align="center" ><div class="ChaptersTitle Text-Center"><img src="@Url.Content("~/Images/Desktop/View_the_book.png")" /></div></td>
+
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Pages</th>
+                        <th>Low&nbsp;Res<br />Size,&nbsp;MB</th>
+                        <th>High&nbsp;Res<br />Size,&nbsp;MB</th>
+                        <th>Thumb-<br />nails</th>
+                    </tr>
+                    
+                    @foreach (HoustonFreeways.Models.DownloadItem chapter in Model.Chapters)
+                    {
+                    <tr>
+                        <td>@chapter.Title<br />@chapter.Description</td>
+                        <td align="center">@chapter.PageCount</td>
+                        <td align="center"><a target="_blank" class="" href="@Model.PdfPath@chapter.PdfFileSmall" title="Download size, MB" >@chapter.PdfFileSmallSizeMB</a></td>
+                        <td align="center"><a target="_blank" class="" href="@Model.PdfPath@chapter.PdfFileLarge" title="Doanload size, MB" >@chapter.PdfFileLargeSizeMB</a></td>
+                        @if (chapter.ChapterNumber == String.Empty) {
+                            <td align="center"></td>
+                        }
+                        else {
+                            <td align="center">@Html.ActionLink("View", "Preview",  new { id = chapter.ChapterNumber }) </td>
+                        }
+                    </tr>
+
+                    }
+                    <tr>
+                        <th colspan="5" align="center"><span style="font-family: Verdana, sans-serif; letter-spacing: 1px;">Freeway Excerpts</span> </th>
+                    </tr>
+
+                    @foreach (HoustonFreeways.Models.DownloadItem excerpt in Model.Excerpts)
+                    {
+                    <tr>
+                        <td>@excerpt.Title<br />@excerpt.Description</td>
+                        <td align="center">@excerpt.PageCount</td>
+                        <td align="center"><a target="_blank" class="" href="@Model.PdfPath@excerpt.PdfFileSmall" title="Download size, MB" >@excerpt.PdfFileSmallSizeMB</a></td>
+                        <td align="center"><a target="_blank" class="" href="@Model.PdfPath@excerpt.PdfFileLarge" title="Doanload size, MB" >@excerpt.PdfFileLargeSizeMB</a></td>
+                        <td align="center"></td>
+                    </tr>
+
+                    }
+                    </table>
+
+            </div><!--right main div -->
+            <p>&nbsp;</p>
+            <br class="CB" />
+
+    </div>
+
+</div>
+    <p>&nbsp;</p>
+</div>
+
+	<!-- ui-dialog -->
+	<div id="authorDialog" title="Houston Freeways Author">
+        <div class="fullWidthCenter">
+                <img src="@Url.Content("~/images/desktop/portrait_2003-06-01_B_ADJ_CROP_600.jpg")" />
+        </div>
+        <div style="font-size: 0.8em">
+            @Html.Partial("AuthorText")
+        </div>
+	</div>

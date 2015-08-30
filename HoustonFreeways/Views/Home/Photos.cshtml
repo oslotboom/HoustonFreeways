@@ -1,0 +1,50 @@
+﻿@model HoustonFreeways.Models.PhotoList
+@using System.Xml.Linq;
+@using System.Xml.XPath;
+@{
+    ViewBag.Title = Model.photoXml.XPathSelectElement("photoPage/pageTitle").Value;
+}
+
+<h2> @Model.photoXml.XPathSelectElement("photoPage/pageTitle").Value</h2>
+<div class="photoPage">
+
+    @if (!String.IsNullOrEmpty(Model.photoXml.XPathSelectElement("photoPage/pageCreated").Value))
+    {
+        <div class="pageDateInformation">Page created @Model.photoXml.XPathSelectElement("photoPage/pageCreated").Value</div>
+    }
+    @if (!String.IsNullOrEmpty(Model.photoXml.XPathSelectElement("photoPage/lastUpdated").Value))
+    {
+        <div class="pageDateInformation">Page last updated @Model.photoXml.XPathSelectElement("photoPage/lastUpdated").Value</div>
+    }
+    @if (!String.IsNullOrEmpty(Model.photoXml.XPathSelectElement("photoPage/photosTaken").Value))
+    {
+        <div class="pageDateInformation">Photos taken @Model.photoXml.XPathSelectElement("photoPage/photosTaken").Value</div>
+    }
+
+    <div class="photoPageIntroText">
+        @Html.Raw(@Model.photoXml.XPathSelectElement("photoPage/text").Value)
+    </div>
+    @{
+    IEnumerable<XElement> photolist = Model.photoXml.XPathSelectElements("photoPage/images/image");
+    }
+    @foreach (XElement image in photolist) {
+        <div>
+            <img src="@(ViewBag.ImagePath + image.Element("file").Value)"  />
+        </div>
+        <div class="captionWidth">
+            @if (!String.IsNullOrEmpty(image.Element("highResolution").Value))
+            {
+                <a target="_blank" class="imageHighResolution" href="@(ViewBag.ImagePath + image.Element("highResolution").Value)">High Resolution</a>
+            }
+            
+            @if (!String.IsNullOrEmpty(image.Element("imageDate").Value))
+            {
+                <span class="imageDate">(@image.Element("imageDate").Value)</span>
+            }    
+
+            @image.Element("caption").Value
+        </div>
+    }
+
+</div>
+

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="@ViewBag.Description">
+    @Styles.Render("~/Content/css")
+
+    @Scripts.Render("~/bundles/modernizr")
+
+    @RenderSection("HeadJavaScript", required:false)
+</head>
+<body>
+    <div class="FullPageWidth">
+        <div class="MainArea">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

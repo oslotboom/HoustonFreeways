@@ -1,0 +1,13 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutBase.cshtml";
+}
+
+<a href="@Url.Action("Index", "Home")">
+    <div class="Header">
+        <img src="@Url.Content("~/images/desktop/Houston_Freeways_title_header.png")" />
+    </div>
+</a>
+<div class="TextZone">
+    @RenderBody()
+</div>
