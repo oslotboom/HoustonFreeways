@@ -1,10 +1,12 @@
 ﻿@{
     ViewBag.Title = "Houston Freeways Video";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    string videoPath = "https://1968d90e831cd27d2017897e0c81e9a12852eb10.googledrive.com/host/0B4gwdXQk1LyieHZHSTBqd0VJSnc/video/";
 }
 
 <div class="PageTitle">Video</div>
 
+<div style="padding-bottom: 8px;">The video files are windows media viewer files (*.wmv), so for browsers other than Internet Explorer you will need to save the file to view it. </div>
 <table cellspacing="0" cellpadding="0" class="VideoTable">
 
     <tr class="whiteBackground">
@@ -25,9 +27,9 @@
         <td>Bellaire</td>
         <td>November 2006</td>
         <td>3:19</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/610_bellaire_best90_360x240.wmv">18 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}610_bellaire_best90_360x240.wmv">18 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/610_bellaire_best90_720x480.wmv">54 MB</a></b>
+            720x480 <b><a href="@{@videoPath}610_bellaire_best90_720x480.wmv">54 MB</a></b>
 
         </td>
     </tr>
@@ -42,9 +44,9 @@
             Trench</td>
         <td>August 2006</td>
         <td>1:59</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/59s_trench_august2006_360x240_best_90.wmv">12 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}59s_trench_august2006_360x240_best_90.wmv">12 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/59s_trench_august2006_720x480_best_90.wmv">35 MB</a></b>
+            720x480 <b><a href="@{@videoPath}59s_trench_august2006_720x480_best_90.wmv">35 MB</a></b>
 
         </td>
     </tr>
@@ -59,9 +61,9 @@
         <td>Loop 610 to downtown</td>
         <td>April 2006</td>
         <td>3:49</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/10e_360x240_best90.wmv">26 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}10e_360x240_best90.wmv">26 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/10e_720x480_best90.wmv">72 MB</a></b>
+            720x480 <b><a href="@{@videoPath}10e_720x480_best90.wmv">72 MB</a></b>
 
         </td>
     </tr>
@@ -76,9 +78,9 @@
             downtown</td>
         <td>March 2006</td>
         <td>2:27</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/288_2005-03-14_360x240_best90.wmv">17 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}288_2005-03-14_360x240_best90.wmv">17 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/288_2005-03-14_720x480_best90.wmv">47 MB</a></b>
+            720x480 <b><a href="@{@videoPath}288_2005-03-14_720x480_best90.wmv">47 MB</a></b>
 
         </td>
     </tr>
@@ -91,9 +93,9 @@
         <td>Freeport to Galveston</td>
         <td>March 2006</td>
         <td>6:46</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/gulf_coast_12-2005_360x240_best93.wmv">49 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}gulf_coast_12-2005_360x240_best93.wmv">49 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/gulf_coast_12-2005_720x480_best90.wmv">122 MB</a></b>
+            720x480 <b><a href="@{@videoPath}gulf_coast_12-2005_720x480_best90.wmv">122 MB</a></b>
 
         </td>
     </tr>
@@ -106,9 +108,9 @@
         <td>Full length</td>
         <td>December 2005</td>
         <td>4:00</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/westpark_best93_360x240.wmv">30 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}westpark_best93_360x240.wmv">30 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/westpark_720x480_best90.wmv">67 MB</a></b>
+            720x480 <b><a href="@{@videoPath}westpark_720x480_best90.wmv">67 MB</a></b>
 
         </td>
     </tr>
@@ -124,9 +126,9 @@
         <td>High Island</td>
         <td>December 2005</td>
         <td>4:25</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/sh87_washed_out_best93_360x240.wmv">28 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}sh87_washed_out_best93_360x240.wmv">28 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/sh87_washed_out_best90_720x480.wmv">64 MB</a></b>
+            720x480 <b><a href="@{@videoPath}sh87_washed_out_best90_720x480.wmv">64 MB</a></b>
 
         </td>
     </tr>
@@ -142,9 +144,9 @@
         <td>Galveston to High Island</td>
         <td>December 2005</td>
         <td>7:00</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/sh87_best93_360x240.wmv">58 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}sh87_best93_360x240.wmv">58 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/sh87_best90_720x480.wmv">122 MB</a></b>
+            720x480 <b><a href="@{@videoPath}sh87_best90_720x480.wmv">122 MB</a></b>
 
         </td>
     </tr>
@@ -160,9 +162,9 @@
         <td>Loop 610 to BW8</td>
         <td>December 2005</td>
         <td>4:00</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/10w_construction_11-28-2005_best97_360x240.wmv">58 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}10w_construction_11-28-2005_best97_360x240.wmv">58 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/10w_construction_11-28-2005_best90_720x480.wmv">83 MB</a></b>
+            720x480 <b><a href="@{@videoPath}10w_construction_11-28-2005_best90_720x480.wmv">83 MB</a></b>
 
         </td>
     </tr>
@@ -178,9 +180,9 @@
         <td>Southeast Houston</td>
         <td>July 2005</td>
         <td>1:51</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/45s_bw8_stack_360x240_best97.wmv">23 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}45s_bw8_stack_360x240_best97.wmv">23 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/45s_bw8_stack_720x480_best93.wmv">43 MB</a></b>
+            720x480 <b><a href="@{@videoPath}45s_bw8_stack_720x480_best93.wmv">43 MB</a></b>
 
         </td>
     </tr>
@@ -196,9 +198,9 @@
             Inside Loop 610</td>
         <td>June 2004</td>
         <td>6:00</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/59s_inner_loop_best93_360x240.wmv">55 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}59s_inner_loop_best93_360x240.wmv">55 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/59s_inner_loop_best93_720x480.wmv">162 MB</a></b>
+            720x480 <b><a href="@{@videoPath}59s_inner_loop_best93_720x480.wmv">162 MB</a></b>
 
         </td>
     </tr>
@@ -213,11 +215,11 @@
             Outside Loop 610</td>
         <td>June 2004</td>
         <td>4:38</td>
-        <td class="interior_middle">180x120 <b><a href="http://www.oscarmail.net/video/59s_outer_loop_180x120_best97.wmv">24.0 MB</a></b>
+        <td class="interior_middle">180x120 <b><a href="@{@videoPath}59s_outer_loop_180x120_best97.wmv">24.0 MB</a></b>
             <br>
-            320x240 <b><a href="http://www.oscarmail.net/video/59s_outer_loop_360x240_good97.wmv">64.3 MB</a></b>
+            320x240 <b><a href="@{@videoPath}59s_outer_loop_360x240_good97.wmv">64.3 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/59s_outer_loop_720x480_best93.wmv">116 MB</a></b>
+            720x480 <b><a href="@{@videoPath}59s_outer_loop_720x480_best93.wmv">116 MB</a></b>
 
         </td>
     </tr>
@@ -230,9 +232,9 @@
         <td>Downtown to Kingwood</td>
         <td>February 2004</td>
         <td>6:27</td>
-        <td class="interior_middle">360x240 <b><a href="http://www.oscarmail.net/video/59n_360x240_best93.wmv">56 MB</a></b>
+        <td class="interior_middle">360x240 <b><a href="@{@videoPath}59n_360x240_best93.wmv">56 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/59n_720x480_best90.wmv">129 MB</a></b>
+            720x480 <b><a href="@{@videoPath}59n_720x480_best90.wmv">129 MB</a></b>
 
         </td>
     </tr>
@@ -245,9 +247,9 @@
         <td>Baytown</td>
         <td>February 2004</td>
         <td>3:06</td>
-        <td class="interior_middle">360x240 <b><a href="http://www.oscarmail.net/video/146_bridge_360x240_best93.wmv">21 MB</a></b>
+        <td class="interior_middle">360x240 <b><a href="@{@videoPath}146_bridge_360x240_best93.wmv">21 MB</a></b>
             <br>
-            640x480 <b><a href="http://www.oscarmail.net/video/146_bridge_640x480_best93.wmv">56 MB</a></b>
+            640x480 <b><a href="@{@videoPath}146_bridge_640x480_best93.wmv">56 MB</a></b>
 
         </td>
     </tr>
@@ -260,10 +262,10 @@
         <td>January 2004<br>
             <span class="small_text">updated 10-Feb-04</span></td>
         <td>3:12</td>
-        <td class="interior_middle">360x240 <b><a href="http://www.oscarmail.net/video/spur527_360x240_best93_updated_2004-02-10.wmv">29 MB</a></b>
+        <td class="interior_middle">360x240 <b><a href="@{@videoPath}spur527_360x240_best93_updated_2004-02-10.wmv">29 MB</a></b>
 
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/spur527_720x480_best90_updated_2004-02-10.wmv">65 MB</a></b>
+            720x480 <b><a href="@{@videoPath}spur527_720x480_best90_updated_2004-02-10.wmv">65 MB</a></b>
 
         </td>
     </tr>
@@ -278,9 +280,9 @@
         <td>January 2004<br>
             <span class="small_text">Revised July 2004</span></td>
         <td>3:38</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/10w_downtown_to_610_matthews_best97_360x240.wmv">49.2 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}10w_downtown_to_610_matthews_best97_360x240.wmv">49.2 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/10w_downtown_to_610_matthews_best93_720x480.wmv">93 MB</a></b>
+            720x480 <b><a href="@{@videoPath}10w_downtown_to_610_matthews_best93_720x480.wmv">93 MB</a></b>
 
         </td>
     </tr>
@@ -299,9 +301,9 @@
         <td>Northwest of Dallas</td>
         <td>September 2005</td>
         <td>3:53</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/190_opening_2005-09-09_best97_360x240.wmv">30 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}190_opening_2005-09-09_best97_360x240.wmv">30 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/190_opening_2005-09-09_best93_720x480.wmv">55 MB</a></b>
+            720x480 <b><a href="@{@videoPath}190_opening_2005-09-09_best93_720x480.wmv">55 MB</a></b>
 
         </td>
     </tr>
@@ -316,9 +318,9 @@
         <td>US 75 at IH-635 </td>
         <td>March 2005</td>
         <td>3:18</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/high_five_2005-03-20_best97_360x240.wmv">44 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}high_five_2005-03-20_best97_360x240.wmv">44 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/high_five_2005-03-20_best93_720x480.wmv">78 MB</a></b>
+            720x480 <b><a href="@{@videoPath}high_five_2005-03-20_best93_720x480.wmv">78 MB</a></b>
         </td>
     </tr>
 
@@ -331,9 +333,9 @@
         <td>Downtown to Walnut Hill</td>
         <td>February 2004</td>
         <td>6:48</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/75_central_320x240_best93.wmv">53 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}75_central_320x240_best93.wmv">53 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/75_central_720x480_best90.wmv">127 MB</a></b>
+            720x480 <b><a href="@{@videoPath}75_central_720x480_best90.wmv">127 MB</a></b>
 
         </td>
     </tr>
@@ -352,9 +354,9 @@
         <td>Moab, Utah</td>
         <td>January 2006</td>
         <td>3:35</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/arches_2006-01-08_360x240_best93.wmv">30 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}arches_2006-01-08_360x240_best93.wmv">30 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/arches_2006-01-08_720x480_best90.wmv">68 MB</a></b>
+            720x480 <b><a href="@{@videoPath}arches_2006-01-08_720x480_best90.wmv">68 MB</a></b>
 
         </td>
     </tr>
@@ -368,9 +370,9 @@
         <td>Bronx, New York</td>
         <td>October 2005</td>
         <td>3:54</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/nyc_bronx_best93_360x240.wmv">49 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}nyc_bronx_best93_360x240.wmv">49 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/nyc_bronx_best93_720x480.wmv">149 MB</a></b>
+            720x480 <b><a href="@{@videoPath}nyc_bronx_best93_720x480.wmv">149 MB</a></b>
 
         </td>
     </tr>
@@ -385,9 +387,9 @@
         <td>TX-LA Border</td>
         <td>May 2005</td>
         <td>2:41</td>
-        <td class="interior_middle">320x240 <b><a href="http://www.oscarmail.net/video/90_burned_out_bridge_360x240_best_97.wmv">67 MB</a></b>
+        <td class="interior_middle">320x240 <b><a href="@{@videoPath}90_burned_out_bridge_360x240_best_97.wmv">67 MB</a></b>
             <br>
-            720x480 <b><a href="http://www.oscarmail.net/video/90_burned_out_bridge_720x480_best_93.wmv">131 MB</a></b>
+            720x480 <b><a href="@{@videoPath}90_burned_out_bridge_720x480_best_93.wmv">131 MB</a></b>
 
         </td>
     </tr>

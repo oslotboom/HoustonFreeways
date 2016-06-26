@@ -1,0 +1,391 @@
+﻿@{
+    ViewBag.Title = "Analysis of the US 59 proposal";
+}
+
+<style>
+    body { 
+     font-family: 'Segoe UI', sans-serif; font-size: 16px; }
+
+    .problem-heading, .comment-heading { font-weight: bold; font-size: 1.1em; margin: 28px 0 4px 0; }
+        .problem-heading:before { counter-increment: index; content: counter(index) ". "; }
+
+    .index-list {padding-top: 10px; padding-bottom: 2px;}
+    .index-list:before { counter-increment: index; content: counter(index) ". ";}
+
+
+        .textItem {padding: 6px 0 6px 0; max-width: 800px; }
+    .updateItem {padding: 6px 0 6px 0; max-width: 900px; margin-left: 16px;}
+
+    .problem-solution span:nth-child(1) { font-weight: bold; color:dodgerblue; }
+    .problem-solution span:nth-child(2) {  }
+    .problem-solution img { display: inline-block; }
+
+    h2 { font-weight: bold; font-size: 1.5em; padding: 12px 0 4px 0; margin: 0 0; }
+    h3 { font-weight: bold; font-size: 1.3em; padding: 0 0 8px 0; margin: 0 0; }
+    .textblock { max-width: 650px; padding: 8px 0; }
+        .textblock div { padding: 4px 0 2px 0; }
+    ul { margin: 0px 0 8px 0; }
+
+    img { display: block; }
+
+    .bold { font-weight: bold; }
+    .red { color: red; }
+
+    .reset-counter { counter-reset: index; }
+    .italic { font-style: italic; }
+    a {
+  text-decoration: none;
+  font-weight: bold; }
+  a:hover {
+    text-decoration: underline;
+    color: red; }
+
+
+    .statusYes, .statusNo, .statusTBD { padding-left: 28px; margin: 8px 0; line-height: 155%; min-height: 25px;}
+  /*.statusYes { background: url(../../images/plan-analysis/checkmark.png) no-repeat 0 6px; }*/
+@*  .statusYes { background: url(@Url.Content("~/images/plan-analysis/tbd-14h.png")) no-repeat 0 6px; 	background-position: 10px 0px; }*@
+    .status { margin-left: 20px;}
+  .status img { display: inline-block; padding-left: 4px; padding-right: 4px;}
+   .status::before {
+    content: "Status: ";
+    font-weight: bold; color:dodgerblue;
+
+} 
+    
+    .itemStatus {font-weight: bold; }
+    .itemStatusText { margin-left: 20px; max-width: 800px; padding-bottom: 12px !important;}
+
+    li { line-height: 160%;}
+</style>
+<a name="top"></a>
+
+
+<h3>Analysis of the Southwest Freeway Congestion Mitigation Study</h3>
+
+<div class="textblock"> <span class="italic" style="padding-right: 30px;">Page created November 8, 2015, last updated November 14, 2015</span> </div>
+
+<div class="textblock">Comments and feedback to <a href="mailto:houston@oscarmail.net">Houston@oscarmail.net</a></div>
+
+<div class="textblock">Official project web site: <a href="http://www.mysouthwestfreeway.com/">MySouthwestFreeway.com</a></div>
+
+
+
+@*<div class="textblock">
+    TxDOT’s recommendation for downtown freeways and Interstate 45 North is the most influential recommendation for Houston’s freeways since the 1950s. 
+TxDOT and its partners deserve credit for a bold plan to fully modernize downtown Houston freeways and enhance mobility.
+However, review of the preliminary schematics reveals numerous points of concern which could compromise the ability of the new freeway system to meet current and future needs.
+</div>*@
+@*<div style="color:red; font-weight: bold; padding-bottom: 10px;">UPDATE SEPT 28, 2015: TxDOT has recently posted updated schematics on the project web site. This analysis will be updated in early October.</div>*@
+
+@*<div class="bold">Updates resulting from July 22 and September 4, 2015, meetings with TxDOT</div>*@
+
+
+<div class="textItem">This objective of  the <a href="http://www.mysouthwestfreeway.com/">Southwest Freeway Congestion Mitigation Study</a> is to identify relatively low-cost measures to reduce traffic congestion.</div>
+
+@*<div class="textItem">While these changes should provide some benefit to the main lane traffic flow, they will impose very substantial negative impacts on the frontage roads, traffic entering or leaving the freeway, and potentially the HOV lane.</div>*@
+
+<div class="bold" style="padding-bottom: 4px; padding-top: 4px;">General Observations </div>
+    <ul>
+        <li>Inside the loop, this plan generally improves main lane traffic flow by moving traffic load onto the frontage roads, causing more congestion on the frontage roads and its intersections</li>
+        <li>While these changes may benefit the main lanes during rush hour, at all other times the changes inside the loop will be a big inconvenience to motorists, especially the removal of the San Jacinto on-ramp</li>
+        <li>Many motorists entering or exiting the freeway inside the loop will need to go through an additional frontage road intersection, causing inconvenience and delays</li>
+        <li>Converting the HOV lane to two-way operation will be difficult and costly in certain areas, and will also probably violate good design standards. There is no need for two-way operation outside the loop, and inside the loop
+            a two-way HOV facility can only be justified from Buffalo Speedway eastward to around Mandel.
+        </li>    
+
+    </ul>
+
+<div class="textItem">In my opinion, many of the proposed changes are not worth the financial cost and negative impact, and some changes need additional refinement to make them suitable for implementation.</div>
+
+<div class="bold" style="padding-bottom: 4px; padding-top: 4px;">My Qualifications</div>
+    <ul>
+        <li>I commute daily on the Southwest Freeway from Beechnut to Loop 610</li>
+        <li>In 2012 and 2013 I commuted daily from Beechnut to downtown</li>
+    </ul>
+
+
+Submit your comments and/or objections to the project public comment email <a href="mailto:publiccomments@h-gac.com?subject=IH 69 Corridor Study Public Meetings">publiccomments@h-gac.com</a>
+
+
+<div class="reset-counter bold" style="padding-top: 12px;"><span>List of Concerns of the Proposed Modifications for the Southwest Freeway</span> </div>
+
+@*Note that some original items of concern marked with X (not fixed) are no longer included since TxDOT has reviewed these issues and determined that changes are not needed or not feasible. *@
+
+<div class="index-list reset-counter"><a href="#san-jacinto">Removal of the San Jacinto on-ramp will eliminate freeway access for Midtown, the Museum District, lower Richmond and Medical Center traffic using San Jacinto</a></div>
+
+<div class="index-list"><a href="#southbound">Changes in the outbound direction from Kirby to Weslayan will likely totally overload the frontage road between Buffalo Speedway and Weslayan</a></div>
+
+<div class="index-list"><a href="#newcastle">The benefit of removing the Newcastle exit seems minimal, but there is a definite negative impact</a></div>
+
+
+<div class="index-list"><a href="#northbound">Inbound frontage road <span style="color: red;">UPDATE 2015-Nov-12: The Kirby exit is retained in the latest design, so this concern is fixed</a></div>
+
+<div class="index-list"><a href="#fountainview">Converting the exterior shoulder to a traffic lane at at Fountainview will violate safety standards</a></div>
+
+
+<div class="index-list"><a href="#two-way-hov-outside-loop">There is no need for a two-way HOV lane facility outside the loop</a></div>
+
+<div class="index-list"><a href="#two-way-hov-inside-loop">A two-way HOV facility inside the loop should start around Buffalo Speedway and go eastward toward Mandell to avoid major complexities</a></div>
+
+<div class="index-list"><a href="#hov-entrance">Adding a northbound entrance to the HOV lane between Bellaire and Hillcroft will worsen the traffic slowdowns in that area, since HOV traffic often comes to a stop</a></div>
+
+<div class="index-list"><a href="#atm">While the active traffic management is reported to have a huge benefit-to-cost ratio, it is still quite expensive at $72 million and will add a very large number of overhead signs</a></div>
+
+<div class="index-list"><a href="#relocate">Consider moving the HOV lane to be along Westpark Road on the Metro right-of-way</a></div>
+
+
+<br />
+
+
+<a name="san-jacinto"></a> 
+<div class="problem-heading reset-counter">Removal of the San Jacinto on-ramp will eliminate freeway access for a large area</div>
+
+<div class="textblock">
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>The plan entirely removes the San Jacinto on-ramp</li>
+        <li>The San Jacinto on-ramp provides freeway access for a very large area, including south Midtown, the Museum District, the Richmond corridor extending west of Montrose, and Medical Center traffic coming north on San Jacinto.</li>
+                <li>Removal of the ramp will force all this traffic to use much longer and much more inconvenient routes to get on the freeway system, which will mean going to the South Freeway (SH 288) for most people. Reaching I-45 will be especially long
+                    and cumbersome.</li>
+
+    </ul>
+
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Do not remove this ramp</li>
+        <li>If closure is deemed to be necessary during the peak traffic periods, close it only during the peak period but leave it open at all other times.</li>
+
+    </ul>
+
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/us59-plan-analysis/san-jacinto-entrance.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+
+<a name="southbound"></a>
+<div class="problem-heading">There is a potential for huge problems on the southbound frontage road between Buffalo Speedway and Weslayan</div>
+
+<div class="textblock">
+    <div>
+        This section of frontage road already gets jammed, and getting on the on-ramp can be difficult if you are making a right from Timmons. 
+    </div>
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>Traffic coming from Kirby will be directed to this section of frontage road, adding a lot of traffic</li>
+        <li>More traffic will be added by the closure of the Newcastle off-ramp, since those vehicles will need to exit at Weslayan.</li>
+        <li>There will be more lane-switching, since the traffic originating from Kirby will need to get into the left lane for the freeway on-ramp, and traffic coming from Buffalo Speedway will need to cross over the Kirby traffic and traffic exiting the freeway,
+            and the exit ramp will have more traffic due to the closure of the Newcastle exit
+        </li>
+        <li>The on-ramp will likely be seriously overloaded and could back a long distance, much longer than the current backups. In fact, it could become gridlock.</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Do not close the Newcastle exit</li>
+        <li>Add a lane to the frontage road</li>
+        <li>Possibly make the on-ramp east of Weslayan two lanes to avoid huge backups on the frontage road. The two lanes would need to be merged to one lane before the on-ramp west of Weslayan</li>
+    </ul>
+    <a href="#top">Back to top</a>
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/us59-plan-analysis/outbound-access-management-annotated.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="newcastle"></a>
+<div class="problem-heading">The negative impact of the removing the Newcastle exit will probably exceed the benefit</div>
+<div class="textblock">
+    <div>
+        Generally speaking, exit ramps are good for main lane traffic flow since they remove traffic. However, for the Newcastle ramp some lane-switching is needed to reach the ramp, and this plan seeks to eliminate the lane switching.
+        </div>
+    <div>
+        But since this exit has a low-to-moderate volume, I don't recall a big lane switching issue caused by this exit when I commuted through this area. The much bigger problem is the lane-switching for main lane vehicles going to the Loop 610 exit, and vehicles entering from
+        the Weslayan on-ramp moving to the left to get in the US 59 main lanes.
+    </div>
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>Removal of the Newcastle exit will force traffic to exit at Weslayan, contributing to traffic on that section of frontage road and at the Weslayan intersection.</li>
+        <li>The Newcastle exit also serves vehicles going to Richmond</li>
+        <li>The potenital benefit of this change is for the main lanes during afternoon rush hour only; at all other times the loss of this exit will be an inconvenience</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Do not remove the exit.</li>
+    </ul>
+    <a href="#top">Back to top</a>
+</div>
+
+
+
+
+<a name="northbound"></a>
+<div class="problem-heading">Northbound Frontage Road at Buffalo Speedway <span style="color: red;">FIXED: This issue has been fixed by a design revision</span></div>
+<div class="textblock">
+    <div>The original plan showed the removal of the inbound exit ramp to Kirby, which would have forced traffic going to Kirby to exit for Buffalo Speedway and pass through the Buffalo Speedway intersection.</div>
+
+    <div>The new plan posted on the web site around the date of the public meeting (12-November-2015) shows the exit to Kirby remaining, so this potential cocern no longer exists.</div>
+
+    <div>The main effect of the revised plan (which also existed in the original plan) is that vehicles entering the freeway going northbound from Kirby will have to pass through the Shepherd and Greenbriar intersections since the on-ramp east of Kirby will be removed.
+        I think the requirement to go through the Shepherd and Greenbriar intersections will be tolerable.
+    </div>
+
+    <a href="#top">Back to top</a>
+</div>
+
+
+<a name="fountainview"></a>
+<div class="problem-heading">Converting the exterior shoulder to a traffic lane at at Fountainview will violate safety standards</div>
+<div class="textblock">
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>There will be seven traffic lanes with no outside shoulder. If the HOV lane is converted to two-way operation, there will be eight lanes</li>
+        <li>I drive this section daily and I don't think the traffic going to the Westpark tollway exit is causing slowdowns. Normally this area moves decently, and then traffic slows or stops on the Westpark overpass</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Widen the freeway so there will be an outside shoulder with the new lane</li>
+        <li>OR, do not convert the shoulder to a traffic lane
+        </li>
+    </ul>
+
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/us59-plan-analysis/westpark-auxiliary.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="two-way-hov-outside-loop"></a>
+<div class="problem-heading">There is no need for a two-way HOV lane facility outside the loop</div>
+<div class="textblock">
+    <div class="problem-solution">Two-way HOV is not needed outside the loop</div>
+    <ul>
+        <li>Outside the loop, traffic in the off-peak direction almost always moves at posted speeds</li>
+        <li>A two-way HOV will possibly violate design standards and have complications at the T-ramp to the Westpark transit center</li>
+                <li>A two-way HOV would need to be transitioned to a one-way HOV outside the Beltway</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Do not convert the HOV lane to two-way operation outside the loop.</li>
+    </ul>
+    <a href="#top">Back to top</a>
+</div>
+
+
+
+
+<a name="two-way-hov-inside-loop""></a>
+<div class="problem-heading">A two-way HOV facility inside the loop should start around Buffalo Speedway and go eastward to avoid major complexities</div>
+<div class="textblock">
+    <div>A two-way HOV inside the Loop would be beneficial in the inbound direction in the afternoon, when there is typically a long backup from SH 288 interchange to around Kirby.</div>
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>Bringing a two-way HOV facility through the Loop 610 interchange and through the Edloe connections will be difficult and costly, and the <a href="http://www.mysouthwestfreeway.com/docs/2015-09-28-US59-Rider42-Final-Report-DRAFT.pdf">report</a> expects new elevated structures to be needed</li>
+        <li>The two-way HOV is not needed west of Buffalo Speedway</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>If a two-way HOV is deemed to be desirable inside the loop, it should exist from around Buffalo Speedway to around Mandell only. West of Buffalo Speedway it should stay as-is, a one-way reversible facility</li>
+    </ul>
+    <a href="#top">Back to top</a>
+</div>
+
+
+<br />
+
+<a name="hov-entrance"></a>
+<div class="problem-heading">Adding a northbound entrance to the HOV lane between Bellaire and Hillcroft will worsen the traffic slowdowns in that area</div>
+<div class="textblock">
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>In the morning on Monday through Thursday, the inbound HOV traffic slows down and often reaches a stop between Bellaire and Hillcroft. The HOV is already over capacity in this area.</li>
+        <li>Adding an entrance ramp to the over-capacity HOV will make congestion on the HOV even worse.</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Do not add the entrance to the HOV. </li>
+                <li>If an entrance is added, have a long transition zone to prevent backups onto the freeway main lanes</li>
+
+    </ul>
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/us59-plan-analysis/HOV-entrance.jpg")" />
+    <a href="#top">Back to top</a>
+
+</div>
+
+<a name="atm"></a>
+<div class="problem-heading">While the traffic system management is reported to have a huge benefit-to-cost ratio of 7.6, it is still quite expensive and will add a very large number of overhead signs</div>
+<div class="textblock">
+
+    <div class="problem-solution">Observation</div>
+    <ul>
+        <li>The active traffic management is reported to have a cost of <b>$72 million</b> and a benefit of $550 million. That is still a major cost, and I'm somewhat skeptical the benefits will be that large.</li>
+        <li>There will be a huge number of overhead signs and roadside signs: 32 sign bridges with lane assignment DMS (nearly 3 per mile), 5 full-color matrix DMS, and 36 detour DMS along alternative routes and arterials</li>
+        <li>The existing changeable message sign near Westpark is useful. Instead of a massive array of signs, I'm thinking a few more signs like the existing sign will be helpful, with the possible addition of signs along arterials which feed into the freeway.</li>
+
+    </ul>
+    <div class="problem-solution">Questions</div>
+    <ul>
+        <li>Is it really necessary to have so many signs to achieve the benefit of active traffic management?</li>
+        <li>Could we achieve most of ths benefit while spending a lot less money?</li>
+    </ul>
+    <a href="#top">Back to top</a>
+</div>
+
+
+<a name="relocate"></a>
+<div class="problem-heading">Consider moving the HOV lane to be along Westpark Road on the Metro right-of-way</div>
+<div class="textblock">
+    <div>
+        Maybe the option of moving the HOV lane(s) to the Metro Westpark right-of-way has been considered. But if it has not been considered, it should be looked at. 
+    </div>
+    <div>
+        The HOV lane modifications are projected to cost <b>$240 million</b>.
+        If that much money is going to be spent, it should be enough to remove that HOV lane(s) from the main freeway and move it to the nearby right-of-way owned by Metro. This would have a lot of advantages, as summarized below.
+    </div>
+
+    <div class="problem-solution">Relocate HOV lanes</div>
+    <ul>
+        <li>From the Westpark curve to east of Shepherd, move the HOV lane off the freeway and build a new facility on the Metro right-of-way</li>
+        <li>Where Metro still wants to use the corridor for rail (around Edloe to Loop 610), the facility would need to be designed to accommodate light rail, most likely by being elevated.</li>
+    </ul>
+    <div class="problem-solution">Advantages</div>
+    <ul>
+        <li>The existing HOV lane (about 22 feet wide including barrier) would become available for auxiliary and/or additional freeway lanes
+        </li>
+        <li>This will greatly simplify making a two-way HOV in the areas around Loop 610 and Edloe. (However, as noted above, I don't think there should be a two-way HOV except from Buffalo Speedway to Mandell)
+        </li>
+        <li>There is also the possibility of a non-reversible inbound HOV from Buffalo Speedway to Mandell, and then a reversible HOV on the Westpark Corridor to duplicate the existing HOV lane.
+        </li>
+        <li>Metro could potentially receive compensation or a credit for making the right-of-way available, earning them money or relieving them of any financial obligation for this project.
+        </li>
+
+    </ul>
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/us59-plan-analysis/hov-on-westpark.jpg")" />
+
+    <br />
+    <div style="padding-bottom: 6px;">This shows the possibility of a permanent one-way inbound HOV from Buffalo Speedway eastward and a reversible HOV on the Metro right-of-way.</div>
+
+        <img src="@Url.Content("~/images/us59-plan-analysis/hov-inbound.jpg")" />
+
+    <a href="#top">Back to top</a>
+
+</div>
+
+
+
+<div>&nbsp;</div>

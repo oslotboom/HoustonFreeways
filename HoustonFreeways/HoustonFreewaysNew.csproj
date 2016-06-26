@@ -245,6 +245,24 @@
     <Content Include="App_Data\caddo-lake-photos.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Data\grand-parkway-october-2015.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\grand-parkway-section-f.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\libya-1961-waw-an-namus.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\libya-1961-desert-camp.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\libya-1961-desert-people.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\libya-1961-oil-exploration.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\houston-construction-september-2014.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -360,6 +378,7 @@
     <Content Include="Images\Desktop\windows_media_logo.gif" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Images\new_small.gif" />
+    <Content Include="Images\west-loop-bus-lanes\610-bus-lanes.jpg" />
     <Content Include="modern\2014-01-18_us_290_right-of-way_clearance.aspx" />
     <Content Include="modern\images\161\161_map.pspimage" />
     <Content Include="Images\Mobile\100x100_green.png" />
@@ -854,6 +873,10 @@
     <Content Include="Views\Home\Sharpstown_History.cshtml" />
     <Content Include="Views\Home\Photos.cshtml" />
     <Content Include="Views\Home\analysis.cshtml" />
+    <Content Include="Views\Home\analysis-original.cshtml" />
+    <Content Include="Views\Home\us59_analysis.cshtml" />
+    <Content Include="Views\Home\west_loop_bus_lanes.cshtml" />
+    <Content Include="Views\Home\analysis_sept_2015.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Desktop\Challenge\Aerial\Maps\" />
@@ -869,6 +892,7 @@
     <Folder Include="Images\Desktop\Preview\notes\" />
     <Folder Include="Images\Desktop\Preview\preface\" />
     <Folder Include="Images\plan-analysis\" />
+    <Folder Include="Images\us59-plan-analysis\" />
     <Folder Include="modern\images\20140118-290-clearance\" />
     <Folder Include="modern\images\fm3005\" />
   </ItemGroup>

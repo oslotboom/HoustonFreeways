@@ -24,14 +24,14 @@
 		
 		<tr><td>
 		<P>
-		<em>Page created January 18, 2014, last updated August 30, 2015
-           <br /> Photos were taken in 2012, 2013 and 2015, as indicated beneath each photo
+		<em>Page created January 18, 2014, last updated March 12, 2016
+           <br /> Photos were taken in 2012, 2013, 2015 and 2016, as indicated beneath each photo
 
 		</em>
 		
 		<div style="width:800px; font-family:serif;">
 
-		The $1.8 billion <a href="http://my290.com/">US 290 expansion</a> is the largest highway construction project in Houston in the 2013-2017 period. 
+		The $2.4 billion <a href="http://my290.com/">US 290 expansion</a> is the largest highway construction project in Houston in the 2013-2017 period. 
             (The Grand Parkway sections F and G is longer at 38 miles long but costs less, $1.1 billion).
 		</p>
             According to a October 3, 2014, <a href="http://www.houstonchronicle.com/news/transportation/article/Ramp-opening-soon-to-directly-connect-U-S-290-to-5799346.phpww?cmpid=gplus-premium&t=b0a8a4f641bfe1217f&cmpid=email-premium&t=b0a8a4f641fda33e64#/0">article</a>
@@ -305,18 +305,29 @@ The fast food strip was located along the south side of US 290 just west of Belt
        (7-April-2013) Another view of the apartment building to be cleared. The elevated HOV lane access structure visible on the right was permanently removed during the expansion.
        August 2015 UPDATE: This building was cleared in August 2015, see next photo.
 
-
-                    <p>                   
+        <p>                   
 		<img src="<%=System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePath"] %>images/20140118-us290-clearance/20150829-0005-1300.jpg">
 		<br>
        (29-August-2015) The apartment buildings alongside the freeway were cleared in August 2015, here is a view looking along the feeder with the brownfield where the building existed.
+        </p>
 
+        <p>                   
+		<img src="<%=System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePath"] %>images/20140118-us290-clearance/20160206-0144-1300.jpg">
+		<br>
+       (6-Feb-2015) In February 2016 the frontage road base was in place on the former location of the apartment building.
+        </p>
 
         <p>                   
 		<img src="<%=System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePath"] %>images/20140118-us290-clearance/20130505_290_0319_creekwood_apartments.jpg">
 		<br>
        (5-May-2013) The Creekwood Apartments at 11911 Northwest Freeway had one building immediately alongside the frontage road. It is slated for removal but was still intact in December 2013.
             September 2015 UPDATE: This building was still intact in early September 2015 but was being readied for clearance.
+
+                    <p>                   
+		<img src="<%=System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePath"] %>images/20140118-us290-clearance/20160206-0125-1300.jpg">
+		<br>
+       (6-Feb-2016) In February 2016 the property was cleared and the base for the eastbound frontage road was in place.
+        </p>
  
        <p>                   
 		<img src="<%=System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePath"] %>images/20140118-us290-clearance/20130500_290_0283_harland_street.jpg">
@@ -348,6 +359,19 @@ The fast food strip was located along the south side of US 290 just west of Belt
 		<img src="<%=System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePath"] %>images/20140118-us290-clearance/20150721-290-row-0023-1200.jpg">
 		<br>
        (21-July-2015) Parking lot view of the Gold Cup
+
+
+        <p>                   
+		<img src="<%=System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePath"] %>images/20140118-us290-clearance/20160206-0164-1300.jpg">
+		<br>
+       (6-Feb-2016) In February 2016 the structure was cleared and only the slab remained.
+
+        <p>                   
+		<img src="<%=System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePath"] %>images/20140118-us290-clearance/20160206-0150-1300.jpg">
+		<br>
+       (6-Feb-2016) This convenience store and fuel station at the southwest corner of Bingle and the freeway was boarded up in 2016. Although the fuel pumps were displaced by the widening, the structure was 
+            far back from the new right-of-way line. I don't know if this building is slated for demolition, or if it is closed during construction and will reopen when work is done.
+
 
                    
         <P>&nbsp;</P>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<photoPage>
+  <folderPath>libya-1961-oil-exploration</folderPath>
+  <pageTitle>Libya 1961 oil exploration photos, Prakla Geophysical</pageTitle>
+  <pageCreated>12-September-2015</pageCreated>
+  <lastUpdated></lastUpdated>
+  <photosTaken>1961</photosTaken>
+  <description>Color photos of Libya taken in 1961 showing seismic surveys conducted by Prakla Geophysical. </description>
+  <text>
+    <![CDATA[
+    <p>
+    These photos were taken by a member of the Prakla Geophysical team which was acquiring seismic data in the Libyan desert in 1961.
+    </p>
+
+    ]]>
+  </text>
+  <images>
+
+    <image>
+      <file>libya-map.png</file>
+      <highResolution></highResolution>
+      <caption>The exact location of these photos is not known, but they are believed to be from the southern area of Libya, east of the Murzuk oil fields.</caption>
+      <imageDate></imageDate>
+    </image>
+    <image>
+      <file>truck-drilling-1-ADJ-1190.jpg</file>
+      <highResolution>truck-drilling-1-ADJ-hires.jpg</highResolution>
+      <caption>Prakla truck drilling a hole for the explosive charge</caption>
+      <imageDate>1961</imageDate>
+    </image>
+    <image>
+      <file>truck-front-view-ADJ-700.jpg</file>
+      <highResolution>truck-front-view-ADJ-hires.jpg</highResolution>
+      <caption>Front view of the Prakla drilling truck</caption>
+      <imageDate>1961</imageDate>
+    </image>
+    <image>
+      <file>truck-drilling-ADJ-1190.jpg</file>
+      <highResolution></highResolution>
+      <caption>Drilling in progress</caption>
+      <imageDate>1961</imageDate>
+    </image>
+    <image>
+      <file>distant-blast-ADJ-1190.jpg</file>
+      <highResolution>distant-blast-ADJ-hires.jpg</highResolution>
+      <caption>Blast in the distance</caption>
+      <imageDate>1961</imageDate>
+    </image>
+    <image>
+      <file>blast-1-ADJ-1190.jpg</file>
+      <highResolution></highResolution>
+      <caption>Two blasts. This photograph was very dirty.</caption>
+      <imageDate>1961</imageDate>
+    </image>
+    <image>
+      <file>equipment-in-hole-ADJ-1190.jpg</file>
+      <highResolution>equipment-in-hole-ADJ-hires.jpg</highResolution>
+      <caption>The field crew is lowering listening devices into the hole.</caption>
+      <imageDate>1961</imageDate>
+    </image>
+
+    <image>
+      <file>truck-1-ADJ-1190.jpg</file>
+      <highResolution>truck-1-ADJ-hires.jpg</highResolution>
+      <caption>Local members of the crew hanging out near a Prakla Unimog service truck.</caption>
+      <imageDate>1961</imageDate>
+    </image>
+    <image>
+      <file>prakla-trucks-1-ADJ-1190.jpg</file>
+      <highResolution>prakla-trucks-1-ADJ-hires.jpg</highResolution>
+      <caption>Four Prakla Land Rover service trucks. </caption>
+      <imageDate>1961</imageDate>
+    </image>
+    <image>
+      <file>prakla-trucks--off-road-may-1965-flying-camp-conc-ADJ-900.jpg</file>
+      <highResolution></highResolution>
+      <caption>Truck driving across rough terrain</caption>
+      <imageDate>1961</imageDate>
+    </image>
+    <image>
+      <file>truck-with-crew-AD-1190.jpg</file>
+      <highResolution>truck-with-crew-ADJ-hires.jpg</highResolution>
+      <caption>(This photo was very dirty.) Truck transporting local labor, with a German from Prakla in front.</caption>
+      <imageDate>1961</imageDate>
+    </image>
+
+  </images>
+</photoPage>

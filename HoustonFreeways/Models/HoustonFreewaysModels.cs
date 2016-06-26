@@ -14,7 +14,7 @@ namespace HoustonFreeways.Models
     /* classes for home page */
     public class HomePage
     {
-        public string PdfPath = "http://freeways.azurewebsites.net/houston-freeways-book/"; //"http://www.oscarmail.net/houstonfreeways/ebook/";
+        public string PdfPath = "https://1968d90e831cd27d2017897e0c81e9a12852eb10.googledrive.com/host/0B4gwdXQk1LyieHZHSTBqd0VJSnc/pdf/"; //"http://www.oscarmail.net/houstonfreeways/ebook/"; "http://freeways.azurewebsites.net/houston-freeways-book/"
         public List<DownloadItem> Chapters { get; set; }
         public List<DownloadItem> Excerpts { get; set; }
 

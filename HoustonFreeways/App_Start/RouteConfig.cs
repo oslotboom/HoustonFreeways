@@ -19,12 +19,18 @@ namespace HoustonFreeways
                 defaults: new { controller = "ViewSwitcher", action = "SwitchView" }
             );
 
-            routes.MapRoute(
-                name: "Default",
-                url: "{action}/{id}/{item}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional, item = UrlParameter.Optional }
-            );
+            //routes.MapRoute(
+            //    name: "Default",
+            //    url: "{action}/{id}/{item}",
+            //    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional, item = UrlParameter.Optional }
+            //);
 
+            routes.Add(
+               new Route("{controller}/{action}/{id}",
+                  new RouteValueDictionary(
+                     new { controller = "Home", action = "Index", id = UrlParameter.Optional, item = UrlParameter.Optional }),
+                     new HyphenatedRouteHandler())
+                     );
 
         }
     }

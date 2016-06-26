@@ -43,6 +43,21 @@ namespace HoustonFreeways.Controllers
             return View();
         }
 
+        public ActionResult analysis_sept_2015()
+        {
+            return View();
+        }
+
+        public ActionResult west_loop_bus_lanes()
+        {
+            return View();
+        }
+
+        public ActionResult us59_analysis()
+        {
+            return View();
+        }
+
         public ActionResult Photos()
         {
 
@@ -54,7 +69,11 @@ namespace HoustonFreeways.Controllers
 
             //define the image path
             string imageFolder = photoXdoc.Descendants("folderPath").SingleOrDefault().Value.ToString();
-            ViewBag.ImagePath = System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePath"] + "images/" + imageFolder + "/";
+            if (requestId.Contains("1961"))
+                ViewBag.ImagePath = System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePathGoogleDrive"] + imageFolder + "/";
+            else
+                ViewBag.ImagePath = System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePath"] + "images/" + imageFolder + "/";
+
             ViewBag.description = photoXdoc.Descendants("description").Count()==1 ? photoXdoc.Descendants("description").SingleOrDefault().Value.ToString(): "";
             return View(new PhotoList(photoXdoc));
         }

@@ -35,13 +35,15 @@
         
         <div class="TopZone CB" >
             <div class="FL leftMain"> <!--left main div -->
-                <div class="fullWidthCenter">
+                <div style="margin-top: 136px;"></div>
+@*                <div class="fullWidthCenter">
                     <img alt="10-year candles" src="@Url.Content("~/Images/Desktop/birthday_candle_ten_with_years_175.png")"  />
-                </div>
-                <div class="fullWidthCenter">
+                </div>*@
+@*                <div class="fullWidthCenter">
                     <img alt="Book Cover" src="@Url.Content("~/Images/Desktop/cover_balloons_feathered_280.png")" />
-                </div>
+                </div>*@
                 <div class="TextArea" >
+                    <img alt="Book Cover" style="margin-left: 3px; margin-top: 4px; margin-bottom: 6px;" src="@Url.Content("~/Images/Desktop/cover-front.jpg")" />
                         <div style="font-size: 1.4em; text-align:center; width:100%; font-weight: bold; padding-bottom: 6px;">Book Data</div>
 
                         <table cellpadding=0 cellspacing=0 class="bookData">
@@ -128,10 +130,27 @@
                     <div class="fullWidth Text-Center">
                         <table class="linkDisplay"  cellpadding="0" cellspacing="0">
                             
-                             <tr>
-                                <td><img src="@Url.Content("~/images/new_small.gif")" /> @Html.ActionLink("Plan Analysis", "analysis")</td>
-                                 <td><div style="color: red;">Updated July 22, 2015</div>Analysis of TxDOT's plan for downtown freeways and I-45 North (May 10, 2015)</td>
-                            </tr>                               
+@*                            <tr>
+                                <td><img src="@Url.Content("~/images/new_small.gif")" /> @Html.ActionLink("US 59 Plan Analysis", "us59_analysis")</td>
+                                 <td><div style="color: red;">Updated November 14, 2015</div>Analysis of the US 59 <a href="http://www.mysouthwestfreeway.com/">traffic mitigation study</a></td>
+                            </tr>  *@                                
+                            <tr>
+                                <td><img src="@Url.Content("~/images/new_small.gif")" />@Html.ActionLink("Critque of proposed West Loop bus lane", "west-loop-bus-lanes")</td>
+                                 <td><div style="color: red;">Updated June 1, 2016</div>Identifies problems and suggests a better design</td>
+                            </tr>  
+                            <tr>
+                                <td>@Html.ActionLink("Grand Parkway Section F", "photos", new { id= "grand-parkway-section-f"}) </td>
+                                 <td>Driving tour of the newly opened section</td>
+                            </tr>                              
+                            <tr>
+                                <td>@Html.ActionLink("Plan Analysis", "analysis")</td>
+                                 <td>Analysis of TxDOT's plan for downtown freeways and I-45 North</td>
+                            </tr>   
+                            <tr>
+                                <td><a href="https://1968d90e831cd27d2017897e0c81e9a12852eb10.googledrive.com/host/0B4gwdXQk1LyieHZHSTBqd0VJSnc/Houston/Bellaire-presentation-final.pdf" target="_blank">Presentation</a></td>
+                                 <td>For the Bellaire Historical Society, September 10, 2015</td>
+                            </tr>                                
+                            
 @*                               <tr>
                                 <td><img src="@Url.Content("~/images/new_small.gif")" /> @Html.ActionLink("IH-35", "photos", new { id= "interstate-35-construction-august-2014"})</td>
                                  <td>IH 35 Central Texas construction report (Aug 23, 2014)</td>
