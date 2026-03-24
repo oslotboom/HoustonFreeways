@@ -46,7 +46,7 @@
 						<td width=10%>
                             @if (Model.Sequence > 0)
                             {
-                                <a href="@Url.Action("challenge", new { item = (Model.Sequence).ToString() })" >
+                                <a href="@Url.Action("challenge", new { dataitem = (Model.Sequence).ToString() })" >
                                     <img src="@Url.Content("~/images/desktop/arrow_left.png")" />
                                 </a>
                             }
@@ -64,7 +64,7 @@
                                     }
                                     else
                                     {
-                                       <span><a href="@Url.Action("challenge", new { item = iDisplay })" class="challengeItemSelected" >@iDisplay</a>&nbsp;</span>
+                                       <span><a href="@Url.Action("challenge", new { dataitem = iDisplay })" class="challengeItemSelected" >@iDisplay</a>&nbsp;</span>
                                     }
                                 }
 
@@ -74,7 +74,7 @@
 						<td width=10%>
                             @if (Model.Sequence < Model.SequenceMax - 1)
                             {
-                                <a href="@Url.Action("challenge", new { item = (Model.Sequence + 2).ToString() })" >
+                                <a href="@Url.Action("challenge", new { dataitem = (Model.Sequence + 2).ToString() })" >
                                     <img src="@Url.Content("~/images/desktop/arrow_right.png")" />
                                 </a>
                             }

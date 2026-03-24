@@ -12,7 +12,7 @@
 	
 		<div style="padding-left:0.5cm; text-align: left; font-family: Serif;">
 
-		<A href="../photoindex">Return to Recent Photos index</a>
+		<a href="/Home/photoIndex">Return to Recent Photos index</a>
 		<p></p>
 				<div style="font-family:Sans-Serif; font-size: 150%; color:#FF2222; font-weight: bold;" >
 		US 290 Right-of-Way Clearance

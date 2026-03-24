@@ -10,7 +10,7 @@
 		<LINK REL="stylesheet" HREF="<%=Page.ResolveUrl("~/content/LegacyPhotos.css")%>" type="text/css">
 	</HEAD>
 	<body>
-		<A href="photos">Return to modern photos</a>
+		<a href="photos">Return to photo index</a>
 		<p></p>
 		<table width="800px">
 					

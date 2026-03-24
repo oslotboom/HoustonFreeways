@@ -20,6 +20,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -243,6 +245,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\caddo-lake-photos.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\sharpstown-high-school-demolition-2018.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\lone-star-rally-photos-2017.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\grand-parkway-october-2015.xml">
@@ -872,11 +880,14 @@
     <Content Include="Views\Home\Challenge.cshtml" />
     <Content Include="Views\Home\Sharpstown_History.cshtml" />
     <Content Include="Views\Home\Photos.cshtml" />
-    <Content Include="Views\Home\analysis.cshtml" />
+    <Content Include="Views\Home\analysis_sept_2015.cshtml" />
     <Content Include="Views\Home\analysis-original.cshtml" />
     <Content Include="Views\Home\us59_analysis.cshtml" />
     <Content Include="Views\Home\west_loop_bus_lanes.cshtml" />
-    <Content Include="Views\Home\analysis_sept_2015.cshtml" />
+    <Content Include="Views\Home\analysis.cshtml" />
+    <Content Include="Views\Home\analysis_June_2016.cshtml" />
+    <Content Include="Views\Home\analysis_May_2017.cshtml" />
+    <Content Include="Views\Home\analysis_May_2018.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Desktop\Challenge\Aerial\Maps\" />

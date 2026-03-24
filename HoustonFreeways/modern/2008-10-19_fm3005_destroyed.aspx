@@ -11,7 +11,7 @@
 	
 		<div style="padding-left:1.4cm; text-align: left; font-family: Serif;">
 
-		<A href="../photoindex">Return to Recent Photos index</a>
+		<a href="/Home/photoIndex">Return to Recent Photos index</a>
 		<p></p>
 				<div style="font-family:Sans-Serif; font-size: 150%; color:#FF2222;" >
 		Brazoria County Road 257, the Blue Water Highway, Surfside to San Luis Pass

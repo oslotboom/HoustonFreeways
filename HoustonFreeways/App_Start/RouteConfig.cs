@@ -26,6 +26,13 @@ namespace HoustonFreeways
             //);
 
             routes.Add(
+               new Route("analysis",
+                  new RouteValueDictionary(
+                     new { controller = "Home", action = "analysis" }),
+                     new HyphenatedRouteHandler())
+                     );
+
+            routes.Add(
                new Route("{controller}/{action}/{id}",
                   new RouteValueDictionary(
                      new { controller = "Home", action = "Index", id = UrlParameter.Optional, item = UrlParameter.Optional }),

@@ -14,7 +14,7 @@ namespace HoustonFreeways.Models
     /* classes for home page */
     public class HomePage
     {
-        public string PdfPath = "https://1968d90e831cd27d2017897e0c81e9a12852eb10.googledrive.com/host/0B4gwdXQk1LyieHZHSTBqd0VJSnc/pdf/"; //"http://www.oscarmail.net/houstonfreeways/ebook/"; "http://freeways.azurewebsites.net/houston-freeways-book/"
+        public string PdfPath = System.Web.Configuration.WebConfigurationManager.AppSettings["PDFPath"];
         public List<DownloadItem> Chapters { get; set; }
         public List<DownloadItem> Excerpts { get; set; }
 
@@ -50,18 +50,6 @@ namespace HoustonFreeways.Models
             homepage.Excerpts.Add(new DownloadItem("", "LaPorte_Freeway_72ppi.pdf", "1.5", "LaPorte_Freeway_150ppi.pdf", "3.8", String.Empty, "LaPorte Freeway", "11", String.Empty, "State Highway 225", false));
             return homepage;
         }
-    }
-
-    public class QuickViewPage
-    {
-        public string Title;
-        public string PdfPath;
-        public string PdfSize;
-        public string PdfFileSmall;
-        public string PdfFileLarge;
-        public string ImagePath;
-        public List<QuickViewItem> Pages;
-
     }
 
     public class DownloadItem
@@ -484,7 +472,7 @@ namespace HoustonFreeways.Models
             challengeArray[0, 6, 1] = "";
             challengeArray[0, 6, 2] = "Chuck Fuhs";
             challengeArray[0, 6, 3] = "This structure will be demolished around 2005 or 2006.";
-            challengeArray[0, 6, 4] = "This view looks west along the Katy Freeway [IH-10] showing the structures for the interchange ramps at Beltway 8/Sam Houston Tollway in October 1987.";
+            challengeArray[0, 6, 4] = "This view looks west along the Katy Freeway [IH-10] showing the structures for the interchange ramps at Beltway 8/Sam Houston Tollway in October 1987. This interchange including these structures was demolished and replaced during the Katy Freeway expansion between 2005 and 2008.";
             challengeArray[0, 6, 5] = "B07_challenge_10w_at_8_fuhs.jpg";
             challengeArray[0, 7, 0] = "B08_59s_1980-02-00_looking_n_at_hillcroft_800.jpg";
             challengeArray[0, 7, 1] = "B08_59s_1980-02-00_looking_n_at_hillcroft_2700.jpg";
@@ -568,7 +556,7 @@ namespace HoustonFreeways.Models
             challengeArray[1, 5, 1] = "";
             challengeArray[1, 5, 2] = "TxDOT";
             challengeArray[1, 5, 3] = "Houston's busiest interchange";
-            challengeArray[1, 5, 4] = "This is the structure for the West Loop main lanes at the Southwest Freeway interchange under construction in 1961. In 2003 work is in progress to fill the gap between the two structures and widen the structures.";
+            challengeArray[1, 5, 4] = "This is the structure for the West Loop main lanes at the Southwest Freeway interchange under construction in 1961. In 2003 a project filled the gap between the two structures. These structures were demolished and replaced between 2022 and 2025 during the major reconstruction of the interchange.";
             challengeArray[1, 5, 5] = "I06_challenge_610_interchange_at_59.jpg";
             challengeArray[1, 6, 0] = "I07_59n_1979-01-00_s_of_610_800.jpg";
             challengeArray[1, 6, 1] = "I07_59n_1979-01-00_s_of_610_2791.jpg";
@@ -622,7 +610,7 @@ namespace HoustonFreeways.Models
             challengeArray[1, 14, 1] = "";
             challengeArray[1, 14, 2] = "Chuck Fuhs";
             challengeArray[1, 14, 3] = "The freeway was built in small pieces in 5 decades.";
-            challengeArray[1, 14, 4] = "This view shows the construction of the Northwest Freeway [US 290] main lanes near Dacoma in 1976.";
+            challengeArray[1, 14, 4] = "This view shows the construction of the Northwest Freeway [US 290] main lanes near Dacoma in 1976. Reconstruction and widening was completed in 2019.";
             challengeArray[1, 14, 5] = "I15_challenge_290_dacoma.jpg";
             challengeArray[2, 0, 0] = "A01_8N_may_1987_800.jpg";
             challengeArray[2, 0, 1] = "";
@@ -646,13 +634,13 @@ namespace HoustonFreeways.Models
             challengeArray[2, 3, 1] = "A04_cc_katy_diversion_360dpi_bw_no_unsharp_2700.jpg";
             challengeArray[2, 3, 2] = "Greater Houston Partnership";
             challengeArray[2, 3, 3] = "In 2003, mega-congestion just ahead.";
-            challengeArray[2, 3, 4] = "This circa-1963 view looks west along the Katy Freeway [IH-10] from one of the ramps at the interchange with Loop 610. Notice that the eastbound traffic was diverted off the freeway to a temporary roadway that continues on the right side of the photo [but is not visible in this photo]. Demolition and reconstruction of this interchange is just underway in 2003.";
+            challengeArray[2, 3, 4] = "This circa-1963 view looks west along the Katy Freeway [IH-10] from one of the ramps at the interchange with Loop 610. Notice that the eastbound traffic was diverted off the freeway to a temporary roadway that continues on the right side of the photo [but is not visible in this photo]. Demolition and reconstruction of this interchange started in 2003 and was completed in 2007.";
             challengeArray[2, 3, 5] = "A04_challenge_10w_at_610.jpg";
             challengeArray[2, 4, 0] = "A05_610s_at_288_oct-1975_HD101.01_noGEM_CROP_ADJ_800.jpg";
             challengeArray[2, 4, 1] = "";
             challengeArray[2, 4, 2] = "Chuck Fuhs";
             challengeArray[2, 4, 3] = "Motorists going to or from the Astrodome saw this.";
-            challengeArray[2, 4, 4] = "This is construction of the interchange at Loop 610 and the South Freeway [SH 288] in October 1975.";
+            challengeArray[2, 4, 4] = "This is construction of the interchange at Loop 610 and the South Freeway [SH 288] in October 1975. The ramps in this photos were demolished and replaced during complete reconstruction of the interchange between 2021 and 2024.";
             challengeArray[2, 4, 5] = "A05_challenge_610_288.jpg";
             challengeArray[2, 5, 0] = "A06_N3BHLA5371959_800.jpg";
             challengeArray[2, 5, 1] = "";

@@ -11,7 +11,7 @@
 
 	</HEAD>
 	<body>
-		<A href="../photoIndex">Return to modern photos</a>
+		<a href="/Home/photoIndex">Return to photo index</a>
 		<p></p>
 		<table width="1000px">
 					

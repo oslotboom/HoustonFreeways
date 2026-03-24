@@ -43,7 +43,21 @@ namespace HoustonFreeways.Controllers
             return View();
         }
 
+        public ActionResult analysis_June_2016()
+        {
+            return View();
+        }
         public ActionResult analysis_sept_2015()
+        {
+            return View();
+        }
+
+        public ActionResult analysis_May_2017()
+        {
+            return View();
+        }
+
+        public ActionResult analysis_May_2018()
         {
             return View();
         }
@@ -69,10 +83,7 @@ namespace HoustonFreeways.Controllers
 
             //define the image path
             string imageFolder = photoXdoc.Descendants("folderPath").SingleOrDefault().Value.ToString();
-            if (requestId.Contains("1961"))
-                ViewBag.ImagePath = System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePathGoogleDrive"] + imageFolder + "/";
-            else
-                ViewBag.ImagePath = System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePath"] + "images/" + imageFolder + "/";
+            ViewBag.ImagePath = System.Web.Configuration.WebConfigurationManager.AppSettings["ImagePath"] + "images/" + imageFolder + "/";
 
             ViewBag.description = photoXdoc.Descendants("description").Count()==1 ? photoXdoc.Descendants("description").SingleOrDefault().Value.ToString(): "";
             return View(new PhotoList(photoXdoc));
@@ -135,7 +146,7 @@ namespace HoustonFreeways.Controllers
         public ActionResult Challenge()
         {
             string challenge = RouteData.Values["id"].ToString().ToLower();
-            string item = RouteData.Values["item"].ToString().ToLower();
+            string item = Request.QueryString["dataitem"]; // RouteData.Values["item"].ToString().ToLower();
             int sequence = 0;
             //validate routeData values
             string[] validChallenge = new string[] { "aerial-1", "aerial-2", "aerial-3", "historical-beginner", "historical-intermediate", "historical-advanced" };

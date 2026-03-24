@@ -1,0 +1,739 @@
+﻿@{
+    ViewBag.Title = "Analysis of TxDOT plan";
+}
+
+<style>
+    body {
+        font-family: serif,sans-serif,
+        'Segoe UI';
+        font-size: 120%;
+    }
+
+    a {font-family: sans-serif;}
+
+    .sans-serif {font-family: sans-serif;}
+
+    .non-numbered-heading { font-weight: bold; font-size: 1.1em; margin: 28px 0 4px 0;  font-family: sans-serif }
+
+    .problem-heading, .comment-heading { font-weight: bold; font-size: 1.1em; margin: 28px 0 4px 0; font-family: sans-serif }
+        .problem-heading:before { counter-increment: index; content: counter(index) ". "; }
+
+    .index-list {padding-top: 10px; padding-bottom: 2px;}
+    .index-list:before { counter-increment: index; content: counter(index) ". ";}
+
+    .updateItem {padding: 6px 0 6px 0; max-width: 1000px; }
+
+    .problem-solution { padding-top: 4px; text-decoration: underline;}
+    .problem-solution span:nth-child(1) { font-weight: bold; color:dodgerblue; }
+    .problem-solution span:nth-child(2) {  }
+    .problem-solution img { display: inline-block; }
+
+    h2 { font-family: sans-serif; font-weight: bold; font-size: 1.5em; padding: 12px 0 4px 0; margin: 0 0; }
+    h3 { font-family: sans-serif; font-weight: bold; font-size: 1.3em; padding: 0 0 8px 0; margin: 0 0; }
+    .textblock { max-width: 900px; padding: 8px 0; }
+        .textblock div { padding: 4px 0 2px 0; }
+    ul { margin: 0px 0 8px 0; }
+
+    img { display: block; }
+
+    .bold { font-weight: bold; font-size: 110%; }
+    .red { color: red; }
+
+    .reset-counter { counter-reset: index; }
+    .italic { font-style: italic; }
+    a {
+  text-decoration: none;
+  font-weight: bold; }
+  a:hover {
+    text-decoration: underline;
+    color: red; }
+
+  .padding-bottom10 {padding-bottom: 10px;}
+
+    .statusYes, .statusNo, .statusTBD { padding-left: 28px; margin: 8px 0; line-height: 155%; min-height: 25px;}
+  /*.statusYes { background: url(../../images/plan-analysis/checkmark.png) no-repeat 0 6px; }*/
+@*  .statusYes { background: url(@Url.Content("~/images/plan-analysis/tbd-14h.png")) no-repeat 0 6px; 	background-position: 10px 0px; }*@
+    .status { margin-left: 20px;}
+  .status img { display: inline-block; padding-left: 4px; padding-right: 4px;}
+   .status::before {
+    content: "Status: ";
+    font-weight: bold; color:dodgerblue;
+    }
+    .additional {padding: 4px 0;}
+    .additional img { display: inline-block; padding-left: 4px; padding-right: 6px;}
+
+
+    .itemStatus {font-weight: bold; }
+    .itemStatusText { margin-left: 20px; max-width: 800px; padding-bottom: 12px !important;}
+
+    .txdot { margin: 10px 0; border: solid black thin; background-color: rgb(255, 255, 220); padding: 4px 6px 8px 14px !important; }
+    .txdot >div:first-child {to
+        font-size: 18px; font-weight: bold;
+    }
+
+    .checklist {display: block; padding-bottom: 8px; }
+    .checklist li {padding: 4px 0;}
+    .checklist div {display: inline-block; vertical-align: top; }
+    .checklist > div:first-child { width: 50px;}
+        .checklist > div:first-child img {
+            display: inline-block;
+        }
+    .checklist > div:nth-child(2) {
+        width: 900px;
+    }
+
+    .padding-topbottom-8 {padding: 8px 0;}
+
+    .status-box {
+        border-color: red;
+        border-width: 2px;
+        border-style: solid;
+        background-color: rgb(255,218,218);
+        width: 92%;
+        font-size: 93%;
+        font-family: sans-serif;
+        padding: 12px 18px 8px 18px;
+        margin-bottom: 16px;
+    }
+</style>
+
+
+<h2>Analysis, Critique and Suggested Modification</h2>
+<h3>for the Proposed Improvements to Downtown Freeways and I-45 North</h3>
+
+<div class="textblock">
+    <span class="italic" style="padding-right: 30px;">Page created May 10, 2015</span>  <span class="italic bold" style="padding-right: 30px;">Major update May 26, 2017 </span>
+    <span class="italic" style="padding-right: 30px;">Status update May 20, 2018</span>
+</div>
+@*<div class="textblock" style="max-width: 850px;"> <span class="italic bold" style="padding-right: 30px;">Updated March 19, 2016 (add comments on Purple City plan)</span> </div>*@
+
+@*<div class="textblock">Comments and feedback to <a href="mailto:houston@oscarmail.net">Houston@oscarmail.net</a></div>*@
+
+<div class="textblock sans-serif">
+    <a href="http://www.ih45northandmore.com/">Official TxDOT Project Web Site</a>
+    <span style="padding-left: 50px;">Comments and feedback: <a href="mailto:houston@oscarmail.net">Houston@oscarmail.net</a></span>
+
+</div>
+
+
+<div class="status-box">
+    <b>May 20, 2018 Update:</b> This is an archive version of the analysis of the North Houston Highway Improvement Project.
+    Updated schematics were placed on the official web site in May 2018, and the most recent update of the analysis is <a href="@Url.Action("analysis")">here</a>.
+    <div style="padding: 10px 0 2px 0;">Changes to the schematic in May 2018 were very minimal and did not affect any of the items listed here, so the information on this page remains valid.</div>
+</div>
+
+@*<div class="textblock">
+        TxDOT’s recommendation for downtown freeways and Interstate 45 North is the most influential recommendation for Houston’s freeways since the 1950s.
+    TxDOT and its partners deserve credit for a bold plan to fully modernize downtown Houston freeways and enhance mobility.
+    However, review of the preliminary schematics reveals numerous points of concern which could compromise the ability of the new freeway system to meet current and future needs.
+    </div>*@
+@*<div style="color:red; font-weight: bold; padding-bottom: 10px;">UPDATE SEPT 28, 2015: TxDOT has recently posted updated schematics on the project web site. This analysis will be updated in early October.</div>*@
+
+@*<div class="bold">Updates resulting from July 22 and September 4, 2015, meetings with TxDOT</div>*@
+
+
+<div class="updateItem">
+    In conjunction with the release of the Draft Environmental Impact Statement and public meetings in May 2017, TxDOT released updated schematics, updating the previous version from May 2016.
+</div>
+
+<div class="updateItem">
+    Changes in the May 2017 schematics compared to the May 2016 schematics are mostly minor, but the changes are all beneficial and the numerous enhancements  on the north side of downtown combine to deliver a substantial improvement in that area.
+</div>
+
+<div class="updateItem">
+    Overall, TxDOT and its consultant (HNTB) are continuing the process of ongoing refinement, and the plan continues to improve, but there are still many remaining concerns which can be fixed with minor or moderate revisions to the current plan.
+</div>
+
+<div class="updateItem">
+    Analysis of previous versions of the schematics: @Html.ActionLink("June 2016", "analysis_June_2016") &nbsp; &nbsp; @Html.ActionLink("September 2015", "analysis_sept_2015")
+</div>
+
+<br />
+<div class="sans-serif bold reset-counter padding-bottom10 ">Official schematics Annotated with My Comments</div>
+<div class="padding-bottom10">The annotated schematics are the easiest way to view the locations my concerns and see the main changes between the May 2016 and May 2017 designs.</div>
+
+<div class="padding-topbottom-8"><a target="_blank" href="@Url.Content("~/images/plan-analysis/HoustonFreeways_10-20170428_NHHIP_Seg3_Overview_Layout_PH_1-1.pdf")" style="padding-right: 8px;">Downtown</a> The May 2017 schematics have substantial improvements on the northwest side of downtown</div>
+<div class="padding-topbottom-8"><a target="_blank" href="@Url.Content("~/images/plan-analysis/HoustonFreeways_01-20170426_NHHIP_Seg2_I-45_RollPlots_PH_1-1.pdf")" style="padding-right: 8px;">Interstate 45 between Interstate 10 and Loop 610</a> This is the section with the most remaining concerns</div>
+<div class="padding-topbottom-8"><a target="_blank" href="@Url.Content("~/images/plan-analysis/HoustonFreeways_02-20170426_NHHIP_Seg2_I-610_RollPlots_PH_1-1.pdf")" style="padding-right: 8px;">Loop 610 at Interstate 45</a></div>
+<div class="padding-topbottom-8"><a target="_blank" href="@Url.Content("~/images/plan-analysis/HoustonFreeways_I45_Seg1_PH_Plot4.pdf")" style="padding-right: 8px;">Interstate 45 at Beltway 8</a></div>
+
+
+<br />
+<div class="sans-serif bold reset-counter padding-bottom10 ">Notable improvements in the May 2017 schematics</div>
+<div class="padding-bottom10">
+    Nearly all the improvements are on the north side of downtown, and are annotated in the
+    <a target="_blank" href="@Url.Content("~/images/plan-analysis/HoustonFreeways_10-20170428_NHHIP_Seg3_Overview_Layout_PH_1-1.pdf")" style="padding-right: 8px;">downtown schematic</a>.
+</div>
+<div class="padding-bottom10">NB = northbound, SB = southbound, EB = eastbound, WB = westbound </div>
+<div class="checklist">
+    <div><img src="@Url.Content("~/images/plan-analysis/checkmark.png")" /><img src="@Url.Content("~/images/plan-analysis/checkmark.png")" /></div>
+    <div>
+        Substantial improvements to the downtown Spur and its associated connections
+        <ul>
+            <li>An extra lane has been added in both directions of the Spur between Buffalo Bayou and the 10/45 interchange, now four lanes each way (instead of 3)</li>
+            <li>The NB Spur connection to NB IH 45 and WB IH 10 now has three lanes (rather than 2) and the exit to NB IH 45 has two lanes (rather than 1)</li>
+            <li>The SB IH 45 connector into Milam Street is now via the connection to the downtown Spur, and the exit from the SB IH 45 main lanes to the Spur is now three lanes (instead of two).</li>
+            <li>The exit from EB IH 10 to the SB downtown Spur has been moved much further south, making the elevated SB Spur connection through the 45/10 interchange exclusively for traffic exiting from SB IH 45 </li>
+            <li>The exit from EB IH 10 into the SB Spur is now two lanes rather than one lane.</li>
+            <li>The design has provisions for connections between the IH 10 express lanes and the IH 45 MaX lanes, both EB to NB and SB to WB. However, these ramps would probably not be included in the initial construction.</li>
+            <li>Connections have been shifted to better locations, including SB IH 45 to EB IH 10</li>
+
+
+        </ul>
+    </div>
+    <div class="checklist">
+        <div><img src="@Url.Content("~/images/plan-analysis/checkmark.png")" /></div>
+        <div>IH 45/IH 69 interchange: exit from IH 45 SB to IH 69 SB is shifted north, and now merges into a ramp with connecting traffic instead of directly into IH 69 SB</div>
+    </div>
+    <div class="checklist">
+        <div><img src="@Url.Content("~/images/plan-analysis/checkmark.png")" /></div>
+        <div>IH 10 at IH 69 interchange: Three eastbound main lanes are now maintained through the interchange (instead of two). However, the EB express lanes are now reduced to one lane before merging back into the main lanes.</div>
+    </div>
+
+    <div class="checklist">
+        <div><img src="@Url.Content("~/images/plan-analysis/checkmark.png")" /></div>
+        <div>IH 10 EB and Hardy SB to SB IH 69: two lanes are maintained on the connection (instead of 1)</div>
+    </div>
+
+    <div class="checklist">
+        <div><img src="@Url.Content("~/images/plan-analysis/checkmark.png")" /></div>
+        <div>IH 45 at Blue Bell (between West Mount Houston and West): new overpass and intersection added</div>
+    </div>
+
+    <div class="checklist">
+        <div></div>
+        <div>EB IH 10 at IH 69 interchange: Entrance/exit structure to Chenvert and Jackson has been realigned</div>
+    </div>
+
+    <div class="checklist">
+        <div></div>
+        <div>On-ramp to NB IH 69 from San Jacinto (Midtown): geometry adjusted</div>
+    </div>
+
+    <div class="checklist">
+        <div></div>
+        <div>IH 69 at IH 10: Exit ramp to Jensen is eliminated</div>
+    </div>
+</div>
+
+<a name="top"></a>
+
+<div class="sans-serif bold reset-counter"><span>Remaining Concerns for the May 2017 Schematics Which Can Still be Fixed</span> </div>
+<div class="padding-topbottom-8">Most of these issues existed in the prior schematics and have not been addressed.</div>
+
+<div class="index-list"><a href="#ih69-fannin-exit">Southbound IH-69 at Midtown: the Fannin exit ramp needs to be restored</a></div>
+
+<div class="index-list"><a href="#45-max-entrance">IH-45 northbound, entrance/exit to managed lanes at Loop 610 is poorly situated and jammed into a constricted space</a></div>
+
+<div class="index-list"><a href="#MaX-northbound-access">IH-45 northbound managed lanes: insufficient access inside the loop</a></div>
+
+<div class="index-list"><a href="#IH45-standards-compromised">IH-45 between IH 10 and Loop 610: design standards are compromised, especially the shared shoulder</a></div>
+
+<div class="index-list"><a href="#IH610-transition-zone">Connections from IH 45 to Loop 610 westbound: Transition zone is too short</a></div>
+
+<div class="index-list"><a href="#IHEB-EB-IH45NB">The connection ramp from IH 10 eastbound to IH 45 northbound has a narrow merge point with the on-ramp from Quitman, and the merge distance with the main lanes appears to be very short</a></div>
+
+
+<div class="index-list"><a href="#BW8-to-IH45">The connections from BW8 have only one lane to the southbound IH 45 main lanes, and the transition zone is too short</a></div>
+
+
+<div class="index-list"><a href="#frontage-merge">Some frontage road off/on ramp merging zones are short</a></div>
+
+
+<div style="padding-top: 6px;">These are lesser concerns, but still deserving of review</div>
+
+
+<div class="index-list"><a href="#ih69-to-ih45">Connecting from southbound IH 69 to southbound IH 45 requires weaving across three lanes in 2200 feet</a></div>
+
+<div class="index-list"><a href="#ih45-ramp-weave">Exit from northbound IH 45 to southbound IH 69: potential for motorists to make a five-lane weave in a short distance</a></div>
+
+<div class="index-list"><a href="#288-nb-merge">The merge-weave zone for northbound SH 288 into northbound IH 69, and for the exit to Gray Street, is very short, around 1400 feet</a></div>
+
+
+
+<div class="index-list"><a href="#IH45-NB-3-lanes">IH-45 northbound at loop 610 is reduced to three main lanes, the same as currently exists</a></div>
+
+
+@*<div class="index-list"><a href="#allen-parkway">Revised design of the downtown spur at Allen Parkway precludes a potential third northbound lane</a></div>*@
+
+<br />
+<div class="sans-serif bold"><span>Design Features Which are Final, and Changes are Not Expected</span> </div>
+
+<div class="index-list"><a href="#IH45-main-lanes">IH 45 between Loop 610 and BW8 still has only 4 regular lanes each way, and it should have 5 sustained regular lanes each way</a></div>
+
+<div class="index-list"><a href="#ih45-pierce-entrance">The entrance ramp to IH 45 southbound from Pierce is eliminated</a></div>
+
+
+<a name="ih69-fannin-exit"></a>
+<div class="problem-heading reset-counter">Southbound IH-69 exit Midtown: the Fannin exit ramp needs to be restored</div>
+<div class="textblock">
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>The existing exit to Fannin is eliminated and replaced with an exit to Almeda Road. This will force vehicles through six traffic signals to reach Fannin using a route with two turns. </li>
+        <li>Using Wheeler to reach Fannin will exacerbate congestion in the area, and Wheeler does not have a left-turn lane to southbound Fannin.</li>
+
+        <li>Proceeding to the west from the Almeda exit using routes other than Wheeler will be difficult and inconvenient since east-west streets are not equipped to handle through-traffic.</li>
+        <li>Without the Fannin exit, there is a distance of 2.3 miles on southbound IH 69 with no exit. This will likely contribute to extra weaving for people trying to reach the Almeda exit, see issue <a href="#ih45-ramp-weave">10</a></li>
+        <li>With the currently existing exit to Fannin, traffic coming from SH 288 can exit to Fannin. If the Fannin exit is eliminated, SH 288 traffic will need to take a much longer route on surface streets to get to the west side of Midtown.</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Restore the exit to southbound Fannin</li>
+        <li>The option shown in the diagram provides 400 feet to bring the ramp up to ground level. This is a 5% grade, which should be acceptable for an off-ramp where traffic must slow down. The benefits of this exit can justify a design exception, if an exception is needed.</li>
+    </ul>
+
+
+    <div class="problem-solution">Outlook</div>
+    Probably not good since TxDOT has resisted restoring the ramp. But the benefits will be substantial, so let's hope they give it additional consideration.
+
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/fannin-exit-direct-annotated.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="45-max-entrance"></a>
+<div class="problem-heading ">IH-45 northbound, entrance/exit to the managed lanes at Loop 610 is poorly situated and jammed into a constricted space</div>
+
+<div class="textblock">
+    @*<div>
+            This can be viewed in the annotated <a href="May2017-downtown-annotated">Downtown Schematic</a>
+        </div>*@
+
+    <div>
+        @*The northbound MaX lanes entrance/exit is situated at the exit to the Loop 610 interchange, a location which typically has congestion. Introducing more lane weaving at a point which is already congested has the potential to make the congestion worse.
+            Also, the entrance to the northbound MaX lanes from the Interstate 45 northbound main lanes should be further south, to provide an alternative to likely congestion in this area.*@
+
+        This design issue was introduced in the May 2016 schematics and was carried forward with no changes to the May 2017 schematics.
+    </div>
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>The northbound entrance/exit to the MaX lanes is located at the exit for the connections to the North Loop. Traffic congestion usually occurs at interchange exit points. Now to further complicate this location, the MaX lane entrance is added at this spot.</li>
+        <li>Vehicles positioning to enter the managed lanes will be weaving to the left, causing more lane-switching in an already congested area, likely worsening congestion.</li>
+        <li>Both the northbound and southbound entrance/exit zones are very tight with no shoulders and minimal buffers. There is minimal space between the edge of the lane and pylon separators. (Pylons would likely have a short life.) It will be safer to have a shoulder and/or wider buffers, like the well-designed entrance/exit zones on the Katy Freeway managed lanes.</li>
+    </ul>
+
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Move the northbound managed lanes entrance/exit southward to be between Cottage Street and Patton Street (shown in the second diagram below), since properties are already being acquired and widening the right-of-way would have no additional impact. Or, a thin strip of right-of-way can be acquired on the west side, since only lower-tier commercial establishments would be affected. Also add buffer space and/or a shoulder along the managed lanes entrance/exit.</li>
+        <li>Or, remove the northbound slip ramp entirely and replace with direct connections, as suggested in <a href="#MaX-northbound-access">item 3</a> below.</li>
+        <li>For the southbound entrance/exit zone, widen the bridge to provide a wider buffer and/or shoulder to improve safety and driver comfort. Possibly move the entrance/exit zone north to be farther away from the merge point of the connections from Loop 610.</li>
+
+
+
+    </ul>
+
+    <div class="problem-solution">Outlook</div>
+    <ul>
+        <li>I was expecting to see some improvement to this situation in the May 2017 update, but nothing changed. So now it is unclear if improvements can or will be made.</li>
+    </ul>
+
+
+</div>
+
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/IH-45-managed-access_annotated.jpg")" />
+</div>
+<br />
+<b>Potential Solution (note: May 2016 schematic is shown, but it is the same as the May 2017 design):</b>
+<div>
+    <img src="@Url.Content("~/images/plan-analysis/ih45-managed-nb-patton-annotated.jpg")" />
+    <a href="#top">Back to top</a>
+</div>
+
+
+
+<a name="MaX-northbound-access"></a>
+<div class="problem-heading">IH-45 Northbound Managed Lanes: Insufficient Access Inside the Loop</div>
+
+<div class="textblock">
+    <div>
+        This item has existed on all prior versions of the schematics.
+        But I still believe there is a need for at least one additional northbound entrance inside the loop, and there are potentially feasible options to be considered.
+    </div>
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>There is only <span class="bold">ONE</span> definite access point to the northbound managed lanes inside the loop, from Travis Street downtown. The May 2017 plan shows a potential connection from the IH 10 eastbound express lanes.</li>
+        <li>Traffic on the northbound IH-45 main lanes, northbound on the downtown spur and westbound on IH-10 cannot get on the managed lanes until the entrance at the North Loop.</li>
+        <li>Since there is normally a heavy traffic backup inside the Loop between downtown and Loop 610, motorists should have the option of better access to the managed lanes to avoid the traffic jams</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Ideally, both the northbound downtown Spur and IH-45 northbound main lanes should have access to the managed lanes in the downtown area.</li>
+        <li>It appears to be feasible to add access to the northbound managed lanes from both the IH 45 northbound main lanes and the northbound Spur. See the diagrams below.</li>
+        <li>If both options above are not feasible or not cost-effective, shifting the northbound managed lanes access point to the area south of Patton as suggested in <a href="#45-max-entrance">item 2</a> would help mitigate this problem, and may in fact be the best solution since it would also solve design concern #2.</li>
+    </ul>
+
+    <div>The plan also lacks a connection from the southbound managed Lanes to the southbound downtown Spur. I feel that connection is less urgent because main lane backups are more likely in the northbound direction. </div>
+
+    <div class="problem-solution">Outlook</div>
+    <ul>
+        <li>The May 2017 schematics did not provide any improvement for this situation while making many other changes in this area of the project. So this appears to be low priority, or already determined to be infeasible or not cost-effective.</li>
+    </ul>
+
+    This image shows how a connection from the northbound IH 45 main laness to the northbound MaX lanes can be added.
+    <img src="@Url.Content("~/images/plan-analysis/45-max-access-from-45-main.jpg")" />
+
+    <br />
+
+    This image shows how a connection from the northbound downtown Spur to the northbound MaX lanes can be added.
+    <img src="@Url.Content("~/images/plan-analysis/45-max-access-from-spur-annoted.jpg")" />
+
+    <a href="#top">Back to top</a>
+
+</div>
+
+
+
+
+<a name="IH45-standards-compromised"></a>
+<div class="problem-heading">IH-45 between IH 10 and Loop 610: design standards are compromised, especially the shared shoulder</div>
+<div class="textblock">
+    <div>Due to constricted right-of-way width in this section, the design standards are compromised. Because the west side of the freeway is lined with lower-tier commercial establishments and some vacant lots, it makes no sense to constrict the width and introduce design compromises.</div>
+
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>The managed (MaX) lanes don't have a dedicated shoulder due to the constricted right-of-way width</li>
+        <li>It is unclear from the schematics if there is an adequate merging zone for the northbound entrance ramp just south of Main Street. Ideally an auxiliary lane should be maintained for a distance, possibly all the way to the Loop 610 exit.</li>
+        <li>The merging distance for the southbound entrance ramp from Cavalcade also appears to be very short.</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Ideally, the right-of-way width should be widened to provide standard-width shoulders for both the main lanes and the MaX lanes.</li>
+        <li>Add a northbound auxiliary lane for at least a short distance for the northbound entrance ramp just south of Main Street, and a southbound auxiliary lane for at least a short distance for the southbound on-ramp from Cavalcade.</li>
+        <li>Consider using extra right-of-way on the west side which is currently listed as a potential detention area. Replacement detention acreage can be obtained around the truck stop. </li>
+
+
+    </ul>
+
+    <div class="problem-solution">Outlook</div>
+    <ul>
+        <li>Due to the right-of-way restrictions, prospects for fixing these issues are not good.</li>
+    </ul>
+
+    <img src="@Url.Content("~/images/plan-analysis/Max-lane-no-shoulder-annotated.jpg")" />
+
+</div>
+
+<div>
+    <a href="#top">Back to top</a>
+</div>
+
+
+
+<a name="IH610-transition-zone"></a>
+<div class="problem-heading">Connections from IH 45 to Loop 610 westbound: Transition zone is too short</div>
+<div class="textblock">
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>There are six lanes of traffic going westbound including the Loop 610 main lanes and lanes on the connections from IH 45, and these six lanes are reduced to four lanes in too short a distance</li>
+        <li>This is similar to the present-day situation, where the merging transition zone is too short.</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Extend the transition zone by adding a westbound auxiliary lane over Main and Yale.</li>
+    </ul>
+
+    <div class="problem-solution">Outlook</div>
+    <ul>
+        <li>Adding an auxiliary lane will be somewhat expensive and probably require some right-of-way acquisition, so the outlook is not favorable.</li>
+    </ul>
+
+    <img src="@Url.Content("~/images/plan-analysis/610 transition zone_annotated.jpg")" />
+
+</div>
+
+<div>
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="IHEB-EB-IH45NB"></a>
+<div class="problem-heading">The connection ramp from IH 10 eastbound to IH 45 northbound has a narrow merge point with the on-ramp from Quitman, and the merge distance with the main lanes appears to be very short</div>
+<div class="textblock">
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>There appears to be little or no merging zone for the on-ramp from Quitman</li>
+        <li>The merge zone into the northbound IH 45 main lanes appears to be short or non-existent</li>
+        <li>The merge zone into the northbound IH 45 main lanes is at the tunnel entrance, and changing lighting conditions may cause additional motorist distraction and stress, potentially making this a dangerous on-ramp if there is not a dedicated auxiliary lane.</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>The on-ramp from Quitman should have a dedicated lane</li>
+        <li>The merge into the IH 45 northbound main lanes should have an auxiliary lane, and at the minimum a sufficient transition zone</li>
+    </ul>
+
+    <div class="problem-solution">Outlook</div>
+    <ul>
+        <li>There are right-of-way issues at both locations, but the Quitman on-ramp should be able to have a dedicated lane.</li>
+    </ul>
+
+    <img src="@Url.Content("~/images/plan-analysis/quitman-on-ramp-annotated.jpg")" />
+
+    <br />
+
+    <img src="@Url.Content("~/images/plan-analysis/45-main-on-ramp_annotated.jpg")" />
+</div>
+
+<div>
+    <a href="#top">Back to top</a>
+</div>
+
+
+<a name="BW8-to-IH45"></a>
+<div class="problem-heading">The connections from BW8 have only one lane to the southbound IH 45 main lanes, and the transition zone is too short</div>
+<div class="textblock">
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>On the connection ramp from Beltway 8 to IH 45 southbound, there is only one lane connecting to the IH 45 regular main lanes</li>
+        <li>The transition/merging zone of the lane coming from Beltway 8 is too short</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Have two lanes from the Beltway 8 connection ramp connect to the main lanes</li>
+        <li>One lane should exit to West Road</li>
+
+        <li>The second lane should continue as an extended auxiliary lane across West Road</li>
+        <li>Additional changes in this area are needed to fix the short frontage road merge distance for the exit/entrance ramp, see issue <a href="#frontage-merge">8</a></li>
+
+    </ul>
+
+    <div class="problem-solution">Outlook</div>
+    Since I have previously raised this issue and TxDOT has not made any changes, the outlook for fixing this is not favorable.
+
+    <div>
+        <img src="@Url.Content("~/images/plan-analysis/BW8-connection_annotated.jpg")" />
+        <a href="#top">Back to top</a>
+    </div>
+</div>
+
+
+<a name="frontage-merge"></a>
+<div class="problem-heading">Some frontage road off/on ramp merging zones are too short</div>
+<div class="textblock">
+
+    <div>I experience an excessively short frontage road merging zone on a daily basis on the Southwest Freeway southbound exit ramp to Beechnut, which has a lane weave zone only 1000 feet long, not nearly long enough and usually a stressful merge. Two frontage road transition zones planned for Interstate 45 are less than 1000 feet.</div>
+
+    <div class="problem-solution">Problem</div>
+
+    The length of the auxiliary lane on the frontage road between exits ramps and entrance ramps are short in these locations
+    <ul>
+        <li>Southbound, between West Road and Fallbrook, about <b>600 feet</b></li>
+        <li>Southbound, between Little York and Parker, about <b>900 feet</b></li>
+        <li>Southbound, between Yale and Tidwell, about 1600 feet</li>
+        <li>Northbound, between Parker and Little York, about 1400 feet</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Adjust ramp locations to lengthen the frontage road transtion zones</li>
+        <li>Braided ramps could be warranted in both directions between Parker and Little York</li>
+        <li>
+            The southbound ramp north of West Road may need major rearrangement in conjunction with a fix for the issue with the lanes from the <a href="#BW8-to-IH45">Beltway 8 ramp</a>. I'm thinking that the on-ramp should be included in the ramp to the MaX lanes,
+            but then the currently-planned ramp will have a split point where traffic chooses between the MaX lanes and the main lanes (see diagram).
+        </li>
+    </ul>
+
+    <div class="problem-solution">Outlook</div>
+    TxDOT has not been interested in improving the southbound area south of Beltway 8 near West Road. But
+    I'm still hoping this entire southbound area can be redesigned to accommodate two lanes from the Beltway 8 connection ramp, and then make the on-ramp from the frontage road part of the already-planned braided ramp to the MaX lanes.
+
+    <div>
+        <img src="@Url.Content("~/images/plan-analysis/west-exit-ramp-annotated.jpg")" />
+        <a href="#top">Back to top</a>
+    </div>
+</div>
+
+
+<a name="ih69-to-ih45"></a>
+<div class="problem-heading">Connecting from southbound IH 69 to southbound IH 45 requires weaving across three lanes in 2200 feet in the tunnel</div>
+<div class="textblock">
+
+    <div class="problem-solution">Problem</div>
+
+    <ul>
+        <li>Southbound IH 69 traffic connecting to southbound IH 45 must move three lanes to the left in 2200 feet. Traffic coming from the ramp on the left side will also be moving to the right, causing a weaving zone.</li>
+        <li>This will be in the tunnel just after entering the tunnel, and people's vision will be adjusting during the day, probably causing some delay in response time, making the connection more stressful for motorists.</li>
+        <li>In my experience, viewing signage and changing lanes in a tunnel is more difficult than outside of a tunnel, which is another reason to move this connection outside of the tunnel.</li>
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Move the connection northward (see diagram). Ideally an auxiliary lane should be maintained on IH 45 southbound, but if an auxiliary lane won't fit, I still think it will be better for motorists to move the connection north.</li>
+        <li>The existing connection should be maintained to serve traffic coming from IH 10 which needs to connect to IH 45 southbound.</li>
+    </ul>
+
+    <div class="problem-solution">Outlook</div>
+    This change should have a minimal cost. The only potential problem is the auxiliary lane on IH 45, for which there may not be sufficient space.
+
+    <div>
+        <img src="@Url.Content("~/images/plan-analysis/IH69sb-to-ih45sb_annotated.jpg")" />
+        <a href="#top">Back to top</a>
+    </div>
+</div>
+
+
+<a name="ih45-ramp-weave"></a>
+<div class="problem-heading">Exit from northbound IH 45 to southbound IH 69: potential for motorists to make a five-lane weave in a short distance</div>
+<div class="textblock">
+
+    <div class="problem-solution">Problem</div>
+
+    <ul>
+        <li>Vehicles connecting from IH 45 northbound to IH 69 southbound may try to exit to Almeda, making a five-lane weave to the right in 1900 feet.</li>
+        <li>Traffic entering the freeway from the Webster Street on-ramp will be moving to the left, creating a weave zone.</li>
+
+
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>There appears to be no feasible way to prevent the 5-lane weave from the ramp from IH 45. And maybe only a small percentage of vehicles will attempt to reach the Almeda exit</li>
+        <li>
+            The best solution is to minimize the number of vehicles attempting to exit to Almeda. Restoring the exit ramp to Fannin will provide another option for vehicles looking to reach the Midtown area.
+            Without the Fannin exit, it will be 2.3 miles to the next exit at Shepherd, and this long distance will surely cause vehicles from IH 45 to try to reach the Almeda exit.
+        </li>
+    </ul>
+
+    <div class="problem-solution">Outlook</div>
+    This is another reason to <a href="#ih69-fannin-exit">restore the exit to Fannin</a>, and hopefully this will persuade TxDOT to serious review the Fannin exit.
+
+    <div>
+        <img src="@Url.Content("~/images/plan-analysis/ih45-ramp-to-ih69-annotated.jpg")" />
+        <a href="#top">Back to top</a>
+    </div>
+</div>
+
+
+<a name="288-nb-merge"></a>
+<div class="problem-heading">The merge-weave zone for northbound SH 288 connecting into northbound IH 69, and for the exit to Gray Street, is very short, around 1500 feet</div>
+<div class="textblock">
+
+    <div class="problem-solution">Problem</div>
+
+    <ul>
+        <li>The right lane of the two lanes coming from SH 288 must move to the left</li>
+        <li>IH 69 northbound traffic exiting to Gray Street will be moving to the right</li>
+        <li>The merge/weave zone is only around 1500 feet, about the same that exists today, and the lane weaving will be about the same as exists today</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Since the SH 288 lanes go over Alabama Street, there is a geomtric constraint since the lanes must drop about 45 feet</li>
+        <li>
+            Move the merge point as far south as possible, possibly by using slim beams on the Alabama overpass and also possibly by a design exception of downgrade percent. A steeper than usual downgrade is preferable to a short and dangerous merging zone.
+        </li>
+        <li>The westbound Woodall Rodgers Freeway in Dallas has an 8% downgrade for a similar drop, with no negative effect. </li>
+        <li>By using a 4% downgrade after the Alabama overpass, the connection ramp can be dropped 45 feet in about 1100 feet, which would increase the weave zone length by <b>500 feet</b>.   </li>
+
+
+    </ul>
+
+    <div class="problem-solution">Outlook</div>
+    I don't know if a design exception is required. If yes, that may be why the weaving zone has not been lengthened. But I think an exception can be justified to get the benefit of a longer weave zone.
+
+    <div>
+        <img src="@Url.Content("~/images/plan-analysis/SH288-to-IH69_annotated.jpg")" />
+        <a href="#top">Back to top</a>
+    </div>
+</div>
+
+
+
+
+
+<a name="IH45-NB-3-lanes"></a>
+<div class="problem-heading">IH-45 Northbound at Loop 610 is Reduced to Three Main Lanes, the Same as Currently Exists</div>
+<div class="textblock">
+
+    <div>
+        There is normally traffic congestion south of Loop 610 due to this bottleneck location. The managed lanes will help with this problem, but the managed lanes have poor access in the current plan (see <a href="#MaX-northbound-access">item 3</a> above).
+    </div>
+
+    <div class="problem-solution">Problem</div>
+    <ul>
+        <li>IH-45 Northbound is reduced to three main lanes at Loop 610</li>
+        <li>Access to the northbound Max lanes is poor, so most motorists won't be able to bypass backups using the MaX lanes</li>
+    </ul>
+    <div class="problem-solution">Potential Solution</div>
+    <ul>
+        <li>Maintain four northbound main lanes across Loop 610</li>
+        <li>The northbound entrance ramp from the frontage road just south of Loop 610 would not have a dedicated lane</li>
+    </ul>
+
+    <div class="problem-solution">Outlook</div>
+    I don't think this change will be implemented. But this is my item of lowest concern, which is why it is last on my list.
+    <div>
+        <img src="@Url.Content("~/images/plan-analysis/IH45-NB-main-lanes-3-annotated.jpg")" />
+        <a href="#top">Back to top</a>
+    </div>
+</div>
+
+
+
+<p />&nbsp;</p>
+<div class="sans-serif bold padding-bottom10 ">Design Features Which Appear to Be Final (no changes expected)</div>
+
+<a name="IH45-main-lanes"></a>
+<div class="problem-heading">IH 45 between Loop 610 and BW8 still has only 4 regular lanes each way, and it should have 5 sustained regular lanes each way</div>
+<div class="textblock">
+    <div>
+        The current IH-45 between Loop 610 and Beltway 8 has four regular lanes each way. The proposed facility also has four regular lanes each way, although there are many more auxiliary lanes, especially north of Loop 610.
+        For an expenditure of probably around $2 billion for this section, you would think the project would include at least one additional sustained lane in each direction.
+    </div>
+    <div>
+        We just need to look at the Katy Freeway to see that 5 regular lanes and 2 managed lanes are not sufficient at peak periods. Sure, there may not as much demand in the IH 45 corridor, but I still think that there should have been
+        5 sustained regular lanes in each direction, or at the very minimum, longer sections with 5 lanes each way.
+    </div>
+</div>
+
+<div>
+    <a href="#top">Back to top</a>
+</div>
+
+<a name="ih45-pierce-entrance"></a>
+<div class="problem-heading">The entrance ramp to IH 45 southbound from Pierce is eliminated</div>
+<div class="textblock">
+
+    <div class="problem-solution">Desgin Feature</div>
+    <ul>
+        <li>With the elimination of the entrance ramp from Pierce (in the area where Pierce becomes the southbound frontage road), there is only one entrance to the Gulf Freeway convenient to downtown, on Jefferson Street. (It is possible to reach IH 45 southbound from the IH-10 eastbound entrance ramp on the far north side of downtown.)</li>
+    </ul>
+    <div class="problem-solution">Observation</div>
+    This design feature was probably in response the following
+    <ul>
+        <li>The currently existing on-ramp connects into the elevated lanes, and in the planned future design the elevated lanes will serve as the connection ramp from northbound IH 69 and SH 288, so it will have more traffic.</li>
+        <li>The plan includes an off-ramp at the location where the on-ramp currently exists, so an on-ramp won't fit at this location.</li>
+    </ul>
+
+    This is probably not a major issue. I'm thinking/hoping that TxDOT/HNTB's analysis shows that the single entrance point on Jefferson Street is sufficient. Also, traffic on Pierce looking to get on IH 45 southbound can continue on the frontage road to the
+    entrance at Scott Street.
+
+
+    <div class="problem-solution">Outlook</div>
+    I don't expect any changes
+    <br />
+    <br />
+    <div>
+        <a href="#top">Back to top</a>
+    </div>
+</div>
+<br />
+
+<div class="non-numbered-heading">What Could Have Been</div>
+
+
+
+<div class="updateItem">
+    I also prepared this <a href="@Url.Content("~/images/plan-analysis/downtown-i45-option-large.jpg")">map</a> of a potential relocation of the IH 45 main lanes to create space to bring managed lanes through downtown. This option was not formally studied, although it may have been rejected very early in the process.
+    It is now too late to consider this option, but I think this would be the only way to create  a north-south corridor of managed lanes through downtown, assuming the Pierce Elevated will be removed.
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

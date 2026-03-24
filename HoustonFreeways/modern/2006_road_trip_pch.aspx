@@ -11,7 +11,7 @@
 	</HEAD>
 	<body>
 		<A href="2006_road_trip_index.aspx">Return to 2006 road trip index</a><br>
-		<A href="../photoIndex">Return to modern photos</a>
+		<a href="/Home/photoIndex">Return to photo index</a>
 
 		<p></p>
 		<table width="1000px">
